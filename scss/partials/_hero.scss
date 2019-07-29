@@ -1,0 +1,19 @@
+// Partial for styling specific to the hero section of index.html
+
+.hero {
+  // position:relative;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-image: url('../img/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  img {
+    max-height: 90vh;
+  }
+}

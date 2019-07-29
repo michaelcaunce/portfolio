@@ -1,0 +1,142 @@
+// Styling specific to the navigation on smaller devices.
+
+.mobile-nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 15%;
+  z-index: 10;
+  transform: translateX(-100%); // Moves the mobile nav out of the display. Use JS to make the nav come out.
+  transition: transform ease-in 250ms; // Transition the transform.
+
+  ul {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: stretch;
+   height: 100vh;
+   background: $accent;
+
+   li {
+     text-align: center;
+
+     &:not(:last-of-type) {
+       border-bottom: 3px solid $dark-blue;
+     }
+
+     &:hover {
+      background: $light-grey;
+      }
+
+    a {
+      display: block;
+      @include sans-serif($fs: 1.5rem, $color: $dark-blue, $ff: $ff-ssa)
+      text-decoration: none;
+      // If more links are added to the navigation, adjust the divided by number accordingly.
+      padding: calc(100vh/12) 0;
+      line-height: 0;
+    }
+  }
+ }
+}
+
+// Styling in relation to the nav.js
+// Class created for use with nav.js.
+.open-nav {
+  height: 100vh;
+  overflow-y: hidden;
+
+  .mobile-nav {
+    transform: translateX(0); //Move mobile-nav back to its starting point.
+  }
+
+  .body-container {
+    transform: translateX(85%);
+  }
+
+  .menu-button {
+    transform: translateX(0);
+  }
+
+  @include mq-l {
+    .menu-button {
+      transform: translateX(100%);
+    }
+  }
+
+  .close {
+    display: block;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+.menu-button {
+  position: absolute;
+  top: 2em;
+  left: 1em;
+  background: transparent;
+  border: 0;
+
+  img {
+    height: 2em;
+  }
+
+  // Remove on larger screens
+  @include mq-l {
+    display: none;
+  }
+}
+
+.close {
+  display: none;
+}
+
+.navigation {
+  display: none;
+}
+
+
+// Styling specific to the navigation on larger screens.
+@include mq-l {
+  .navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-top: .2em solid $accent;
+    display: flex;
+    margin: 1em auto 0;
+    padding: 0;
+    max-width: 50em;
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+      margin: 1em auto 0;
+      padding: 0;
+    }
+
+    a {
+      @include sans-serif($fs: 1.25rem, $color: $accent, $ff: $ff-ssr)
+      text-decoration: none;
+      padding: 0 1em;
+
+      &:hover {
+        color: $dark-blue;
+      }
+    }
+
+    img {
+      height: 250px;
+      width: 300px;
+    }
+  }
+}

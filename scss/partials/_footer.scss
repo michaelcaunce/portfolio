@@ -1,0 +1,37 @@
+// Styling specific to the footer.
+
+footer {
+  background: $medium-blue;
+  padding: 5em 0 1em;
+  text-align: center;
+  // color: $black;
+
+  // Styling the icons holder
+  .social-icons {
+    @include container($max-width: 20em);
+    display: flex;
+
+    // Styling the icons
+    .social-icon {
+      padding: 0 .5em 0;
+      // width: 50%;
+      // height: 50%;
+    }
+  }
+
+  // Styling creates the horizontal line present in the contact/footer section
+  .copyright {
+    &::before {
+      content: '';
+      display: block;
+      height: 3px;
+      background: $white;
+      margin: 4em auto;
+      width: 50%;
+    }
+  }
+
+  img {
+    @include container($max-width: 15em);
+  }
+}

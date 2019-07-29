@@ -1,0 +1,70 @@
+
+// Styling for the about me section. Nested sections are specific to the about-me class.
+.about-me {
+  @include container;
+  @include clearfix;
+
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+  img {
+    @include mq {
+      float: left;
+      margin-right: 1em;
+    }
+  }
+
+  // Defining the placement of the about title ensuring the placement overlaps the imgage.
+  .about-title {
+    grid-column: title-start / about-end;
+    grid-row: 1 / 2;
+    margin-top: .25em;
+    font-size: 3.25rem;
+
+    @include mq {
+      grid-column: img-end / about-end;
+      font-size: 4.75rem;
+    }
+  }
+
+  .about-subtitle {
+    @include sans-serif($fs: 2rem, $ff: $ff-ssa, $color: $accent);
+    margin-top: .5em;
+
+    @include mq {
+      font-size: 2.5rem;
+      margin-top: -1.5em;
+    }
+  }
+
+  // Ensure that the subtitle flows beneath the image and the content of the section occupies the full width. Small screens only.
+  .about-subtitle, .about-text {
+    grid-column: about-start / about-end;
+
+    // The subtitle and content will positon next to the image on larger screens.
+    @include mq {
+      grid-column: img-end / about-end;
+    }
+  }
+}
+
+// Styling specific for browsers supporting css grids
+@supports (display: grid) {
+  // Define the grid of the about me section. The use of 'start' and 'end' to ensure elements can be desirably placed.
+  .about-me {
+    display: grid;
+    // Names are assigned to the lines of the grid, see square brackets. The use of name lines allows line-based placement for redefining the grid.
+    grid-template-columns: [about-start] minmax(6em, 1fr) [title-start] minmax(6em, 1fr) [img-end] 2fr [about-end];
+    grid-column-gap: .75em;
+  }
+
+  // Defining the placement of the image within the grid.
+  img {
+    grid-column: about-start / img-end;
+    grid-row: 1 / 2;
+
+    @include mq {
+      grid-row: 1 / 4;
+    }
+  }
+}
