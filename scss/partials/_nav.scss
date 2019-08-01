@@ -122,21 +122,28 @@
       list-style: none;
       margin: 1em auto 0;
       padding: 0;
-    }
 
-    a {
-      @include sans-serif($fs: 1.25rem, $color: $accent, $ff: $ff-ssr)
-      text-decoration: none;
-      padding: 0 1em;
+      a {
+        @include sans-serif($fs: 1.25rem, $color: $accent, $ff: $ff-ssr)
+        text-decoration: none;
+        padding: 0 1em;
+        display: inline-block;
 
-      &:hover {
-        color: $dark-blue;
+        &::after {
+          content: '';
+          display: block;
+          width: 0;
+          height: .1em;
+          background-color: $accent;
+          // transition: .3s;
+          margin-top: .3em;
+        }
+
+        &:hover::after {
+          width: 99%;
+          transition: .3s;
+        }
       }
-    }
-
-    img {
-      height: 250px;
-      width: 300px;
     }
   }
 }

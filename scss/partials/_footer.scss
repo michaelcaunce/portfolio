@@ -1,21 +1,22 @@
 // Styling specific to the footer.
 
 footer {
-  background: $medium-blue;
+  background: $light-grey;
   padding: 5em 0 1em;
   text-align: center;
-  // color: $black;
 
   // Styling the icons holder
   .social-icons {
-    @include container($max-width: 20em);
     display: flex;
+    @include container($max-width: 18em);
+
+    @include mq {
+      @include container($max-width: 23em);
+    }
 
     // Styling the icons
     .social-icon {
       padding: 0 .5em 0;
-      // width: 50%;
-      // height: 50%;
     }
   }
 
@@ -25,7 +26,7 @@ footer {
       content: '';
       display: block;
       height: 3px;
-      background: $white;
+      background: $accent;
       margin: 4em auto;
       width: 50%;
     }
@@ -33,5 +34,9 @@ footer {
 
   img {
     @include container($max-width: 15em);
+
+    @include mq {
+      @include container($max-width: 20em);
+    }
   }
 }

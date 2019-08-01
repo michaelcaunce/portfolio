@@ -1,12 +1,10 @@
 // Partial for styling specific to the intro section of index.html
 
 .quote-section {
-  display: flex;
-  color: $white;
-  background: $accent;
+  color: $accent;
 
   h2 {
-    @include sans-serif($fs: 1.75rem, $color: $white, $ff: $ff-ssr);
+    @include sans-serif($fs: 1.75rem, $color: $accent, $ff: $ff-ssr);
 
     @include mq {
       font-size: 2.25rem;
@@ -16,24 +14,18 @@
       content: '';
       width: 20%;
       height: 3px;
-      background: rgba($white, .5);
+      background: rgba($accent, .5);
       display: block;
       margin: 1em auto 0;
     }
   }
 
-  // Specific styling for browsers supporting css grids.
-  @supports (display: grid) {
-    display: grid;
-    grid-template-columns: minmax(4em, 1fr);
+  .quote {
+    @include container($max-width: 90em);
+    padding: 2.5em 0 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-}
-
-.quote {
-  @include container($max-width: 90em);
-  padding: 2.5em 0 1em;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
