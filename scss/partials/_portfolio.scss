@@ -1,6 +1,6 @@
 .portfolio {
-  text-align: center;
-  background: $black;
+  @include container($max-width: 80em);
+  text-align: left;
   padding: 5em 0;
 
   figure {
@@ -15,18 +15,18 @@
 .portfolio-items {
   display: flex;
   flex-wrap: wrap;
-   @include container($max-width: 90em);
 }
 
 
 //Styling for individual portfolios items.
 
 //Styling specific to the featured item.
-.featured {
+.portfolio-item:nth-child(1) {
   .portfolio-title {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
+
     // Make the font size bigger on larger screens.
-    @include mq {
+    @include mq-l {
       font-size: 3rem;
     }
   }
@@ -35,10 +35,21 @@
 // Styling for all titles other than the featured title.
 .portfolio-title {
   margin-bottom: auto;
-  @include sans-serif($fs: 1.3rem, $color: $white, $ff: $ff-ssa, $ls: 0);
+  @include sans-serif($fs: 1.3rem, $color: $gold, $ff: $ff-ssa, $ls: 0);
+
   // Make the font size bigger on larger screens.
   @include mq-l {
     font-size: 1.5rem;
+  }
+}
+
+.portfolio-subtitle {
+  @include sans-serif($fs: 2rem, $ff: $ff-cc, $color: $gold);
+  margin-top: -1.5em;
+
+  @include mq {
+    font-size: 2.5rem;
+
   }
 }
 
@@ -65,12 +76,12 @@
     bottom: 0;
     right: 0;
     left: 0;
-    padding-top: 2em;
-    padding-left: 2em;
+    padding-top: 1em;
+    padding-left: 1em;
     padding-bottom: 1em;
-    background: rgba($accent, .9);
+    background: rgba($black, .9);
     text-align: left;
-    transition: top ease-in-out 250ms;
+    transition: top ease-in-out 350ms;
   }
 
   &:hover figcaption, &:focus figcaption {
@@ -79,10 +90,10 @@
 }
 
 .portfolio-link {
-  @include sans-serif($fs: 1.2rem, $color: $white, $ff: $ff-ssr, $ls: 0);
-  font-weight: $fw-b;
+  @include sans-serif($fs: 1.2rem, $color: $gold, $ff: $ff-ssr, $ls: 0);
+  // font-weight: $fw-b;
   text-decoration: none;
-  border-bottom: 3px solid $white;
+  border-bottom: 3px solid $gold;
   align-self: flex-start;
 }
 
@@ -91,15 +102,16 @@
   .portfolio-items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: .9em;
 
     // Define the size of the grid for larger screens.
-    @include mq-l {
-      grid-template-columns: repeat(4, 1fr);
+    @include mq {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
   //Define the space the feautred item occupies. Currently, 'featured' spans ftwo columns and rows
-  .portfolio-item.featured {
+  .portfolio-item:nth-child(1) {
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
   }

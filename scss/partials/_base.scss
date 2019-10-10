@@ -1,20 +1,24 @@
 // General body styling relevant throughout the website.
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
 body {
   color: $dark-grey;
   font-family: $ff-ssr;
   line-height: 1.6;
   background: $white;
-  font-size: .975rem;
+  font-size: 1.1rem;
   overflow-x: hidden;
-
-  @include mq {
-    font-size: 1.125rem;
-  }
 }
 
 .large-text {
-  @include sans-serif($fs: 1.4rem, $color: $dark-grey, $ff: $ff-ssr, $ls: 0);
+  @include sans-serif($fs: 1.4rem, $color: $dark-grey, $ff: $ff-large, $ls: 0);
 
   @include mq {
     font-size: 1.9rem;
@@ -36,7 +40,7 @@ h1, h2, p {
 }
 
 h1 {
-  @include sans-serif($fs: 3.125rem, $color: $accent, $ff: $ff-ssa, $ls: 0);
+  @include sans-serif($fs: 3.125rem, $color: $gold, $ff: $ff-ssa, $ls: 0);
 
   @include mq {
     font-size: 4.75rem;

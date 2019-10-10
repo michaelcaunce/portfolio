@@ -4,7 +4,7 @@
   // position:relative;
   background-repeat:no-repeat;
   background-attachment:fixed;
-  background-image: url('../img/hero.jpg');
+  background-image: url('../img/test21.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -13,7 +13,55 @@
   justify-content: center;
   flex-direction: column;
 
-  img {
-    max-height: 90vh;
+
+  .logo {
+    max-height: 38vh;
+
+    @include mq-l {
+      // margin-top: -28em;
+      margin-bottom: 25em;
+    }
+  }
+
+  // Start of the styling specific to the scroll img
+  .scroll-hide {
+    display: none;
+  }
+
+  .scroll-show {
+    @include mq-l {
+      display: block;
+      margin: 0 auto 0 auto;
+    }
+  }
+
+  .scroll {
+    width: 20px;
+    animation: bounce 1s infinite alternate;
+
+    -webkit-animation-name: bounce; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s;
+
+
+    /* Safari 4.0 - 8.0 */
+    @-webkit-keyframes bounce {
+      0% {
+        transform: translateY(0px);
+      }
+
+      100% {
+        transform: translateY(20px);
+      }
+  }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0px);
+      }
+
+      100% {
+        transform: translateY(20px);
+      }
+    }
   }
 }

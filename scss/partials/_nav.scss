@@ -7,8 +7,12 @@
   left: 0;
   right: 15%;
   z-index: 10;
-  transform: translateX(-100%); // Moves the mobile nav out of the display. Use JS to make the nav come out.
+  transform: translateX(-100%); // Hides the mobile nav out of the display. Use JS to make the nav come out.
   transition: transform ease-in 250ms; // Transition the transform.
+
+  @include mq {
+    right: 50%;
+  }
 
   ul {
    margin: 0;
@@ -19,26 +23,27 @@
    justify-content: space-between;
    align-items: stretch;
    height: 100vh;
-   background: $accent;
+   background: $black;
+
 
    li {
      text-align: center;
 
-     &:not(:last-of-type) {
-       border-bottom: 3px solid $dark-blue;
-     }
-
      &:hover {
-      background: $light-grey;
+      background: $gold;
       }
 
     a {
       display: block;
-      @include sans-serif($fs: 1.5rem, $color: $dark-blue, $ff: $ff-ssa)
+      @include sans-serif($fs: 1.8rem, $color: $gold, $ff: $ff-cc)
       text-decoration: none;
       // If more links are added to the navigation, adjust the divided by number accordingly.
       padding: calc(100vh/12) 0;
       line-height: 0;
+
+      &:hover {
+       color: $black;
+       }
     }
   }
  }
@@ -56,6 +61,10 @@
 
   .body-container {
     transform: translateX(85%);
+
+    @include mq {
+      transform: translateX(50%);
+    }
   }
 
   .menu-button {
@@ -110,7 +119,7 @@
     top: 0;
     left: 0;
     right: 0;
-    border-top: .2em solid $accent;
+    border-top: .2em solid $white;
     display: flex;
     margin: 1em auto 0;
     padding: 0;
@@ -124,18 +133,19 @@
       padding: 0;
 
       a {
-        @include sans-serif($fs: 1.25rem, $color: $accent, $ff: $ff-ssr)
+        @include sans-serif($fs: 1.5rem, $color: $gold, $ff: $ff-cc)
         text-decoration: none;
         padding: 0 1em;
         display: inline-block;
+        font-weight: bold;
 
         &::after {
           content: '';
           display: block;
           width: 0;
           height: .1em;
-          background-color: $accent;
-          // transition: .3s;
+          background-color: $white;
+          transition: .3s;
           margin-top: .3em;
         }
 

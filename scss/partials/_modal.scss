@@ -19,7 +19,7 @@
   }
 
   h2 {
-      @include sans-serif($fs: 3.5rem, $color: $accent, $ff: $ff-cc, $ls: 0);
+      @include sans-serif($fs: 3.5rem, $color: $gold, $ff: $ff-cc, $ls: 0);
       margin-top: 1em;
   }
 }
@@ -27,7 +27,7 @@
 .modal-close {
   background: transparent;
   position: fixed;
-  background: $white;
+  background: $black;
   top: .5em;
   left: 1em;
   border: 0;
@@ -35,7 +35,7 @@
   height: 2em;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 0 5px rgba(black, .5);
+  box-shadow: 0 0 5px rgba($gold, .9);
 
   img {
     height: 1em;
@@ -82,7 +82,7 @@
 
 // Styling for the overlapping title box at the top of each modal
 .portfolio-title-box {
-  background: rgba($accent, .75);
+  background: rgba($black, .9);
   padding: 2em 0 1em 2em;
   color: $white;
   width: 100%;
@@ -119,6 +119,7 @@
 
     display: flex;
     align-items: flex-start;
+
 
     .social-icon {
       @include clearfix;

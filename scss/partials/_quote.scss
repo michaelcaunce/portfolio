@@ -1,23 +1,34 @@
 // Partial for styling specific to the intro section of index.html
 
 .quote-section {
-  color: $accent;
+  background: $black;
+  // background: #41ade5;
+  position: relative;
+  z-index: 1;
 
-  h2 {
-    @include sans-serif($fs: 1.75rem, $color: $accent, $ff: $ff-ssr);
+  &:before,
+  &:after {
+    background: inherit;
+    content: '';
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    -webkit-backface-visibility: hidden; // for Chrome Windows
+  }
 
-    @include mq {
-      font-size: 2.25rem;
-    }
+  &:before {
+    top: 0;
+    transform: skewY(1.5deg);
+    transform-origin: 100% 0;
+  }
 
-    &::after {
-      content: '';
-      width: 20%;
-      height: 3px;
-      background: rgba($accent, .5);
-      display: block;
-      margin: 1em auto 0;
-    }
+  &:after {
+    bottom: 0;
+    transform: skewY(-1.5deg);
+    transform-origin: 100%;
   }
 
   .quote {
@@ -27,5 +38,27 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    q {
+      @include sans-serif($fs: 1.75rem, $color: $gold, $ff: $ff-cc);
+
+      @include mq {
+        font-size: 2.25rem;
+      }
+
+      &::after {
+        content: '';
+        width: 20%;
+        height: 3px;
+        background: $white;
+        display: block;
+        margin: 1em auto 0;
+      }
+    }
+
+    p {
+      @include sans-serif($fs: 1rem, $color: $gold, $ff: $ff-ssr);
+      margin-top: 1.5em;
+    }
   }
 }

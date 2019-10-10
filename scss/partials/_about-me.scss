@@ -1,14 +1,18 @@
 
 // Styling for the about me section. Nested sections are specific to the about-me class.
+
 .about-me {
   @include container;
   @include clearfix;
-
-  margin-top: 2em;
   margin-bottom: 2em;
-  
+  margin-top: 2em;
+
 
   img {
+    @include clearfix;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
     @include mq {
       float: left;
       margin-right: 1em;
@@ -19,7 +23,7 @@
   .about-title {
     grid-column: title-start / about-end;
     grid-row: 1 / 2;
-    margin-top: .25em;
+    margin-top: .5em;
     font-size: 3.25rem;
 
     @include mq {
@@ -29,7 +33,7 @@
   }
 
   .about-subtitle {
-    @include sans-serif($fs: 2rem, $ff: $ff-ssa, $color: $accent);
+    @include sans-serif($fs: 2rem, $ff: $ff-cc, $color: $gold);
     margin-top: .5em;
 
     @include mq {
