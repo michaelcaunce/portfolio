@@ -1,24 +1,35 @@
 // General body styling relevant throughout the website.
 
-* {
-  box-sizing: border-box;
-}
-
-html {
-	scroll-behavior: smooth;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 body {
-  color: $dark-grey;
-  font-family: $ff-ssr;
+  color: $base;
+  font-family: $ff-header;
   line-height: 1.6;
   background: $white;
   font-size: 1.1rem;
   overflow-x: hidden;
+  min-height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+
+  @include mq-l {
+    padding: 2rem;
+  }
+}
+
+.body-container {
+  background-color: #F7F7F7;
 }
 
 .large-text {
-  @include sans-serif($fs: 1.4rem, $color: $dark-grey, $ff: $ff-large, $ls: 0);
+  @include sans-serif($fs: 1.4rem, $color: $base, $ff: $ff-large, $ls: 0);
 
   @include mq {
     font-size: 1.9rem;
@@ -26,7 +37,7 @@ body {
 }
 
 .highlight {
-  @include sans-serif($fs: 1.4rem, $color: $accent, $ff: $ff-ssr, $ls: 0);
+  @include sans-serif($fs: 1.4rem, $color: $secondary, $ff: $ff-large, $ls: 0);
   font-weight: bold;
 }
 
@@ -40,15 +51,18 @@ h1, h2, p {
 }
 
 h1 {
-  @include sans-serif($fs: 3.125rem, $color: $gold, $ff: $ff-ssa, $ls: 0);
+  @include sans-serif($fs: 3.125rem, $color: $secondary, $ff: $ff-header, $ls: 0);
 
   @include mq {
-    font-size: 4.75rem;
+    font-size: 4rem;
   }
 }
 
 h2 {
   @include sans-serif($fs: 2rem);
+  background-image: linear-gradient(to right, $secondary, $primary);
+  -webkit-background-clip: text;
+  color: transparent;
 
   @include mq {
     font-size: 3rem;

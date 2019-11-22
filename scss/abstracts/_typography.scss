@@ -3,22 +3,19 @@
 @import url('https://fonts.googleapis.com/css?family=Archivo&display=swap');
 
 // Defining the the variable for the different fonts.
-$ff-s: 'Merriweather', serif;
-$ff-c: 'Special Elite', cursive;
-$ff-cc: 'marydale', sans-serif;
-$ff-ssr: 'forma-djr-text', sans-serif;
-
+$ff-body: 'forma-djr-text', sans-serif;
+$ff-header: 'Archivo', sans-serif;
+$ff-sub: 'marydale', sans-serif;
 $ff-large: 'template-gothic', sans-serif;
-
-$ff-ssa: 'Archivo', sans-serif;
 
 // Defining the font-weight variables.
 $fw-n: 400;
 $fw-m: 500;
 $fw-b: 900;
 
+
 // Defined Mixins to define styles that can be re-used throughout the stylesheet
-@mixin sans-serif($fs, $ls: .15em, $color: $dark-grey, $tt: upppercase, $lh: 1, $ff: $ff-c ) {
+@mixin sans-serif($fs, $ls: .15em, $color: $base, $tt: upppercase, $lh: 1, $ff: $ff-body ) {
   font-size: $fs;
   letter-spacing: $ls;
   color: $color;

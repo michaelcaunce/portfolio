@@ -1,3 +1,4 @@
+
 .portfolio {
   @include container($max-width: 80em);
   text-align: left;
@@ -21,46 +22,45 @@
 //Styling for individual portfolios items.
 
 //Styling specific to the featured item.
-.portfolio-item:nth-child(1) {
-  .portfolio-title {
-    font-size: 1.8rem;
-
-    // Make the font size bigger on larger screens.
-    @include mq-l {
-      font-size: 3rem;
-    }
-  }
-}
+// .portfolio-item:nth-child(1) {
+//   .portfolio-title {
+//     font-size: 1.8rem;
+//
+//     // Make the font size bigger on larger screens.
+//     @include mq-l {
+//       font-size: 3rem;
+//     }
+//   }
+// }
 
 // Styling for all titles other than the featured title.
 .portfolio-title {
   margin-bottom: auto;
-  @include sans-serif($fs: 1.3rem, $color: $gold, $ff: $ff-ssa, $ls: 0);
+  @include sans-serif($fs: 1.8rem, $color: $secondary, $ff: $ff-body, $ls: 0);
 
   // Make the font size bigger on larger screens.
-  @include mq-l {
+  @include mq {
     font-size: 1.5rem;
   }
 }
 
 .portfolio-subtitle {
-  @include sans-serif($fs: 2rem, $ff: $ff-cc, $color: $gold);
+  @include sans-serif($fs: 1.8rem, $ff: $ff-sub, $color: $secondary);
   margin-top: -1.5em;
 
   @include mq {
     font-size: 2.5rem;
-
   }
 }
 
 // End of title styling
-
 
 // Start of styling for each item.
 .portfolio-item {
   position: relative;
   overflow: hidden;
   flex: 1 1 25rem;
+
 
   img {
     display: block;
@@ -79,7 +79,10 @@
     padding-top: 1em;
     padding-left: 1em;
     padding-bottom: 1em;
-    background: rgba($black, .9);
+    background-image: linear-gradient(to right bottom,
+      rgba($black, .9),
+      rgba($primary, 1));
+
     text-align: left;
     transition: top ease-in-out 350ms;
   }
@@ -90,29 +93,18 @@
 }
 
 .portfolio-link {
-  @include sans-serif($fs: 1.2rem, $color: $gold, $ff: $ff-ssr, $ls: 0);
-  // font-weight: $fw-b;
+  @include sans-serif($fs: 1.2rem, $color: $secondary, $ff: $ff-body, $ls: 0);
   text-decoration: none;
-  border-bottom: 3px solid $gold;
+  border-bottom: 2px solid $secondary;
   align-self: flex-start;
 }
 
-// Define the size of the grid for smaller screens.
+// Define the size of the grid for smaller screens and larger screens.
 @supports (display: grid) {
+  // max-height: 50vh;
   .portfolio-items {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: .9em;
-
-    // Define the size of the grid for larger screens.
-    @include mq {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-
-  //Define the space the feautred item occupies. Currently, 'featured' spans ftwo columns and rows
-  .portfolio-item:nth-child(1) {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: .5em;
   }
 }

@@ -1,22 +1,74 @@
 // Styling specific to the footer.
 
 footer {
+  height: 30vh;
   padding: 5em 0 1em;
-  text-align: center;
-  background-repeat:no-repeat;
-  background-attachment:fixed;
-  background-image: url('../img/test21.jpg');
-  background-size: cover;
-  background-position: center;
-  // height: 50vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-
+  background: $primary;
 
   h1 {
-    color: $gold;
+    color: $secondary;
+  }
+
+  img {
+    @include container($max-width: 13em);
+    margin-top: -7em;
+    margin-bottom: -3em;
+  }
+
+  p {
+    @include sans-serif($fs: .8rem, $color: $secondary, $ff: $ff-body)
+    padding-top: 2em;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .footer-links {
+    // display: flex;
+    // flex-direction: row;
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      list-style: none;
+      margin: 1em auto 0;
+      padding: 0;
+
+      a {
+        @include sans-serif($fs: .9rem, $color: $secondary, $ff: $ff-sub)
+        text-decoration: none;
+        padding: .5em 1em 0 0;
+        display: inline-block;
+        font-weight: bold;
+        transition: transform .3s;
+
+        @include mq {
+          font-size: 1.2rem;
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          width: 0;
+          height: .1em;
+          background-color: $white;
+          transition: .3s;
+          margin-top: .3em;
+        }
+
+        &:hover {
+          transform: translateY(-.5rem) scale(1);
+        }
+
+        &:hover::after {
+          width: 99%;
+        }
+      }
+    }
   }
 
   // Styling the icons holder
@@ -26,27 +78,14 @@ footer {
 
     // Styling the icons
     .social-icon {
-      padding: 0 .5em 0;
-      width: 2.8em;
-      height: 2.8em;
+      padding: 1em .5em 0;
+      width: 2em;
+      height: 2em;
       fill: $white;
 
       &:hover {
-        fill: $gold;
+        fill: $secondary;
       }
-
-      @include mq {
-        width: 4em;
-        height: 4em;
-      }
-    }
-  }
-
-  img {
-    @include container($max-width: 15em);
-
-    @include mq {
-      @include container($max-width: 20em);
     }
   }
 }

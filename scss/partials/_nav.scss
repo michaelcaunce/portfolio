@@ -23,27 +23,30 @@
    justify-content: space-between;
    align-items: stretch;
    height: 100vh;
-   background: $black;
+   background: $white;
 
 
    li {
      text-align: center;
 
      &:hover {
-      background: $gold;
+       background: linear-gradient(to right,
+             $black, $primary);
       }
 
     a {
       display: block;
-      @include sans-serif($fs: 1.8rem, $color: $gold, $ff: $ff-cc)
+      @include sans-serif($fs: 1.8rem, $color: $secondary, $ff: $ff-sub)
       text-decoration: none;
       // If more links are added to the navigation, adjust the divided by number accordingly.
       padding: calc(100vh/12) 0;
       line-height: 0;
+      scroll-behavior: smooth;
 
       &:hover {
-       color: $black;
-       }
+       color: $secondary;
+
+      }
     }
   }
  }
@@ -92,9 +95,16 @@
   left: 1em;
   background: transparent;
   border: 0;
+  fill: $secondary;
+  cursor: pointer;
+  transition: all .3s;
 
-  img {
+  svg {
     height: 2em;
+  }
+
+  &:hover {
+    transform: translateY(.3rem);
   }
 
   // Remove on larger screens
@@ -116,14 +126,16 @@
 @include mq-l {
   .navigation {
     position: absolute;
-    top: 0;
+    top: 4rem;
     left: 0;
     right: 0;
     border-top: .2em solid $white;
     display: flex;
+    flex-direction: column;
     margin: 1em auto 0;
     padding: 0;
     max-width: 50em;
+    z-index: 1;
 
     ul {
       display: flex;
@@ -133,11 +145,12 @@
       padding: 0;
 
       a {
-        @include sans-serif($fs: 1.5rem, $color: $gold, $ff: $ff-cc)
+        @include sans-serif($fs: 1.5rem, $color: $secondary, $ff: $ff-sub)
         text-decoration: none;
         padding: 0 1em;
         display: inline-block;
         font-weight: bold;
+        transition: transform .3s;
 
         &::after {
           content: '';
@@ -145,13 +158,36 @@
           width: 0;
           height: .1em;
           background-color: $white;
-          transition: .3s;
           margin-top: .3em;
+        }
+
+        &:hover {
+          transform: translateY(.5rem) scale(1);
         }
 
         &:hover::after {
           width: 99%;
           transition: .3s;
+        }
+      }
+    }
+
+    // Styling the icons holder
+    .social-icons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      // Styling the icons
+      .social-icon {
+        padding: 1em .5em 0;
+        width: 2.2em;
+        height: 2.2em;
+        fill: $white;
+
+        &:hover {
+          fill: $secondary;
         }
       }
     }

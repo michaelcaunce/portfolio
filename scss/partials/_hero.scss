@@ -4,22 +4,38 @@
   // position:relative;
   background-repeat:no-repeat;
   background-attachment:fixed;
-  background-image: url('../img/test21.jpg');
+  // background-image: url('../img/hero.jpg');
+  background-image: linear-gradient(to right bottom,
+    rgba($primary, 1),
+    rgba($primary, 0.9)),
+    url(../img/hero.jpg);
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 95vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 
+  @include mq {
+    /* Using clip path and the x, y values to add a diagonal line */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  }
 
   .logo {
     max-height: 38vh;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    @include mq {
+      margin-bottom: 10em;
+    }
 
     @include mq-l {
       // margin-top: -28em;
-      margin-bottom: 25em;
+      margin-bottom: 5em;
     }
   }
 
@@ -32,6 +48,7 @@
     @include mq-l {
       display: block;
       margin: 0 auto 0 auto;
+      margin-top: 6em;
     }
   }
 
@@ -62,6 +79,27 @@
       100% {
         transform: translateY(20px);
       }
+    }
+  }
+
+  // animation
+
+  @keyframes moveInRight {
+    0% {
+      opacity: 0;
+      /* Move the element to the side for the start of the animation */
+      transform: translateX(10rem);
+    }
+
+    80% {
+      /* Move the element to the opposite side during the animation */
+      transform: translateX(-1rem);
+    }
+
+    100% {
+      opacity: 1;
+      /* Move the element to the original position */
+      transform: translate(0);
     }
   }
 }
