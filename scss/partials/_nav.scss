@@ -1,0 +1,221 @@
+// Styling specific to the navigation on smaller devices.
+
+.mobile-nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 15%;
+  z-index: 10;
+  transform: translateX(-100%); // Hides the mobile nav out of the display. Use JS to make the nav come out.
+  transition: transform ease-in 250ms; // Transition the transform.
+
+ 
+
+  ul {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: stretch;
+   height: 93vh;
+   background: $white;
+
+
+   li {
+     text-align: center;
+     display: flex;
+     justify-content: center;
+
+     &:hover:nth-child(odd) {
+       background: $main;
+       }
+
+      &:hover:nth-child(even) {
+        background: $accent;
+      }
+
+    a {
+      @include sans-serif($fs: 1.4rem, $ff: $ff-title)
+      text-decoration: none;
+      // If more links are added to the navigation, adjust the divided by number accordingly.
+      padding: calc(93vh/12) 0;
+      line-height: 0;
+      scroll-behavior: smooth;
+
+    }
+  }
+ }
+}
+
+// Styling in relation to the nav.js
+// Class created for use with nav.js.
+.open-nav {
+  height: 93vh;
+  overflow-y: hidden;
+
+  .mobile-nav {
+    transform: translateX(0); //Move mobile-nav back to its starting point.
+  }
+
+  .body-container {
+    transform: translateX(85%);
+  }
+
+  .menu-button {
+    transform: translateX(0);
+  }
+
+  @include mq-l {
+    .menu-button {
+      transform: translateX(100%);
+    }
+  }
+
+  .close {
+    display: block;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+.menu-button {
+  position: absolute;
+  top: 2em;
+  left: 1em;
+  background: transparent;
+  border: 0;
+  fill: $base;
+  cursor: pointer;
+  transition: all .3s;
+
+  @include mq {
+    fill: $accent;
+  }
+
+  svg {
+    height: 2em;
+  }
+
+  &:hover {
+    transform: translateY(.3rem);
+  }
+
+  // Remove on larger screens
+  @include mq {
+    display: none;
+  }
+}
+
+.close {
+  display: none;
+}
+
+// Hide the navigation on smaller screens
+.navigation {
+  display: none;
+}
+
+// Hide the logo on smaller screens
+.header--logo {
+  display: none;
+}
+
+
+// Styling specific to the navigation on larger screens.
+@include mq {
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+
+    &--logo {
+        display: block;
+        height: 4em;
+        width: auto;
+        margin-left: 1em
+    }
+
+  }
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0 auto;
+    width: 100%;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      list-style: none;
+      margin-right: 1em;
+      padding: 0;
+
+      a {
+        @include sans-serif($fs: 1.2rem, $color: $black, $ff: $ff-title)
+        text-decoration: none;
+        padding: 0 .5em;
+        display: inline-block;
+        transition: transform .3s;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 0;
+          height: .1em;
+          background-color: $accent;
+          margin-top: .3em;
+        }
+
+        &:hover {
+          transform: translateY(.5rem) scale(1);
+        }
+
+        &:hover::after {
+          width: 99%;
+          transition: .3s;
+        }
+      }
+    }
+
+    // Styling the icons holder
+    .social-icons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      // Styling the icons
+      .social-icon {
+        padding: 1em .5em 0;
+
+        svg {
+          fill: $white;
+          width: 1.5em;
+          height: 1.5em;
+          transition: transform .3s;
+          /* Animate */
+          animation-name: moveInRight;
+          animation-duration: 1s;
+          animation-timing-function: ease-out;
+
+          &:hover {
+            fill: $secondary;
+            transform: translateY(.5rem) scale(1);
+          }
+        }
+      }
+    }
+  }
+}

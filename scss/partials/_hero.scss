@@ -1,0 +1,212 @@
+.hero {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(10, 10vh);
+  position: relative;
+  // margin-bottom: 5rem;
+
+  &--img {
+    grid-column: 1 / -1;
+    grid-row: 1 / 10;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+
+    @include mq {
+      grid-column: 2 / -1;
+      grid-row: 1 / -1;
+    }
+
+    @include mq-l {
+      grid-column: 5 / -1;
+      grid-row: 1 / 9;
+      transform: translateX(-1em);
+    }
+  }
+
+  &__content {
+    background-color: rgba(256, 256, 256, .9);
+    grid-column: 1 / -1;
+    grid-row: 3 / 7;
+    padding: 1em 0 0 1em;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 55%;
+      left: 0;
+      height: .5em;
+      width: 40%;
+      background: $main;
+
+      @include mq {
+        top: 50%;
+      }
+
+      @include mq-l {
+        content: '';
+        position: absolute;
+        top: 10%;
+        left: 0;
+        height: 1em;
+        width: 20%;
+        background: $base;
+      }
+    }
+
+    @include mq {
+      grid-column: 1 / 10;
+      padding: 1em 0 0 3em;
+
+    }
+
+    @include mq-l {
+      grid-column: 1 / 8;
+      grid-row: 3 / 7;
+      border-left: .4rem solid $main;
+      padding: 3em 0 0 3em;
+      margin-left: 5em;
+    }
+
+    &--title {
+      @include sans-serif($fs: 3.5rem, $color: $base, $ff: $ff-title, $ls: 0);
+      margin-top: .5em;
+      margin-bottom: 0;
+
+      @include mq {
+        font-size: 4.5rem;
+        margin-top: 0;
+      }
+
+      @include mq-l {
+        font-size: 5rem;
+        margin-top: 0;
+      }
+
+      @include mq-xl {
+        font-size: 6rem;
+      }
+    }
+
+    &--sub {
+      @include sans-serif($fs: 1.6rem, $color: $main, $ff: $ff-title, $ls: 0);
+      margin-top: .5em;
+      font-style: italic;
+
+      @include mq {
+        font-size: 2rem;
+      }
+
+      @include mq-l {
+        font-size: 2.2rem;
+      }
+    }
+
+    &--text {
+      @include sans-serif($fs: 1.4rem, $color: $base, $ff: $ff-main, $ls: 0);
+      width: 80%;
+
+      @include mq {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__footer {
+    background: $base;
+    grid-column: 1 / 8;
+    grid-row: 8 / 10;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 60%;
+      left: 0;
+      height: 10em;
+      width: 20%;
+      background: $accent;
+
+      @include mq-l {
+        height: 4em;
+        top: 65%;
+        width: 30%;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 85%;
+      left: 60%;
+      height: 5em;
+      width: 40%;
+      background: $main;
+
+      @include mq-xl {
+        height: 4em;
+        left: 30%;
+        width:60%;
+        top: 88%;
+      }
+
+    }
+
+    .btn {
+      @include sans-serif($fs: 1.5rem, $color: $white, $ff: $ff-main, $ls: 0);
+      position: relative;
+      margin-top: -4.5em;
+      margin-left: 4em;
+      text-decoration: none;
+      border: 3px solid $white;
+      padding: .5rem .5em;
+      transition: all .5s;
+      
+      @include mq {
+        margin-top: -3em;
+      }
+
+      @include mq-l {
+        margin-top: -3em;
+      }
+
+      &::before, &::after {
+        content: "";
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        border-style: solid;
+        transition: all .5s;
+      }
+
+      &::before {
+        top: -1rem;
+        left: -1rem;
+        border-width: 3px 0 0 3px;
+        border-color: $main;
+      }
+
+      &::after {
+        bottom: -1rem;
+        right: -1rem;
+        border-width: 0 3px 3px 0;
+        border-color: $accent;
+      }
+
+      &:hover {
+        color: $base;
+        background-color: $white;
+        border-color: $white;
+      }
+
+      &:hover::before,
+      &:hover::after {
+        width: calc(100% + 2rem);
+        height: calc(100% + 2rem);
+        border-color: $base;
+      }
+    }
+  }
+}
+
+

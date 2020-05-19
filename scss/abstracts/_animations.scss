@@ -1,0 +1,97 @@
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+    }
+
+  100% {
+    transform: translateY(20px);
+    }
+  }
+
+
+@keyframes moveInRight {
+    0% {
+      opacity: 0;
+      /* Move the element to the side for the start of the animation */
+      transform: translateX(10rem);
+    }
+
+    80% {
+      /* Move the element to the opposite side during the animation */
+      transform: translateX(-1rem);
+    }
+
+    100% {
+      opacity: 1;
+      /* Move the element to the original position */
+      transform: translate(0);
+    }
+}
+
+@keyframes moveInLeft {
+    0% {
+    opacity: 0;
+    /* Move the element to the side for the start of the animation */
+    transform: translateX(-10rem);
+    }
+
+    80% {
+    /* Move the element to the opposite side during the animation */
+    transform: translateX(1rem);
+    }
+
+    100% {
+    opacity: 1;
+    /* Move the element to the original position */
+    transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+    opacity: 0;
+    /* Move the element to the side for the start of the animation */
+    transform: translateY(20rem);
+    }
+
+    80% {
+    /* Move the element to the opposite side during the animation */
+    transform: translateY(-1rem);
+    }
+
+    100% {
+    opacity: 1;
+    /* Move the element to the original position */
+    transform: translate(0);
+    }
+}
+
+@keyframes moveInTop {
+    0% {
+    opacity: 0;
+    /* Move the element to the side for the start of the animation */
+    transform: translateY(-20rem);
+    }
+
+    80% {
+    /* Move the element to the opposite side during the animation */
+    transform: translateY(1rem);
+    }
+
+    100% {
+    opacity: 1;
+    /* Move the element to the original position */
+    transform: translate(0);
+    }
+}

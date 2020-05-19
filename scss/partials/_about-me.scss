@@ -1,0 +1,114 @@
+
+// Styling for the about me section. Nested sections are specific to the about-me class.
+
+.about-me {
+  @include container;
+  @include clearfix;
+  margin-bottom: 5em;
+
+
+  img {
+    @include clearfix;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+
+    @include mq {
+      float: left;
+      margin-right: 1em;
+    }
+  }
+
+  a {
+    &:link,
+    &:visited {
+      color: $secondary;
+      text-decoration: none;
+      transition: all .2s;
+      font-weight: bold;
+    }
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+// Styling specific for browsers supporting css grids
+@supports (display: grid) {
+  // Define the grid of the about me section. The use of 'start' and 'end' to ensure elements can be desirably placed.
+  .about-me {
+    display: grid;
+    // Names are assigned to the lines of the grid, see square brackets. The use of name lines allows line-based placement for redefining the grid.
+    grid-template-columns: [about-start] minmax(15em, 1fr) [title-start] minmax(6em, 1fr) [img-end] 2fr [about-end];
+    grid-column-gap: .75em;
+
+    // Defining the placement of the about title ensuring the placement overlaps the imgage.
+    .about-title {
+      grid-column: about-start / about-end;
+      grid-row: 2 / 2;
+      margin-top: .6em;
+      margin-top: -3em;
+
+      @include mq {
+        margin-top: .5em;
+        grid-row: 1 / 2;
+
+      }
+    }
+
+    .about-subtitle {
+      @include sans-serif($fs: 2rem, $ff: $ff-title, $color: $secondary);
+      margin-top: -2.8em;
+
+      @include mq {
+        font-size: 2.5rem;
+        margin-top: -1.5em;
+      }
+    }
+
+    // Ensure that the subtitle flows beneath the image and the content of the section occupies the full width. Small screens only.
+    .about-subtitle, .about-text {
+      grid-column: about-start / about-end;
+
+      // The subtitle and content will positon next to the image on larger screens.
+      @include mq {
+        grid-row: 2 / 4;
+        grid-column: about-start / img-end;
+      }
+    }
+
+    .about-text {
+      @include mq-l {
+        margin-top: 2rem;
+        border: 6px solid transparent;
+        border-image: linear-gradient(to bottom, $white, $accent);
+        border-image-slice: 1;
+        padding-top: 1rem;
+        padding-left: 1rem;
+        padding-right: 4rem;
+        margin-right: -5rem;
+        z-index: 999;
+      }
+    }
+
+
+    // Defining the placement of the image within the grid.
+    img {
+      grid-column: about-start / img-end;
+      grid-row: 1 / 2;
+
+
+      @include mq {
+        grid-column: img-end / about-end;
+        grid-row: 1 / 4;
+      }
+
+      @include mq-l {
+        z-index: 1000;
+        margin-top: 17.5rem;
+        box-shadow: 0 1.5rem 4rem rgba($black, .15);
+      }
+    }
+  }
+}

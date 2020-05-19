@@ -1,0 +1,42 @@
+
+.quote-section {
+  background-color: $primary;
+  position: relative;
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+
+
+  .quote {
+    @include container($max-width: 90em);
+    // padding: 2.5em 0 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    q {
+      @include sans-serif($fs: 1.75rem, $color: $accent, $ff: $ff-title);
+      line-height: 1.3;
+
+      @include mq {
+        font-size: 2rem;
+        // margin-top: 1em;
+      }
+
+      &::after {
+        content: '';
+        width: 20%;
+        height: 3px;
+        background: $white;
+        display: block;
+        margin: 1em auto 0;
+      }
+    }
+
+    p {
+      @include sans-serif($fs: 1rem, $color: $secondary, $ff: $ff-main);
+      margin-top: 1.5em;
+      font-style: italic;
+    }
+  }
+}

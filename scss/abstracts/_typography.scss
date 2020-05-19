@@ -1,0 +1,30 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital@0;1&family=Oswald&display=swap');
+
+// Defining the the variable for the different fonts.
+$ff-main: 'Cardo', serif;
+$ff-title: 'Oswald', sans-serif;
+// $ff-sub: 'Cardo', serif;
+// $ff-large: 'Cardo', serif;
+
+
+// Defining the font-weight variables.
+$fw-n: 400;
+$fw-m: 500;
+$fw-b: 900;
+
+
+// Defined Mixins to define styles that can be re-used throughout the stylesheet
+@mixin sans-serif($fs, $ls: .05em, $color: $base, $tt: upppercase, $lh: 1, $ff: $ff-main ) {
+  font-size: $fs;
+  letter-spacing: $ls;
+  color: $color;
+  text-transform: $tt;
+  line-height: $lh;
+  font-family: $ff;
+  font-weight: $fw-n;
+}
