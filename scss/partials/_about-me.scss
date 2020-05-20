@@ -1,12 +1,25 @@
 
 // Styling for the about me section. Nested sections are specific to the about-me class.
 
+.about__container {
+  width: 100%;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: 'about';
+    font-size: 50rem;
+    font-family: $ff-title;
+    opacity: .03;
+  }
+}
+
 .about-me {
   @include container;
   @include clearfix;
+  margin-top: 5em;
   margin-bottom: 5em;
-
-
+  
   img {
     @include clearfix;
     margin-top: 2em;
@@ -47,8 +60,8 @@
     .about-title {
       grid-column: about-start / about-end;
       grid-row: 2 / 2;
-      margin-top: .6em;
       margin-top: -3em;
+      
 
       @include mq {
         margin-top: .5em;
@@ -58,7 +71,8 @@
     }
 
     .about-subtitle {
-      @include sans-serif($fs: 2rem, $ff: $ff-title, $color: $secondary);
+      @include sans-serif($fs: 2rem, $ff: $ff-title, $color: $accent);
+      font-style: italic;
       margin-top: -2.8em;
 
       @include mq {
@@ -79,10 +93,10 @@
     }
 
     .about-text {
-      @include mq-l {
+      @include mq {
         margin-top: 2rem;
         border: 6px solid transparent;
-        border-image: linear-gradient(to bottom, $white, $accent);
+        border-image: linear-gradient(to bottom, $white, $main);
         border-image-slice: 1;
         padding-top: 1rem;
         padding-left: 1rem;

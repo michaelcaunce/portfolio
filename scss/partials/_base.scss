@@ -46,7 +46,7 @@ h1, h2, p {
 }
 
 h1 {
-  @include sans-serif($fs: 3.125rem, $color: $secondary, $ff: $ff-title, $ls: 0);
+  @include sans-serif($fs: 3.125rem, $ff: $ff-title, $ls: 0);
 
   @include mq {
     font-size: 4rem;
