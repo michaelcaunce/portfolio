@@ -918,7 +918,8 @@ h2 {
   margin: 0 auto;
   max-width: 80em;
   text-align: left;
-  padding: 2em 0; }
+  padding: 2em 0;
+  margin-bottom: 5em; }
   .portfolio__section figure {
     margin: 0; }
   .portfolio__section img {
@@ -947,7 +948,10 @@ h2 {
     .portfolio__items--item--img {
       display: block;
       width: 100%;
-      height: 100%; }
+      height: 100%;
+      transition: all 1s ease-in-out; }
+    .portfolio__items--item:hover .portfolio__items--item--img, .portfolio__items--item:focus .portfolio__items--item--img {
+      transform: scale(1.5); }
     .portfolio__items--item--fig {
       display: flex;
       flex-direction: column;
@@ -988,22 +992,24 @@ h2 {
           clear: both; }
 
 .portfolio-link {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   letter-spacing: 0;
-  color: #C69963;
+  color: #ffffff;
   text-transform: upppercase;
   line-height: 1;
-  font-family: "Cardo", serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 400;
   text-decoration: none;
-  border-bottom: 2px solid #C69963;
+  border-bottom: 2px solid #A78CE7;
   align-self: flex-start; }
 
 @supports (display: grid) {
   .portfolio__items {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-    grid-gap: .5em; } }
+    grid-gap: .5em; }
+  .span-2 {
+    grid-row: span 2; } }
 
 .portfolio-modal {
   background-color: #ffffff;
@@ -1037,7 +1043,7 @@ h2 {
 .modal-close {
   background: transparent;
   position: fixed;
-  background: #C69963;
+  background: #A78CE7;
   top: .7em;
   left: 1.5em;
   border: 0;
@@ -1047,7 +1053,8 @@ h2 {
   cursor: pointer;
   box-shadow: 0 0 5px rgba(198, 153, 99, 0.9); }
   .modal-close img {
-    height: 1em; }
+    height: 1em;
+    margin-top: .2em; }
 
 .portfolio-header {
   text-align: left;
@@ -1080,7 +1087,7 @@ h2 {
   background-image: url("../img/miami-modal-header.jpg"); }
 
 .portfolio-title-box {
-  background: rgba(56, 64, 91, 0.9);
+  background: rgba(96, 96, 96, 0.9);
   padding: 2em 0 1em 2em;
   color: #ffffff;
   width: 100%; }
@@ -1096,13 +1103,14 @@ h2 {
     font-family: "Oswald", sans-serif;
     font-weight: 400; }
   .portfolio-title-box .portfolio-title {
+    color: #ffffff;
     font-size: 1.9rem;
     display: inline-block; }
     .portfolio-title-box .portfolio-title::after {
       content: '';
       height: 3px;
       margin: .5em 0;
-      background: #ffffff;
+      background: #A78CE7;
       display: block; }
     @media (min-width: 75em) {
       .portfolio-title-box .portfolio-title {
@@ -1125,13 +1133,17 @@ h2 {
         display: block;
         clear: both; }
       .portfolio-title-box .social-icons .social-icon:hover {
-        fill: #C69963; }
+        fill: #FF7BB4; }
 
 .portfolio-content {
   text-align: left;
   width: 85%;
   margin: 0 auto;
   padding-bottom: 2em; }
+  .portfolio-content h2 {
+    color: #606060; }
+  .portfolio-content h3 {
+    color: #A78CE7; }
 
 .portfolio-full-width {
   width: 100vw !important;

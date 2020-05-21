@@ -1,15 +1,17 @@
 // Make a variable for the portfolio container = class portfolio-items. portfolio-items contains all portfolio elements.
-const portfolioContainer = document.querySelector('.portfolio-items')
+const portfolioContainer = document.querySelector('.portfolio__items')
 
 // addEventListener listening for a click,
 portfolioContainer.addEventListener('click', ev => {
 
-  // e.preventDefault()
+  // ev.preventDefault()
 
   // Variable for turning on the modal in relation to the link clicked.
   // When the target is the closest class of portfolio-link
   const modalToggle = ev.target.closest('.portfolio-link')
 
+  if(modalToggle) ev.preventDefault()
+  
   // If a click is not a portfolio-link, end script.
   if (! modalToggle) return
 
@@ -22,7 +24,7 @@ portfolioContainer.addEventListener('click', ev => {
   const modalOpen = _ => {
     // Open the modal by adding class open
     modal.classList.add('open')
-    modal.style.animation = 'modalIn 300ms forwards'
+    modal.style.animation = 'modalIn 1000ms forwards'
     // Remove back scroll
     document.body.style.overflowY = 'hidden'
   }
@@ -39,7 +41,7 @@ portfolioContainer.addEventListener('click', ev => {
 
   // closeButton is equal to a function to fade the modal out and look for the end of the animation followed by running a function.
   closeButton.addEventListener('click', _=> {
-    modal.style.animation = 'modalOut 300ms forwards'
+    modal.style.animation = 'modalOut 1000ms forwards'
     modal.addEventListener('animationend', modalClose)
     // Add back scroll
     document.body.style.overflowY = 'scroll'
