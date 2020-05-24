@@ -28,21 +28,22 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://use.typekit.net/pws3tdw.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
     <!-- Start of Mobile Nav -->
     <nav class="mobile-nav">
       <ul>
-        <li><a href="#home">home</a></li>
-        <li><a href="#about">about</a></li>
-        <li><a href="#portfolio">portfolio</a></li>
-        <li><a href="#contact">contact</a></li>
-        <li><a href="cv.pdf" target="_blank">cv</a></li>
-        <li><a href="transcript.pdf" target="_blank">transcript</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="cv.pdf" target="_blank">CV</a></li>
+        <li><a href="transcript.pdf" target="_blank">Transcript</a></li>
       </ul>
     </nav>
 
-    <header class="header">
+    <header class="header" data-aos="fade-right">
       <img src="img/header-logo2.png" alt="" class="header--logo">
 
       <!-- Start of the navigation -->
@@ -62,7 +63,7 @@
     <div class="body-container">
       <!-- Start of the hero banner section, along with being the placeholder for the navigation hamburger. -->
       <section class="hero">
-        <button class="menu-button">
+        <button class="menu-button" data-aos="fade-right">
           <!-- SVG for hamburger -->
           <svg class="hamburger" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 124 124" style="enable-background:new 0 0 124 124;" xml:space="preserve" class="hovered-paths"><g><g>
             <path d="M112,6H12C5.4,6,0,11.4,0,18s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,6,112,6z"  class="active-path" />
@@ -75,35 +76,58 @@
           </g></g> </svg>
         </button>
 
-        <img src="img/hero.jpeg" alt="" class="hero--img">
+        <img src="img/hero.jpeg" alt="" class="hero--img" data-aos="zoom-out">
         <div class="hero__content">
-          <h1 class="hero__content--title">Michael J Caunce</h1>
-          <h2 class="hero__content--sub">Front end developer with a creative edge</h2>
-          <p class="hero__content--text">Every story we tell and every interaction we create, must not only look beautiful, but has to feel and function beautifully, too.</p>
+          <h1 class="hero__content--title" data-aos="fade-down">Michael J Caunce</h1>
+          <h2 class="hero__content--sub" data-aos="fade-down">Front end developer with a creative edge</h2>
+          <p class="hero__content--text" data-aos="fade-down">Every story we tell and every interaction we create, must not only look beautiful, but has to feel and function beautifully, too.</p>
         </div>
         <div class="hero__footer">
-          <a href="" class="btn">Recent Projects</a>
+          <a href="#portfolio" class="btn">Recent Projects</a>
         </div>
       </section>
 
       <!-- Start of the about me section -->
       <section class="about__container">
         <div class="about-me" id="about">
-          <img src="img/about.jpg" alt="A greyscale photo of the Michael Caunce, the creator and person of whom this portfolio belongs to. Michael is in deep thought whilst enjoying the view from Old Wardour Castle">
-          <h1 class="about-title">About Me</h1>
-          <h2 class="about-subtitle">Designer/Developer</h2>
-          <div class="about-text">
-            <p class="large-text">Based in the North West, I am a recent graduate from Edge Hill with aspirations of working within the web industry. I have recently completed a BSc in Web Design & Development, where I achieved an overall first-class classification.</p>
-            <p>I am an ambitious, personable and driven individual with a track record demonstrating passion, resilience and determination, shown by recently being awarded the ‘Academic Achievement Award’. Throughout my degree, I have acquired knowledge and experience in <b>HTML5</b>, <b>CSS3</b>, <b>JavaScript</b>, <b>UX</b>, <b>PHP</b>, <b>Laravel</b>, <b>Version Control</b>, <b>Gulp</b>, <b>Sass</b>, <b>MySQL</b>, the <b>BEM</b> methodology and extensive <b>research</b> skills.</p>
-            <p>As a recent graduate, I continue to learn and develop my skills as an active Udemy student where I recently completed <a href="wordpress.pdf" target="_blank">‘Become a WordPress Developer: Unlocking Power With Code’.</a></p>
-            <p>I am now actively seeking a junior or graduate role in web design and development as a front-end developer where I can demonstrate my passion for all things creative and technological I am eager to utilise my interpersonal skills and enhance the foundation of knowledge I have acquired throughout my degree.</p>
+          <img src="img/about.jpg" data-aos="zoom-in-up" alt="A greyscale photo of the Michael Caunce, the creator and person of whom this portfolio belongs to. Michael is in deep thought whilst enjoying the view from Old Wardour Castle">
+          <h1 class="about-title" data-aos="zoom-in">About Me</h1>
+          <h2 class="about-subtitle" data-aos="zoom-in">Designer/Developer</h2>
+          <div class="about-text" data-aos="zoom-in">
+            <p class="large-text">Based in the North West, I am a recent graduate from Edge Hill where I recently completed a BSc in Web Design & Development, achieving an overall first-class classification.</p>
+            <p>I am an ambitious, personable and driven individual with a track record of demonstrating passion, resilience and determination, traits which led to being the recipient of the ‘Academic Achievement Award’.</p>
+            <p>As a recent graduate, I freelance and continue to learn and develop my skills as an active Udemy student where I am currently learning React and enhancing my knowledge in JS and Laravel. </p>
+            <p>I am actively seeking a junior or graduate role in web design and development as a front-end developer where I can demonstrate my passion for all things creative and technological and utilise my interpersonal skills and enhance the foundation of knowledge I have acquired throughout my degree.</p>
           </div>
+        </div>
+      </section>
+
+      <section class="skills__container">
+        <div class="skills">
+          <h1 class="skills--title" data-aos="fade-down">Skill Set</h1>
+          <ul class="skills__list">
+            <div class="flex-column" data-aos="fade-right">
+              <li class="skills__list--item" aria-label="advanced">HTML</li>
+              <li class="skills__list--item" aria-label="advanced">CSS</li>
+              <li class="skills__list--item" aria-label="average">JS</li>
+              <li class="skills__list--item" aria-label="average">React</li>
+              <li class="skills__list--item" aria-label="advanced">Version Control</li>
+           </div>
+          
+          <div class="flex-column" data-aos="fade-left">
+            <li class="skills__list--item" aria-label="average">PHP</li>
+            <li class="skills__list--item" aria-label="average">Laravel</li>
+            <li class="skills__list--item" aria-label="advanced">Wordpress</li>
+            <li class="skills__list--item" aria-label="advanced">UX</li>
+            <li class="skills__list--item" aria-label="average">MySQL</li>
+            </div>
+          </ul>
         </div>
       </section>
 
       <!-- Start of the quote section -->
       <section class="quote-section">
-        <div class="quote">
+        <div class="quote" data-aos="flip-up">
           <q>An essential aspect of creativity is not being afraid to fail</q>
           <p>Edwin Land</p>
         </div>
@@ -582,5 +606,12 @@
     <!-- Import JS scripts -->
     <script src="js/nav.js"></script>
     <script src="js/portfolio.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 400,
+        duration: 1000
+      });
+    </script>
   </body>
 </html>

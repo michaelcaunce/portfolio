@@ -165,9 +165,6 @@
         padding: 0 .5em;
         display: inline-block;
         transition: transform .3s;
-        animation-name: moveInLeft;
-        animation-duration: 1s;
-        animation-timing-function: ease-out;
 
         &::after {
           content: '';

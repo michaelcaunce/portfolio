@@ -1,0 +1,96 @@
+@for $i from 1 through 1 {
+    &:nth-child(#{$i}):after {
+    animation: animation-delay(#{$i * 1.5}s);
+    }
+}
+
+@keyframes fill {
+    from {
+        right: 100%;
+    }
+}
+
+
+.skills__container {
+    width: 100%;
+    position: relative;
+
+    &:before {
+        content: 'skills';
+        position: absolute;
+        color: $base;
+        font-size: 30rem;
+        opacity: .03;
+    }
+}
+
+
+.skills {
+    @include container($max-width: 80em);
+    @include clearfix;
+    padding-bottom: 5em;
+
+    &__list {
+        @include sans-serif($fs: 1.2rem, $ff: $ff-title, $color: $base);
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        &--item {
+            position: relative; // For positioning bar pseudo elements
+            height: 60px;
+            margin: 1rem 0 0 0;
+            width: 90%;
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                border-radius: 20px;
+                margin-top: 2rem;
+            }
+
+            &:before {
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                height: 20px;
+                background: $base;
+            }
+
+            &:after {
+                background-color: $main;
+                background: repeating-linear-gradient(-45deg, $main, $main 10px, lighten($main, 3) 10px, lighten($main, 3) 20px);
+                height: 16px; 
+                top: 2px;
+                left: 2px;
+                animation: fill 2s both;
+            }
+
+            &[aria-label="novice"]:after {
+                right: 75%;
+            }
+            &[aria-label="average"]:after {
+                right: 50%;
+            }
+            &[aria-label="adept"]:after {
+                right: 35%;
+            }
+            &[aria-label="advanced"]:after {
+                right: 20%;
+            }
+            &[aria-label="elite"]:after {
+                right: 10%;
+            }
+            &[aria-label="pro"]:after {
+                right: 2px;
+            }
+        }
+    }
+}
+
+  
+  
+  
