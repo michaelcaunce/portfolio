@@ -14,13 +14,13 @@
   }
 }
 
-.about-me {
+.about__section {
   @include container;
   @include clearfix;
   margin-top: 5em;
   margin-bottom: 5em;
   
-  img {
+  &--img {
     @include clearfix;
     margin-top: 2em;
     margin-bottom: 2em;
@@ -50,19 +50,18 @@
 // Styling specific for browsers supporting css grids
 @supports (display: grid) {
   // Define the grid of the about me section. The use of 'start' and 'end' to ensure elements can be desirably placed.
-  .about-me {
+  .about__section {
     display: grid;
     // Names are assigned to the lines of the grid, see square brackets. The use of name lines allows line-based placement for redefining the grid.
     grid-template-columns: [about-start] minmax(15em, 1fr) [title-start] minmax(6em, 1fr) [img-end] 2fr [about-end];
     grid-column-gap: .75em;
 
     // Defining the placement of the about title ensuring the placement overlaps the imgage.
-    .about-title {
+    &--title {
       grid-column: about-start / about-end;
       grid-row: 2 / 2;
       margin-top: -3em;
       
-
       @include mq {
         margin-top: .5em;
         grid-row: 1 / 2;
@@ -70,7 +69,7 @@
       }
     }
 
-    .about-subtitle {
+    &--sub {
       @include sans-serif($fs: 2rem, $ff: $ff-title, $color: $accent);
       font-style: italic;
       margin-top: -2.8em;
@@ -82,7 +81,7 @@
     }
 
     // Ensure that the subtitle flows beneath the image and the content of the section occupies the full width. Small screens only.
-    .about-subtitle, .about-text {
+    &--sub, &--text {
       grid-column: about-start / about-end;
 
       // The subtitle and content will positon next to the image on larger screens.
@@ -92,7 +91,7 @@
       }
     }
 
-    .about-text {
+    &--text {
       @include mq {
         margin-top: 2rem;
         border: 6px solid transparent;
@@ -108,7 +107,7 @@
 
 
     // Defining the placement of the image within the grid.
-    img {
+    &--img {
       grid-column: about-start / img-end;
       grid-row: 1 / 2;
 

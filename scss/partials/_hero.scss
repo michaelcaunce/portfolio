@@ -143,20 +143,26 @@
       width: 40%;
       background: $main;
 
-      @include mq-xl {
-        height: 4em;
-        left: 30%;
-        width:60%;
-        top: 88%;
+      @include mq-l {
+        height:20em;
+        left: 58%;
+        width:30%;
+        top: 85%;
       }
 
+      @include mq-xl {
+        height:20em;
+        left: 45%;
+        width: 50%;
+        top: 85%;
+      }
     }
 
     .btn {
       @include sans-serif($fs: 1.5rem, $color: $white, $ff: $ff-main, $ls: 0);
       position: relative;
       top: 30%;
-      left: 40%;;
+      left: 40%;
       text-decoration: none;
       border: 3px solid $white;
       padding: .5rem .5em;

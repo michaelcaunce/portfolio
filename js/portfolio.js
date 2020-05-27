@@ -18,7 +18,7 @@ portfolioContainer.addEventListener('click', ev => {
   // Variable modal is equal to the parent / next sibling of modalToggle. The parent being the figcaption, next sibling being the class portfolio-modal (see index.html)
   const modal = modalToggle.parentNode.nextElementSibling
   // Variable equal to class modal-close
-  const closeButton = modal.querySelector('.modal-close')
+  const closeButton = modal.querySelector('.modal__section--button')
 
   // modalOpen is equal to a function to add the open class and add an inline style for animation, modalIn (see _modal.scss)
   const modalOpen = _ => {

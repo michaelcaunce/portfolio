@@ -1,6 +1,6 @@
 // Start of modal styling
 
-.portfolio-modal {
+.modal__section {
   background-color: $white;
   position: fixed;
   z-index: 10;
@@ -11,61 +11,100 @@
   box-shadow: 0 0 0 3em rgba($primary, .8);
   overflow-y: scroll;
   overflow-x: hidden;
-
   display: none;
 
+  &--button {
+    background: transparent;
+    position: fixed;
+    background: $main;
+    top: .7em;
+    left: 1.5em;
+    border: 0;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba($secondary, .9);
+  
+    &--img {
+      max-height: 1em;
+      margin-top: .2em;
+    }
+  }
+
+  // Start of the modal header styling
+
+  &--header {
+    text-align: left;
+    padding: 5em 0;
+    margin-bottom: 2em;
+
+    // Styling for the overlapping title box at the top of each modal
+    &--box {
+      background: rgba($base, .9);
+      padding: 2em 0 1em 2em;
+      color: $white;
+      width: 100%;
+
+      @include mq-l {
+          padding: 5em 0 1em 5em;
+        }
+
+      &--title {
+        color: $white;
+        font-size: 1.9rem;
+        display: inline-block;
+    
+        &::after {
+          content: '';
+          height: 3px;
+          margin: .5em 0;
+          background: $main;
+          display: block;
+        }
+
+        @include mq-l {
+            font-size: 3rem;
+        }
+      }
+
+      &--sub {
+        @include sans-serif($fs: 1.5rem, $color: $white, $ff: $ff-title, $ls: 0);
+      }
+
+      &--social {
+        display: flex;
+        align-items: flex-start;
+    
+        &--icons {
+          @include clearfix;
+          width: 2.5em;
+          height: 2.5em;
+          margin-right: 1em;
+          fill: $white;
+    
+          &:hover {
+            fill: $accent;
+          }
+        }
+      }
+    }
+  }
+
+  // Class to be added in JS
   &.open {
     display: block;
   }
-
-  h2 {
-      @include sans-serif($fs: 2.8rem, $color: $secondary, $ff: $ff-title, $ls: 0);
-      margin-top: 1em;
-
-      @include mq-l {
-        font-size: 3em;
-      }
-  }
-
-  h3 {
-    margin-bottom: 1em;
-  }
 }
 
-.modal-close {
-  background: transparent;
-  position: fixed;
-  background: $main;
-  top: .7em;
-  left: 1.5em;
-  border: 0;
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 0 5px rgba($secondary, .9);
-
-  img {
-    height: 1em;
-    margin-top: .2em;
-  }
-}
-
-// Start of the modal header styling
-
-.portfolio-header {
-  text-align: left;
-  padding: 5em 0;
-  margin-bottom: 2em;
-}
-
-.header-one, .header-two, .header-three, .header-four, .header-five, .header-six {
+// Styling for specific modal headers 
+.header-one, .header-two, .header-three, .header-four, .header-five, .header-six {  
   background-size: cover;
   background-position: center;
 
   @include mq-l {
     height: 60vh;
-    }
+  }
 }
 
 // Styling specific to individual modals. The 'hero' image at the top of each modal
@@ -93,76 +132,104 @@
   background-image: url('../img/miami-modal-header.jpg');
 }
 
-// Styling for the overlapping title box at the top of each modal
-.portfolio-title-box {
-  background: rgba($base, .9);
-  padding: 2em 0 1em 2em;
-  color: $white;
-  width: 100%;
-
-  @include mq-l {
-      padding: 5em 0 1em 5em;
-    }
-
-    p {
-      @include sans-serif($fs: 1.5rem, $color: $white, $ff: $ff-title, $ls: 0);
-    }
-
-  .portfolio-title {
-    color: $white;
-    font-size: 1.9rem;
-    display: inline-block;
-
-    &::after {
-      content: '';
-      height: 3px;
-      margin: .5em 0;
-      background: $main;
-      display: block;
-    }
-    @include mq-l {
-        font-size: 3rem;
-    }
-  }
-  .portfolio-subtitle {
-    font-size: 1.3rem;
-
-    @include mq-l {
-        font-size: 1.8rem;
-    }
-  }
-
-  .social-icons {
-    // @include container($max-width: 15em);
-
-    display: flex;
-    align-items: flex-start;
-
-    .social-icon {
-      @include clearfix;
-      width: 2.5em;
-      height: 2.5em;
-      margin-right: 1em;
-      fill: $white;
-
-      &:hover {
-        fill: $accent;
-      }
-    }
-  }
-}
-
-
 // End of modal header styling
 
-.portfolio-content {
+// Start of the modal content styling
+.modal__content {
   text-align: left;
   width: 85%;
   margin: 0 auto;
   padding-bottom: 2em;
 
-  h2 {
-    color: $base;
+  // Title styling
+   &--title {
+      @include sans-serif($fs: 2.8rem, $color: $base, $ff: $ff-title, $ls: 0);
+      margin-top: 1em;
+
+      @include mq-l {
+        font-size: 3em;
+      }
+  }
+
+  // Styling for the full width banners
+  &--fullwidth {
+    width: 100vw !important;
+    max-width: initial;
+    margin: 2em calc(50% - 50vw);
+    height: 20vh !important;
+    object-fit: cover;
+  }
+
+  &--section {
+    .img-left {
+      width: 150px;
+      height: 150px;
+      float: left;
+      margin-right: 1em;
+      shape-outside: ellipse();
+      border-radius: 50%;
+    }
+
+    .img-right {
+      max-width: 350px;
+      max-height: 350px;
+      float: right;
+      margin-bottom: 2em;
+  
+    @include mq-l {
+      margin-top: -5em;
+      }
+    }
+
+    // Styling for the modal gallery
+    &--gallery {
+      display: flex;
+      flex-wrap: wrap;
+
+      &--fig {
+        position: relative;
+        overflow: hidden;
+        flex: 1 1 25rem;
+      
+        &--img {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    // Styling for the modal video
+    &--videoholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      flex-direction: column;
+      margin-top: -2em;
+
+      &--video {
+        width: 100%;
+      }
+    }
+
+
+ 
+    
+    
+    
+    @supports (display: grid) {
+      // max-height: 50vh;
+      &--gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: .5em;
+    
+        @include mq {
+          grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+        }
+      }
+    }
   }
 
   h3 {
@@ -170,15 +237,8 @@
   }
 }
 
-// Styling for the full width image that seperates certain sections.
-.portfolio-full-width {
-  width: 100vw !important;
-  max-width: initial;
-  margin: 2em calc(50% - 50vw);
-  height: 20vh !important;
-  object-fit: cover;
-}
 
+// Modal Animations
 @keyframes modalIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
@@ -189,109 +249,3 @@
   100% { opacity: 0; }
 }
 
-// styling for modal sections
-
-.branding {
-  .circle-logo {
-    width: 150px;
-    height: 150px;
-    float: left;
-    margin-right: 1em;
-    shape-outside: ellipse();
-    border-radius: 50%;
-  }
-
-  .logo {
-    width: 250px;
-    height: 250px;
-    float: left;
-    margin-right: 1em;
-  }
-
-  .mjc-logo {
-    width: 200px;
-    height: 200px;
-    float: left;
-    margin-right: .5em;
-    shape-outside: ellipse();
-    border-radius: 50%;
-  }
-}
-
-.responsive {
-  @include mq-l {
-    margin-bottom: 5em;
-    }
-
-  img {
-    max-width: 350px;
-    max-height: 350px;
-    float: right;
-    margin-bottom: 2em;
-
-  @include mq-l {
-    margin-top: -5em;
-    }
-  }
-}
-
-.design {
-  @include mq-l {
-    margin-bottom: 5em;
-  }
-
-  img {
-    margin-bottom: 5em;
-    @include mq-l {
-      @include container($max-width: 50em);
-    }
-  }
-}
-
-.demonstration {
-  .video-holder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    flex-direction: column;
-    margin-top: -2em;
-
-    video {
-      width: 100%;
-    }
-  }
-}
-
-// Modal Gallery Styling
-
-.gallery-items {
-  display: flex;
-  flex-wrap: wrap;
-  background: $primary;
-}
-
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-  flex: 1 1 25rem;
-
-  img {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-@supports (display: grid) {
-  // max-height: 50vh;
-  .gallery-items {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: .5em;
-
-    @include mq {
-      grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
-    }
-  }
-}

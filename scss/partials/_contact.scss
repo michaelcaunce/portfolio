@@ -2,7 +2,6 @@
 .contact__container {
   background: $white;
   margin-bottom: 5em;
-
   position: relative;
 
   &::before {
@@ -15,22 +14,20 @@
   }
 }
 
-.contact {
+.contact__section {
   @include container;
-  // @include sans-serif($fs: 1rem, $color: $secondary, $ff: $ff-body, $ls: 0);
   padding: 2em 0;
   position: relative;
   
-  h1 {
+  &--title {
     text-align: left;
     margin-top: 1em;
   }
 
-  .contact-subtitle {
+  &--sub {
     @include sans-serif($fs: 1.8rem, $ff: $ff-title, $color: $accent);
     margin-top: -1.5em;
     font-style: italic;
-
 
     @include mq {
       font-size: 2.5rem;
@@ -38,61 +35,73 @@
     }
   }
 
-  // form {
-  //   display: flex;
-  //   flex-direction: column;
-  // }
+  &--form {
+    width: 100%;
+    background: $white;
+    padding: 3.5rem;
+    border-radius: .8rem;
+    box-shadow:  20px 20px 60px #d9d9d9, 
+    -20px -20px 60px #ffffff;
+    font-family: $ff-title;
+    font-size: 1.2rem;
 
-  // label {
-  //   display: block;
-  //   margin-top: 1em;
-  //   color: $base;
-  // }
+    &--inputs {
+      display: flex;
+      flex-direction: column;
 
-  // input, textarea {
-  //   display: block;
-  //   padding: .5em;
-  //   width: 100%;
-  //   background: lighten($primary, 65%);
-  //   border: 1px solid $primary;
-  // }
+      @include mq {
+        flex-direction: row;
+
+        input:first-child {
+          margin-right: 3.5rem;
+        }
+      }
+    }
+  }
+
+  // Styling for the social icons
+  &--icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2em;
+
+    &--list {
+      list-style: none;
+
+      &--link {
+        display: flex;
+        font-size: 2rem;
+        text-decoration: none;
+        color: #b6bbc5;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        box-shadow:
+        1rem 1rem 2rem rgba(0,0,0, .1),
+        -1rem -1rem 2rem rgba(255,255,255, .5);
+
+        &:hover {
+          box-shadow:
+          inset 1rem 1rem 2rem rgba(0,0,0, .1),
+          inset -1rem -1rem 2rem rgba(255,255,255, .5);
+        }
+
+       i {
+          margin: auto;
+        }
+      }
+    }
+  }
 
   .captcha {
     margin-top: 1em;
     display: block;
     width: 20%;
   }
-
-  // .button {
-  //   display: block;
-  //   width: 20%;
-  //   margin-right: auto;
-  //   margin-top: 1em;
-  //   background: $secondary;
-  //   color: $white;
-  //   cursor: pointer;
-  //   transition: transform .3s;
-
-  //   &:hover {
-  //     background: linear-gradient(to right,
-  //     $black, $primary);
-  //     color: $secondary;
-  //     transform: translateY(.5rem) scale(1);
-  //   }
-  // }
 }
 
-
-.form-container {
-  width: 100%;
-  background: $white;
-  padding: 3.5rem;
-  border-radius: .8rem;
-  box-shadow: var(--shadow-normal);
-  font-family: $ff-title;
-  font-size: 1.2rem;
-}
-
+// Styling outside of the parent div as styling applies to multiple input fields
 input, textarea {
   display: block;
   width: 100%;
@@ -101,7 +110,8 @@ input, textarea {
   background-color: transparent;
   border: none;
   border-radius: 2rem;
-  box-shadow: var(--shadow-inset);
+  box-shadow: inset 20px 20px 60px #d9d9d9, 
+  inset -20px -20px 60px #ffffff;
   margin-bottom: 3.5rem;
   outline: none;
 }
@@ -119,14 +129,6 @@ input::placeholder, textarea::placeholder {
   color: #b6bbc5;
 }
 
-.input-group {
-  display: flex;
-}
-
-.input-group input:first-child {
-  margin-right: 3.5rem;
-}
-
 .button {
   width: 100%;
   display: block;
@@ -139,70 +141,15 @@ input::placeholder, textarea::placeholder {
   letter-spacing: 2px;
   outline: none;
   padding: 1.5rem;
-  box-shadow: var(--shadow-normal);
+  box-shadow: 20px 20px 60px #d9d9d9, 
+  -20px -20px 60px #ffffff;
   cursor: pointer;
   border-radius: 2rem;
 }
 
 .button:hover,
 .button:focus {
-  box-shadow: var(--shadow-inset)
-}
-
-@media screen and (max-width: 600px) {
-  .input-group {
-    display: block;
-  }
-
-  .input-group input:first-child {
-    margin-right: 0;
-  }
-}
-
-:root {
-  --shadow-normal:
-  20px 20px 60px #d9d9d9, 
-  -20px -20px 60px #ffffff;
-
-  --shadow-inset:
-  inset 20px 20px 60px #d9d9d9, 
+  box-shadow: inset 20px 20px 60px #d9d9d9, 
   inset -20px -20px 60px #ffffff;
-
 }
 
-
-.icon-list {
-  width: 100%;
-  // max-width: 98rem;
-  // padding: 0 1.5rem;
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 2em;
-}
-
-.icon-item {
-  list-style: none;
-}
-
-.icon-link {
-  display: flex;
-  font-size: 2rem;
-  text-decoration: none;
-  color: #b6bbc5;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  box-shadow:
-  1rem 1rem 2rem rgba(0,0,0, .1),
-  -1rem -1rem 2rem rgba(255,255,255, .5);
-}
-
-.icon-link:hover {
-  box-shadow:
-  inset 1rem 1rem 2rem rgba(0,0,0, .1),
-  inset -1rem -1rem 2rem rgba(255,255,255, .5);
-}
-
-.icon-link i {
-  margin: auto;
-}

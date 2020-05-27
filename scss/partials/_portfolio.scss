@@ -41,6 +41,44 @@
       font-size: 2.5rem;
     }
   }
+
+  &--filter {
+    margin: 3rem 0 3rem 0;
+    
+    
+    &--buttons {
+      list-style: none;
+      text-align: center;
+      padding: 0;
+      
+  
+      &--list {
+        display: inline-block;
+        @include sans-serif($fs: 1.1rem, $ff: $ff-title, $color: $base);
+        margin: 0 5px;
+        text-transform: uppercase;
+        cursor: pointer;
+        padding: 1rem; 
+
+        @include mq-l {
+          font-size: 1.8rem;
+        }
+        
+        &:hover {
+          color: $accent;
+        }
+      }
+    }
+  
+    .active {
+      font-weight: bolder;
+      border-bottom: 4px solid $main;
+
+      &:hover {
+        color: $base;
+      }
+    }
+  }
 }
 
 // Styling for the portfolio items
@@ -130,3 +168,5 @@
     grid-row: span 2;
   }
 }
+
+
