@@ -38,7 +38,7 @@
       left: 0;
       height: .5em;
       width: 40%;
-      background: $main;
+      background: $main-light;
 
       @include mq {
         top: 50%;
@@ -64,7 +64,7 @@
     @include mq-l {
       grid-column: 1 / 8;
       grid-row: 3 / 7;
-      border-left: .4rem solid $main;
+      border-left: .4rem solid $main-light;
       padding: 3em 0 0 3em;
       margin-left: 5em;
     }
@@ -141,7 +141,7 @@
       left: 60%;
       height: 5em;
       width: 40%;
-      background: $main;
+      background: $main-light;
 
       @include mq-l {
         height:20em;

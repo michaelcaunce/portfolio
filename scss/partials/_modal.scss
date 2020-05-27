@@ -38,6 +38,12 @@
     text-align: left;
     padding: 5em 0;
     margin-bottom: 2em;
+    background-size: cover;
+    background-position: center;
+
+    @include mq-l {
+      height: 60vh;
+    } 
 
     // Styling for the overlapping title box at the top of each modal
     &--box {
@@ -97,39 +103,45 @@
   }
 }
 
-// Styling for specific modal headers 
-.header-one, .header-two, .header-three, .header-four, .header-five, .header-six {  
-  background-size: cover;
-  background-position: center;
-
-  @include mq-l {
-    height: 60vh;
-  }
-}
-
 // Styling specific to individual modals. The 'hero' image at the top of each modal
-.header-one {
-  background-image: url('../img/iit-modal-header.jpg');
+.header-blackswan {
+  background-image: url('../img/blackswan-modal.png');
 }
 
-.header-two {
-  background-image: url('../img/doggie-modal-header.jpg');
+.header-adventure {
+  background-image: url('../img/adventure-modal.png');
 }
 
-.header-three {
-  background-image: url('../img/laravel-modal-header.jpg');
+.header-mendip {
+  background-image: url('../img/mendip-modal.png');
 }
 
-.header-four {
-  background-image: url('../img/nml-modal-header.jpg');
+.header-roman {
+  background-image: url('../img/roman-modal.png');
 }
 
-.header-five {
-  background-image: url('../img/tx-modal-header.jpg');
+.header-connect4 {
+  background-image: url('../img/connect4-modal.png');
 }
 
-.header-six {
-  background-image: url('../img/miami-modal-header.jpg');
+.header-nexter {
+  background-image: url('../img/nexter-modal.png');
+}
+
+.header-iit {
+  background-image: url('../img/iit-modal.png');
+}
+
+.header-dw {
+  background-image: url('../img/dw-modal.png');
+}
+
+.header-blog {
+  background-image: url('../img/blog-modal.png');
+}
+
+.header-nml {
+  background-image: url('../img/nml-modal.png');
 }
 
 // End of modal header styling

@@ -95,7 +95,7 @@
       @include mq {
         margin-top: 2rem;
         border: 6px solid transparent;
-        border-image: linear-gradient(to bottom, $white, $main);
+        border-image: linear-gradient(to bottom, $main-light, $main);
         border-image-slice: 1;
         padding-top: 1rem;
         padding-left: 1rem;

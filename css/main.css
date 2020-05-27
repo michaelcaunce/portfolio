@@ -406,7 +406,7 @@ template {
       .about__section--text {
         margin-top: 2rem;
         border: 6px solid transparent;
-        border-image: linear-gradient(to bottom, #ffffff, #A78CE7);
+        border-image: linear-gradient(to bottom, #CECFFF, #A78CE7);
         border-image-slice: 1;
         padding-top: 1rem;
         padding-left: 1rem;
@@ -696,7 +696,7 @@ input::placeholder, textarea::placeholder {
       left: 0;
       height: .5em;
       width: 40%;
-      background: #A78CE7; }
+      background: #CECFFF; }
       @media (min-width: 50em) {
         .hero__content:before {
           top: 50%; } }
@@ -717,7 +717,7 @@ input::placeholder, textarea::placeholder {
       .hero__content {
         grid-column: 1 / 8;
         grid-row: 3 / 7;
-        border-left: 0.4rem solid #A78CE7;
+        border-left: 0.4rem solid #CECFFF;
         padding: 3em 0 0 3em;
         margin-left: 5em; } }
     .hero__content--title {
@@ -793,7 +793,7 @@ input::placeholder, textarea::placeholder {
       left: 60%;
       height: 5em;
       width: 40%;
-      background: #A78CE7; }
+      background: #CECFFF; }
       @media (min-width: 75em) {
         .hero__footer::after {
           height: 20em;
@@ -852,7 +852,7 @@ input::placeholder, textarea::placeholder {
 
 .message__container {
   padding: 3rem 0;
-  background-image: url(../../img/quote.jpeg);
+  background-image: url(../../img/message.jpeg);
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -973,7 +973,12 @@ input::placeholder, textarea::placeholder {
   .modal__section--header {
     text-align: left;
     padding: 5em 0;
-    margin-bottom: 2em; }
+    margin-bottom: 2em;
+    background-size: cover;
+    background-position: center; }
+    @media (min-width: 75em) {
+      .modal__section--header {
+        height: 60vh; } }
     .modal__section--header--box {
       background: rgba(96, 96, 96, 0.9);
       padding: 2em 0 1em 2em;
@@ -1020,30 +1025,35 @@ input::placeholder, textarea::placeholder {
   .modal__section.open {
     display: block; }
 
-.header-one, .header-two, .header-three, .header-four, .header-five, .header-six {
-  background-size: cover;
-  background-position: center; }
-  @media (min-width: 75em) {
-    .header-one, .header-two, .header-three, .header-four, .header-five, .header-six {
-      height: 60vh; } }
+.header-blackswan {
+  background-image: url("../img/blackswan-modal.png"); }
 
-.header-one {
-  background-image: url("../img/iit-modal-header.jpg"); }
+.header-adventure {
+  background-image: url("../img/adventure-modal.png"); }
 
-.header-two {
-  background-image: url("../img/doggie-modal-header.jpg"); }
+.header-mendip {
+  background-image: url("../img/mendip-modal.png"); }
 
-.header-three {
-  background-image: url("../img/laravel-modal-header.jpg"); }
+.header-roman {
+  background-image: url("../img/roman-modal.png"); }
 
-.header-four {
-  background-image: url("../img/nml-modal-header.jpg"); }
+.header-connect4 {
+  background-image: url("../img/connect4-modal.png"); }
 
-.header-five {
-  background-image: url("../img/tx-modal-header.jpg"); }
+.header-nexter {
+  background-image: url("../img/nexter-modal.png"); }
 
-.header-six {
-  background-image: url("../img/miami-modal-header.jpg"); }
+.header-iit {
+  background-image: url("../img/iit-modal.png"); }
+
+.header-dw {
+  background-image: url("../img/dw-modal.png"); }
+
+.header-blog {
+  background-image: url("../img/blog-modal.png"); }
+
+.header-nml {
+  background-image: url("../img/nml-modal.png"); }
 
 .modal__content {
   text-align: left;
