@@ -548,7 +548,7 @@ h2 {
     background: #ffffff;
     padding: 3.5rem;
     border-radius: .8rem;
-    box-shadow: 20px 20px 60px #d9d9d9,  -20px -20px 60px #ffffff;
+    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
     font-family: "Oswald", sans-serif;
     font-size: 1.2rem; }
     .contact__section--form--inputs {
@@ -580,7 +580,7 @@ h2 {
         .contact__section--icons--list--link i {
           margin: auto; }
   .contact__section .captcha {
-    margin-top: 1em;
+    margin: 1em 0 1em 0;
     display: block;
     width: 20%; }
 
@@ -592,7 +592,7 @@ input, textarea {
   background-color: transparent;
   border: none;
   border-radius: 2rem;
-  box-shadow: inset 20px 20px 60px #d9d9d9,  inset -20px -20px 60px #ffffff;
+  box-shadow: inset 20px 20px 60px #d9d9d9, inset -20px -20px 60px #ffffff;
   margin-bottom: 3.5rem;
   outline: none; }
 
@@ -600,7 +600,7 @@ textarea {
   height: 300px; }
 
 input:focus, textarea:focus {
-  box-shadow: 20px 20px 60px #d9d9d9,  -20px -20px 60px #ffffff; }
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff; }
 
 input::placeholder, textarea::placeholder {
   color: #b6bbc5; }
@@ -617,13 +617,13 @@ input::placeholder, textarea::placeholder {
   letter-spacing: 2px;
   outline: none;
   padding: 1.5rem;
-  box-shadow: 20px 20px 60px #d9d9d9,  -20px -20px 60px #ffffff;
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
   cursor: pointer;
   border-radius: 2rem; }
 
 .button:hover,
 .button:focus {
-  box-shadow: inset 20px 20px 60px #d9d9d9,  inset -20px -20px 60px #ffffff; }
+  box-shadow: inset 20px 20px 60px #d9d9d9, inset -20px -20px 60px #ffffff; }
 
 .footer {
   display: flex;
