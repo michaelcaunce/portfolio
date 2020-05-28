@@ -10,26 +10,9 @@
     }
 }
 
-
-.skills__container {
-    width: 100%;
-    position: relative;
-
-    &:before {
-        content: 'skills';
-        position: absolute;
-        color: $base;
-        font-size: 30rem;
-        opacity: .03;
-        font-family: $ff-title;
-    }
-}
-
-
 .skills {
     @include container($max-width: 80em);
     @include clearfix;
-    padding-bottom: 5em;
 
     &__list {
         @include sans-serif($fs: 1.2rem, $ff: $ff-title, $color: $base);
@@ -64,7 +47,7 @@
             &:after {
                 background-color: $main;
                 background: repeating-linear-gradient(-45deg, $main, $main 10px, lighten($main, 3) 10px, lighten($main, 3) 20px);
-                height: 16px; 
+                height: 16px;
                 top: 2px;
                 left: 2px;
                 animation: fill 2s both;
@@ -91,7 +74,3 @@
         }
     }
 }
-
-  
-  
-  

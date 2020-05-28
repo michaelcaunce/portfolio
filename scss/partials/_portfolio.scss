@@ -1,29 +1,10 @@
 
-// Styling for the container
-.portfolio__container {
-  width: 100%;
-  position: relative;
-  margin-top: 5em;
-
-  &::before {
-    position: absolute;
-    content: 'projects';
-    font-size: 20rem;
-    font-family: $ff-title;
-    opacity: .03;
-    transform: rotate(-90deg);
-    top: 30%;
-    left: -20%;
-  }
-}
-
 // Styling for the portfolio section
 .portfolio__section {
   @include container($max-width: 80em);
   text-align: left;
   padding: 2em 0;
-  margin-bottom: 5em;
-
+  
   figure {
     margin: 0;
   }
@@ -36,7 +17,7 @@
     @include sans-serif($fs: 1.8rem, $ff: $ff-title, $color: $accent);
     margin-top: -1.5em;
     font-style: italic;
-  
+
     @include mq {
       font-size: 2.5rem;
     }
@@ -44,32 +25,32 @@
 
   &--filter {
     margin: 3rem 0 3rem 0;
-    
-    
+
+
     &--buttons {
       list-style: none;
       text-align: center;
       padding: 0;
-      
-  
+
+
       &--list {
         display: inline-block;
         @include sans-serif($fs: 1.1rem, $ff: $ff-title, $color: $base);
         margin: 0 5px;
         text-transform: uppercase;
         cursor: pointer;
-        padding: 1rem; 
+        padding: 1rem;
 
         @include mq-l {
           font-size: 1.8rem;
         }
-        
+
         &:hover {
           color: $accent;
         }
       }
     }
-  
+
     .active {
       font-weight: bolder;
       border-bottom: 4px solid $main;
@@ -161,12 +142,10 @@
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-gap: .5em;
 
-    
+
   }
 
   .span-2 {
     grid-row: span 2;
   }
 }
-
-

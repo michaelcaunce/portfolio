@@ -1,23 +1,9 @@
 
-.contact__container {
-  background: $white;
-  margin-bottom: 5em;
-  position: relative;
-
-  &::before {
-    position: absolute;
-    content: 'contact';
-    font-size: 40rem;
-    font-family: $ff-title;
-    opacity: .03;
-    top: 30%;
-  }
-}
-
 .contact__section {
-  @include container;
+  @include container($max-width: 60em);
   padding: 2em 0;
   position: relative;
+  margin-bottom: 5em;
 
   &--title {
     text-align: left;

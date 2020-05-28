@@ -1,5 +1,6 @@
 
 .quote__container{
+  @include container($max-width: 100vw);
   padding: 3rem 0;
   background-image: url(../../img/quote.jpeg);
   background-position: center;
@@ -9,6 +10,8 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  margin-top: 5em;
+  margin-bottom: 5em;
 
   .quote__section {
     @include container($max-width: 90em);
@@ -19,10 +22,10 @@
     @include mq-xl {
       width: 50%;
     }
-    
+
 
     &--quote {
-      @include sans-serif($fs: 3rem, $color: $main, $ff: $ff-title);
+      @include sans-serif($fs: 2.8rem, $color: $main, $ff: $ff-title);
       line-height: 1.3;
 
       @include mq-xl {

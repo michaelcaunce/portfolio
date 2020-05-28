@@ -330,16 +330,6 @@ template {
 [hidden] {
   display: none; }
 
-.about__container {
-  width: 100%;
-  position: relative; }
-  .about__container::before {
-    position: absolute;
-    content: 'about';
-    font-size: 50rem;
-    font-family: "Oswald", sans-serif;
-    opacity: .03; }
-
 .about__section {
   width: 90%;
   margin: 0 auto;
@@ -508,24 +498,13 @@ h2 {
   flex-basis: 100%;
   flex: 1; }
 
-.contact__container {
-  background: #ffffff;
-  margin-bottom: 5em;
-  position: relative; }
-  .contact__container::before {
-    position: absolute;
-    content: 'contact';
-    font-size: 40rem;
-    font-family: "Oswald", sans-serif;
-    opacity: .03;
-    top: 30%; }
-
 .contact__section {
   width: 90%;
   margin: 0 auto;
-  max-width: 50em;
+  max-width: 60em;
   padding: 2em 0;
-  position: relative; }
+  position: relative;
+  margin-bottom: 5em; }
   .contact__section--title {
     text-align: left;
     margin-top: 1em; }
@@ -816,7 +795,7 @@ input::placeholder, textarea::placeholder {
       font-weight: 400;
       position: relative;
       top: 30%;
-      left: 40%;
+      left: 35%;
       text-decoration: none;
       border: 3px solid #ffffff;
       padding: .5rem .5em;
@@ -1291,27 +1270,12 @@ input::placeholder, textarea::placeholder {
             fill: #C69963;
             transform: translateY(0.5rem) scale(1); } }
 
-.portfolio__container {
-  width: 100%;
-  position: relative;
-  margin-top: 5em; }
-  .portfolio__container::before {
-    position: absolute;
-    content: 'projects';
-    font-size: 20rem;
-    font-family: "Oswald", sans-serif;
-    opacity: .03;
-    transform: rotate(-90deg);
-    top: 30%;
-    left: -20%; }
-
 .portfolio__section {
   width: 90%;
   margin: 0 auto;
   max-width: 80em;
   text-align: left;
-  padding: 2em 0;
-  margin-bottom: 5em; }
+  padding: 2em 0; }
   .portfolio__section figure {
     margin: 0; }
   .portfolio__section img {
@@ -1433,6 +1397,9 @@ input::placeholder, textarea::placeholder {
     grid-row: span 2; } }
 
 .quote__container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 100vw;
   padding: 3rem 0;
   background-image: url(../../img/quote.jpeg);
   background-position: center;
@@ -1441,7 +1408,9 @@ input::placeholder, textarea::placeholder {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%; }
+  width: 100%;
+  margin-top: 5em;
+  margin-bottom: 5em; }
   .quote__container .quote__section {
     width: 90%;
     margin: 0 auto;
@@ -1453,7 +1422,7 @@ input::placeholder, textarea::placeholder {
       .quote__container .quote__section {
         width: 50%; } }
     .quote__container .quote__section--quote {
-      font-size: 3rem;
+      font-size: 2.8rem;
       letter-spacing: 0.05em;
       color: #A78CE7;
       text-transform: upppercase;
@@ -1493,22 +1462,10 @@ input::placeholder, textarea::placeholder {
   from {
     right: 100%; } }
 
-.skills__container {
-  width: 100%;
-  position: relative; }
-  .skills__container:before {
-    content: 'skills';
-    position: absolute;
-    color: #606060;
-    font-size: 30rem;
-    opacity: .03;
-    font-family: "Oswald", sans-serif; }
-
 .skills {
   width: 90%;
   margin: 0 auto;
-  max-width: 80em;
-  padding-bottom: 5em; }
+  max-width: 80em; }
   .skills::after {
     content: '';
     display: block;
