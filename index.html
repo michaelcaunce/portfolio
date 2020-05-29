@@ -707,36 +707,39 @@
       </div>
     </section>
 
-    <section class="contact__section" id="contact">
-      <h1 class="contact__section--title">get in touch</h1>
-      <h2 class="contact__section--sub">drop me a line...</h2>
-      <div class="contact__section--form">
-        <form name="contact" method="POST" data-netlify="true" action="/message.html">
-          <div class="contact__section--form--inputs">
-            <input type="text" placeholder="First Name" required>
-            <input type="text" placeholder="Last Name" required>
+    <!-- Start of the contact section -->
+    <section class="contact">
+      <h1 class="contact--title">get in touch</h1>
+      <h2 class="contact--sub">drop me a line...</h2>
+      <div class="contact__container">
+        <img class="contact__container--img" src="img/message.jpeg" alt="">
+          <div class="contact__container--box">
+            <ul class="contact__container--box--icons">
+              <li class="contact__container--box--icons--list">
+                <a href="https://github.com/michaelcaunce" class="contact__container--box--icons--list--link" target="_blank"><i class="fab fa-github"></i></a>
+              </li>
+              <li class="contact__container--box--icons--list">
+                <a href="https://www.facebook.com/profile.php?id=795882835" class="contact__container--box--icons--list--link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li class="contact__container--box--icons--list">
+                <a href="https://twitter.com/MichaelJCaunce" class="contact__container--box--icons--list--link" target="_blank"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li class="contact__container--box--icons--list">
+                <a href="https://www.linkedin.com/in/michael-caunce-241010/" class="contact__container--box--icons--list--link" target="_blank" target="_blank"><i class="fab fa-linkedin"></i></a>
+              </li>
+            </ul>
+            <form class="contact__container--box--form" name="contact" method="POST" data-netlify="true" action="/message.html">
+              <input type="text" placeholder="First Name" required>
+              <input type="text" placeholder="Last Name" required>
+              <input type="email" placeholder="Email Address" required>
+              <textarea name="message" placeholder="Enter Message Here" ></textarea>
+              <input type="submit" name="" value="Send">
+            </form>
           </div>
-          <input type="email" placeholder="Email Address" required>
-          <textarea name="message" placeholder="Enter Message Here" ></textarea>
-          <div class="captcha" data-netlify-recaptcha="true"></div>
-          <input class="button" type="submit" value="SEND">
-        </form>
-        <ul class="contact__section--icons">
-          <li class="contact__section--icons--list">
-            <a href="https://github.com/michaelcaunce" class="contact__section--icons--list--link" target="_blank"><i class="fab fa-github"></i></a>
-          </li>
-          <li class="contact__section--icons--list">
-            <a href="https://www.facebook.com/profile.php?id=795882835" class="contact__section--icons--list--link" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          </li>
-          <li class="contact__section--icons--list">
-            <a href="https://twitter.com/MichaelJCaunce" class="contact__section--icons--list--link" target="_blank"><i class="fab fa-twitter"></i></a>
-          </li>
-          <li class="contact__section--icons--list">
-            <a href="https://www.linkedin.com/in/michael-caunce-241010/" class="contact__section--icons--list--link" target="_blank" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </li>
-        </ul>
+        </div>
       </section>
 
+      <!-- Footer Section -->
       <footer class="footer">
         <img src="img/mjc-logo.png" alt="Michael J Caunce, web design and developer logo" data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom">
         <p>&copy; Michael Caunce 2020</p>
