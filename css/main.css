@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cardo:ital@0;1&family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Roboto:wght@400;700&display=swap");
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes bounce {
   0% {
@@ -378,7 +378,7 @@ template {
       color: #FF7BB4;
       text-transform: upppercase;
       line-height: 1;
-      font-family: "Oswald", sans-serif;
+      font-family: "Playfair Display", serif;
       font-weight: 400;
       font-style: italic;
       margin-top: -2.8em; }
@@ -394,27 +394,14 @@ template {
           grid-column: about-start / img-end; } }
     @media (min-width: 50em) {
       .about__section--text {
-        margin-top: 2rem;
-        border: 6px solid transparent;
-        border-image: linear-gradient(to bottom, #CECFFF, #A78CE7);
-        border-image-slice: 1;
-        padding-top: 1rem;
-        padding-left: 1rem;
-        padding-right: 4rem;
-        margin-right: -5rem;
-        z-index: 999; } }
+        margin-top: 2rem; } }
     .about__section--img {
       grid-column: about-start / img-end;
       grid-row: 1 / 2; }
       @media (min-width: 50em) {
         .about__section--img {
           grid-column: img-end / about-end;
-          grid-row: 1 / 4; } }
-      @media (min-width: 75em) {
-        .about__section--img {
-          z-index: 1000;
-          margin-top: 17.5rem;
-          box-shadow: 0 1.5rem 4rem rgba(38, 38, 38, 0.15); } } }
+          grid-row: 2 / 4; } } }
 
 *,
 *::after,
@@ -442,7 +429,7 @@ body {
   color: #606060;
   text-transform: upppercase;
   line-height: 1;
-  font-family: "Cardo", serif;
+  font-family: "Playfair Display", serif;
   font-weight: 400; }
   @media (min-width: 50em) {
     .large-text {
@@ -471,7 +458,7 @@ h1 {
   color: #606060;
   text-transform: upppercase;
   line-height: 1;
-  font-family: "Oswald", sans-serif;
+  font-family: "Playfair Display", serif;
   font-weight: 400; }
   @media (min-width: 50em) {
     h1 {
@@ -518,7 +505,7 @@ h2 {
     color: #FF7BB4;
     text-transform: upppercase;
     line-height: 1;
-    font-family: "Oswald", sans-serif;
+    font-family: "Playfair Display", serif;
     font-weight: 400;
     margin-top: -1.5em;
     font-style: italic; }
@@ -592,7 +579,7 @@ h2 {
         color: #FF7BB4;
         text-transform: upppercase;
         line-height: 1;
-        font-family: "Oswald", sans-serif;
+        font-family: "Cardo", serif;
         font-weight: 400;
         text-transform: uppercase;
         max-width: 33.3%;
@@ -668,7 +655,8 @@ h2 {
     background-color: rgba(255, 255, 255, 0.9);
     grid-column: 1 / -1;
     grid-row: 3 / 7;
-    padding: 1em 0 0 1em; }
+    padding: 1em 0 0 1em;
+    z-index: 1; }
     .hero__content:before {
       content: '';
       position: absolute;
@@ -695,7 +683,7 @@ h2 {
         padding: 1em 0 0 3em; } }
     @media (min-width: 75em) {
       .hero__content {
-        grid-column: 1 / 8;
+        grid-column: 1 / 9;
         grid-row: 3 / 7;
         border-left: 0.4rem solid #CECFFF;
         padding: 3em 0 0 3em;
@@ -706,10 +694,11 @@ h2 {
       color: #606060;
       text-transform: upppercase;
       line-height: 1;
-      font-family: "Oswald", sans-serif;
+      font-family: "Playfair Display", serif;
       font-weight: 400;
       margin-top: .5em;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      position: relative; }
       @media (min-width: 50em) {
         .hero__content--title {
           font-size: 4.5rem;
@@ -718,25 +707,19 @@ h2 {
         .hero__content--title {
           font-size: 5rem;
           margin-top: 0; } }
-      @media (min-width: 100em) {
-        .hero__content--title {
-          font-size: 6rem; } }
     .hero__content--sub {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       letter-spacing: 0;
       color: #A78CE7;
       text-transform: upppercase;
       line-height: 1;
-      font-family: "Oswald", sans-serif;
+      font-family: "Playfair Display", serif;
       font-weight: 400;
       margin-top: .5em;
       font-style: italic; }
       @media (min-width: 50em) {
         .hero__content--sub {
           font-size: 2rem; } }
-      @media (min-width: 75em) {
-        .hero__content--sub {
-          font-size: 2.2rem; } }
     .hero__content--text {
       font-size: 1.4rem;
       letter-spacing: 0;
@@ -785,7 +768,7 @@ h2 {
           height: 20em;
           left: 45%;
           width: 50%;
-          top: 85%; } }
+          top: 80%; } }
     .hero__footer .btn {
       font-size: 1.5rem;
       letter-spacing: 0;
@@ -856,7 +839,7 @@ h2 {
       color: #606060;
       text-transform: upppercase;
       line-height: 1;
-      font-family: "Oswald", sans-serif;
+      font-family: "Playfair Display", serif;
       font-weight: 400; }
       @media (min-width: 75em) {
         .message__container .message__section--title {
@@ -867,7 +850,7 @@ h2 {
       color: #A78CE7;
       text-transform: upppercase;
       line-height: 1;
-      font-family: "Oswald", sans-serif;
+      font-family: "Playfair Display", serif;
       font-weight: 400;
       line-height: 1.3; }
       @media (min-width: 100em) {
@@ -889,7 +872,7 @@ h2 {
       color: #606060;
       text-transform: upppercase;
       line-height: 1;
-      font-family: "Oswald", sans-serif;
+      font-family: "Playfair Display", serif;
       font-weight: 400;
       position: relative;
       margin-top: 2em;
@@ -986,7 +969,7 @@ h2 {
         color: #ffffff;
         text-transform: upppercase;
         line-height: 1;
-        font-family: "Oswald", sans-serif;
+        font-family: "Playfair Display", serif;
         font-weight: 400; }
       .modal__section--header--box--social {
         display: flex;
@@ -1046,7 +1029,7 @@ h2 {
     color: #606060;
     text-transform: upppercase;
     line-height: 1;
-    font-family: "Oswald", sans-serif;
+    font-family: "Playfair Display", serif;
     font-weight: 400;
     margin-top: 1em; }
     @media (min-width: 75em) {
@@ -1149,7 +1132,7 @@ h2 {
         color: #606060;
         text-transform: upppercase;
         line-height: 1;
-        font-family: "Oswald", sans-serif;
+        font-family: "Playfair Display", serif;
         font-weight: 400;
         text-decoration: none;
         padding: calc(93vh/12) 0;
@@ -1233,7 +1216,7 @@ h2 {
         color: #262626;
         text-transform: upppercase;
         line-height: 1;
-        font-family: "Oswald", sans-serif;
+        font-family: "Cardo", serif;
         font-weight: 400;
         text-decoration: none;
         padding: 0 .5em;
@@ -1287,7 +1270,7 @@ h2 {
     color: #FF7BB4;
     text-transform: upppercase;
     line-height: 1;
-    font-family: "Oswald", sans-serif;
+    font-family: "Playfair Display", serif;
     font-weight: 400;
     margin-top: -1.5em;
     font-style: italic; }
@@ -1307,7 +1290,7 @@ h2 {
         color: #606060;
         text-transform: upppercase;
         line-height: 1;
-        font-family: "Oswald", sans-serif;
+        font-family: "Playfair Display", serif;
         font-weight: 400;
         margin: 0 5px;
         text-transform: uppercase;
@@ -1361,7 +1344,7 @@ h2 {
       color: #FF7BB4;
       text-transform: upppercase;
       line-height: 1;
-      font-family: "Oswald", sans-serif;
+      font-family: "Playfair Display", serif;
       font-weight: 400; }
     .portfolio__items--item--social {
       display: flex;
@@ -1383,7 +1366,7 @@ h2 {
   color: #ffffff;
   text-transform: upppercase;
   line-height: 1;
-  font-family: "Oswald", sans-serif;
+  font-family: "Playfair Display", serif;
   font-weight: 400;
   text-decoration: none;
   border-bottom: 2px solid #A78CE7;
@@ -1428,12 +1411,12 @@ h2 {
       color: #A78CE7;
       text-transform: upppercase;
       line-height: 1;
-      font-family: "Oswald", sans-serif;
+      font-family: "Playfair Display", serif;
       font-weight: 400;
       line-height: 1.3; }
       @media (min-width: 100em) {
         .quote__container .quote__section--quote {
-          font-size: 5rem; } }
+          font-size: 4rem; } }
       .quote__container .quote__section--quote::after {
         content: '';
         width: 90%;
@@ -1477,7 +1460,7 @@ h2 {
     color: #606060;
     text-transform: upppercase;
     line-height: 1;
-    font-family: "Oswald", sans-serif;
+    font-family: "Playfair Display", serif;
     font-weight: 400;
     list-style: none;
     display: flex;

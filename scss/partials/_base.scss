@@ -24,7 +24,7 @@ body {
 }
 
 .large-text {
-  @include sans-serif($fs: 1.4rem, $color: $base, $ff: $ff-main, $ls: 0);
+  @include sans-serif($fs: 1.4rem, $color: $base, $ff: $ff-title, $ls: 0);
 
   @include mq {
     font-size: 1.9rem;

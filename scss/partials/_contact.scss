@@ -109,7 +109,7 @@
           }
 
           input[type="submit"] {
-            @include sans-serif($fs: 1rem, $ff: $ff-title, $color: $accent);
+            @include sans-serif($fs: 1rem, $ff: $ff-main, $color: $accent);
             text-transform: uppercase;;
             max-width: 33.3%;
             background: $main;

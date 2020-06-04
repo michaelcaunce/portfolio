@@ -31,6 +31,7 @@
     grid-column: 1 / -1;
     grid-row: 3 / 7;
     padding: 1em 0 0 1em;
+    z-index: 1;
 
     &:before {
       content: '';
@@ -63,7 +64,7 @@
     }
 
     @include mq-l {
-      grid-column: 1 / 8;
+      grid-column: 1 / 9;
       grid-row: 3 / 7;
       border-left: .4rem solid $main-light;
       padding: 3em 0 0 3em;
@@ -74,6 +75,7 @@
       @include sans-serif($fs: 3.5rem, $color: $base, $ff: $ff-title, $ls: 0);
       margin-top: .5em;
       margin-bottom: 0;
+      position: relative;
 
       @include mq {
         font-size: 4.5rem;
@@ -85,13 +87,13 @@
         margin-top: 0;
       }
 
-      @include mq-xl {
-        font-size: 6rem;
-      }
+      // @include mq-xl {
+      //   font-size: 6rem;
+      // }
     }
 
     &--sub {
-      @include sans-serif($fs: 1.6rem, $color: $main, $ff: $ff-title, $ls: 0);
+      @include sans-serif($fs: 1.5rem, $color: $main, $ff: $ff-title, $ls: 0);
       margin-top: .5em;
       font-style: italic;
 
@@ -99,9 +101,9 @@
         font-size: 2rem;
       }
 
-      @include mq-l {
-        font-size: 2.2rem;
-      }
+      // @include mq-l {
+      //   font-size: 2.2rem;
+      // }
     }
 
     &--text {
@@ -155,7 +157,7 @@
         height:20em;
         left: 45%;
         width: 50%;
-        top: 85%;
+        top: 80%;
       }
     }
 
