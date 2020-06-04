@@ -53,8 +53,12 @@
                 animation: fill 2s both;
             }
 
+            // Styling for the skill levels
             &[aria-label="novice"]:after {
                 right: 75%;
+            }
+            &[aria-label="improve"]:after {
+                right: 65%;
             }
             &[aria-label="average"]:after {
                 right: 50%;

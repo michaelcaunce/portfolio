@@ -1509,6 +1509,8 @@ h2 {
         animation: fill 2s both; }
       .skills__list--item[aria-label="novice"]:after {
         right: 75%; }
+      .skills__list--item[aria-label="improve"]:after {
+        right: 65%; }
       .skills__list--item[aria-label="average"]:after {
         right: 50%; }
       .skills__list--item[aria-label="adept"]:after {
