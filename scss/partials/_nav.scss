@@ -160,7 +160,7 @@
       padding: 0;
 
       a {
-        @include sans-serif($fs: 1.2rem, $color: $black, $ff: $ff-main)
+        @include sans-serif($fs: 1.2rem, $color: $black, $ff: $ff-title)
         text-decoration: none;
         padding: 0 .5em;
         display: inline-block;

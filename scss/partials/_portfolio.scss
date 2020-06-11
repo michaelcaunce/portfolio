@@ -14,7 +14,7 @@
   }
 
   &--subtitle {
-    @include sans-serif($fs: 1.8rem, $ff: $ff-title, $color: $accent);
+    @include sans-serif($fs: 1.8rem, $ff: $ff-sub, $color: $accent);
     margin-top: -1.5em;
     font-style: italic;
 
@@ -129,7 +129,7 @@
 }
 
 .portfolio-link {
-  @include sans-serif($fs: 1.6rem, $color: $white, $ff: $ff-title, $ls: 0);
+  @include sans-serif($fs: 1.6rem, $color: $white, $ff: $ff-main, $ls: 0);
   text-decoration: none;
   border-bottom: 2px solid $main;
   align-self: flex-start;

@@ -15,7 +15,7 @@
     @include clearfix;
 
     &__list {
-        @include sans-serif($fs: 1.2rem, $ff: $ff-title, $color: $base);
+        @include sans-serif($fs: 1.2rem, $ff: $ff-main, $color: $base);
         list-style: none;
         display: flex;
         flex-direction: row;

@@ -13,7 +13,7 @@
   }
 
   &--sub {
-    @include sans-serif($fs: 1.8rem, $ff: $ff-title, $color: $accent);
+    @include sans-serif($fs: 1.8rem, $ff: $ff-sub, $color: $accent);
     margin-top: -1.5em;
     font-style: italic;
 
