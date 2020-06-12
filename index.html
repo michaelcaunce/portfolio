@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110345083-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-110345083-2');
-    </script>
-
     <meta charset="utf-8">
     <meta name="description" content="Based in the North West, I am a recent graduate from Edge Hill with aspirations of becoming a front-end web developer. I have recently completed a BSc in Web Design & Development, where I am predicted to graduate with a high 1:1. I am an ambitious, personable and driven individual with a track record demonstrating passion, resilience and determination, shown by recently being awarded the ‘Academic Achievement Award’. Over the course of my degree, I have acquired knowledge and experience in HTML5, CSS3, JavaScript, Laravel, Ember, version control, and mySQL. Also, outside of academia, I am actively learning new skills, such as Gulp and Sass. I am now actively seeking a junior or graduate role in web design and development, where I can demonstrate my passion for all things creative and technological. As an aspiring web developer, I am eager to utilise my interpersonal skills and enhance the foundation of knowledge I have acquired throughout my degree.">
     <meta name="keywords" content="HTML, CSS, JavaScript, web, design, web design, developer, web developer, junior, graduate, junior web, front-end web, portfolio">
@@ -45,7 +35,7 @@
     </nav>
 
     <header class="header">
-      <img src="img/mjc-logo.png" alt="" class="header--logo">
+      <img src="img/mjc-logo.png" alt="Peronal logo" class="header--logo">
 
       <!-- Start of the navigation -->
       <nav class="navigation">
@@ -77,7 +67,7 @@
           </g></g> </svg>
         </button>
 
-        <img src="img/hero.jpeg" alt="" class="hero--img">
+        <img data-src="img/hero.jpeg" alt="Colourful image of a developers workspace." class="lazy hero--img">
         <div class="hero__content">
           <h1 class="hero__content--title">Michael J Caunce</h1>
           <h2 class="hero__content--sub">Front end developer with a creative edge</h2>
@@ -90,7 +80,7 @@
 
       <!-- Start of the about me section -->
       <section class="about__section" id="about">
-        <img class="about__section--img" src="img/test2.jpg" alt="A greyscale photo of the Michael Caunce, the creator and person of whom this portfolio belongs to. Michael is in deep thought whilst enjoying the view from Old Wardour Castle">
+        <img class="lazy about__section--img" data-src="img/about.jpg" alt="A colourful image of Michael">
         <h1 class="about__section--title">About Me</h1>
         <h2 class="about__section--sub">Designer/Developer</h2>
         <div class="about__section--text">
@@ -167,7 +157,7 @@
 
           <!-- Portfolio item Black Swan -->
           <figure class="portfolio__items--item span-2" data-id="html">
-            <img src="img/blackswan.png" alt="Black Swan website on a laptop" class="portfolio__items--item--img">
+            <img data-src="img/blackswan.jpg" alt="Black Swan website on a laptop" class="lazy portfolio__items--item--img">
             <figcaption class="portfolio__items--item--fig">
               <h2 class="portfolio__items--item--title">Black Swan</h2>
               <a href="#" class="portfolio-link">Learn More</a>
@@ -207,7 +197,7 @@
 
           <!-- Portfolio item Adventure Trails -->
           <figure class="portfolio__items--item" data-id="html">
-            <img src="img/adventure.png" alt="Adventure Trails website on a laptop" class="portfolio__items--item--img">
+            <img data-src="img/adventure.jpg" alt="Adventure Trails website on a laptop" class="lazy portfolio__items--item--img">
             <figcaption class="portfolio__items--item--fig">
               <h2 class="portfolio__items--item--title">Adventure Trails</h2>
               <a href="#" class="portfolio-link">Learn More</a>
@@ -246,7 +236,7 @@
 
           <!-- Portfolio item Mendip University -->
           <figure class="portfolio__items--item" data-id="wordpress">
-            <img src="img/mendip.png" alt="Mendip University website on a laptop" class="portfolio__items--item--img">
+            <img data-src="img/mendip.jpg" alt="Mendip University website on a laptop" class="lazy portfolio__items--item--img">
             <figcaption class="portfolio__items--item--fig">
               <h2 class="portfolio__items--item--title">Mendip University - Wordpress</h2>
               <a href="#" class="portfolio-link">Learn More</a>
@@ -285,7 +275,7 @@
 
           <!-- Portfolio item Roman James -->
           <figure class="portfolio__items--item" data-id="bootstrap">
-            <img src="img/roman.png" alt="Roman James website on a laptop" class="portfolio__items--item--img">
+            <img data-src="img/roman.jpg" alt="Roman James website on a laptop" class="lazy portfolio__items--item--img">
             <figcaption class="portfolio__items--item--fig">
               <h2 class="portfolio__items--item--title">Roman James</h2>
               <a href="#" class="portfolio-link">Learn More</a>
@@ -324,7 +314,7 @@
 
           <!-- Portfolio item Connect4 -->
           <figure class="portfolio__items--item span-2" data-id="js">
-            <img src="img/c4.png" alt="Connect 4 on a mobile phone" class="portfolio__items--item--img">
+            <img data-src="img/c4.jpg" alt="Connect 4 on a mobile phone" class="lazy portfolio__items--item--img">
             <figcaption class="portfolio__items--item--fig">
               <h2 class="portfolio__items--item--title">Connect 4</h2>
               <a href="#" class="portfolio-link">Learn More</a>
@@ -356,7 +346,7 @@
                 <p>The aim was to create a realistic, challenging and entirely functioning usable version of Connect 4. Emphasis was placed on functionality over graphical attraction, with more importance being placed on providing users with a game that functioned as intended, yet still being identifiable with the incorporation of the traditional red and yellow markers.</p>
                 <h2 class="modal__content--title">Build Process</h2>
                 <p>The build process adopted a bottom-up logical approach to building the application. With this method, the build started with the foundations, all the installations required to run the application. The set approach adopted a parallel design where the building of the application and extensive testing were completed together. Once the foundations of the application had been laid, the functionality and game dependents began to be constructed. The bottom-up approach was appropriate for the order of development based on the requirements of the game. For example, it would not be logical to work on identifying winning patterns first, as there would be no way of testing the functionality without the dependents created (game board, markers, click function, start function). The benefit to this approach was the allowance for stringent testing of each function before progressing onto the next.</p>
-                <img class="modal__content--fullwidth" src="img/quote.jpeg" alt="Three rubber duckies">
+                <img class="lazy modal__content--fullwidth" data-src="img/quote.jpeg" alt="Three rubber duckies">
                 <h2 class="modal__content--title">Computer Player</h2>
                 <p>In an attempt to make the computer player smarter, the computer needed to look to the future. The minimax algorithm determines all possible moves. This creates the game tree which represents sequences of possible moves. It then calculates the heuristic score of the leaf nodes. Moreover, finally, moves back up the game tree, aggregating the scores for all possible moves. To fully incorporate the minimax algorithm, additional code refactoring was required. A deepClone function was created which clones the state matrix. This was required because when the minimax algorithm creates the game tree, it holds all the possible moves. Thus it is essential to hold many copies of the state matrix.</p>
                 <p>A recursive minimax function was created which was similar to the previous code used for the standard computer player. However, minimax calls the deepClone function every time a potential move is generated, additionally storing the state upon each move. The minimax function works by checking to see if the game is at a leaf in the game tree or an internal node. If it is at a leaf, the score is determined on whether a player has won. The computer player at this point was significantly better but still quite beatable. To make the computer player even stronger, the basic heuristic was improved.</p>
@@ -369,7 +359,7 @@
 
           <!-- Portfolio item Nexter -->
           <figure class="portfolio__items--item" data-id="html">
-            <img src="img/nexter.png" alt="Nexter website on a laptop" class="portfolio__items--item--img">
+            <img data-src="img/nexter.jpg" alt="Nexter website on a laptop" class="lazy portfolio__items--item--img">
             <figcaption class="portfolio__items--item--fig">
               <h2 class="portfolio__items--item--title">Nexter</h2>
               <a href="#" class="portfolio-link">Learn More</a>
@@ -408,7 +398,7 @@
 
           <!-- Portfolio item iiT -->
           <figure class="portfolio__items--item" data-id="html">
-            <img src="img/iit.png" alt="iiT website on a computer" class="portfolio__items--item--img">
+            <img data-src="img/iit.jpg" alt="iiT website on a computer" class="lazy portfolio__items--item--img">
             <figcaption class="portfolio__items--item--fig">
               <h2 class="portfolio__items--item--title">iiT - Voice Controlled Website</h2>
               <a href="#" class="portfolio-link">Learn More</a>
@@ -443,7 +433,7 @@
                 <p class="large-text">Speech recognition has developed into one of the most important technologies in modern society, primarily due to the emergence and acceptance of digital assistants. An extensive review of old and new literature presented a pattern with the focus being on the history, limitations and concept of speech recognition.</p>
                 <p>While there are many existing speech recognition technologies, and today there does not seem to be much that cannot be accomplished by using speech recognition, the idea of navigating through a website using speech remains scarcely documented. Interestingly, over half the world’s population is now connected to the internet, which yields the question, is it feasible to navigate through a website using only speech commands? The limited available literature highlights a gap in research and technology. Thus, presenting the opportunity to provide an answer and establish whether navigation through a website using speech is feasible or not.</p>
                 <p>For my final year project, iiT was created as an informative website providing an introduction into software testing. Additionally, iiT was used as the primary instrument in an attempt to discover whether it is feasible to navigate through a website using only speech commands.</p>
-                <img class="modal__content--fullwidth" src="img/quote.jpeg" alt="An grapical representation of the layout for iiT being sketched.">
+                <img class="lazy modal__content--fullwidth" data-src="img/quote.jpeg" alt="Three rubber duckies">
                 <!-- Start of the branding section -->
                 <div class="modal__content--section">
                   <h2 class="modal__content--title">Branding</h2>
@@ -465,11 +455,11 @@
                   <p>The outcome was that the design for iiT encapsulates the importance of proximity with the content placed carefully together, allowing for the user to make associations by grouping. Each page displays similarity, allowing users to make further associations. The design presents the user with closure by incorporating white space, and lastly, the design displays continuity across all pages.</p>
                   <p>In addition to the four principles described, the design adopts a visual framework by applying a grid of equals, a design where several items look similar. Due to the design, the content is in a grid or grids, following a standard template with the visual weight of each item like the next. The theory of incorporating a grid of equals is that all items will appear to be of the same importance, with the user beginning to associate each item with one another. Visual hierarchy and visual flow are two vital elements to the layout. The importance of visual hierarchy related to ensuring the most important elements stood out. </p>
                 </div>
-                <img class="modal__content--fullwidth" src="img/quote.jpeg" alt="An grapical representation of the layout for iiT being sketched.">
+                <img class="lazy modal__content--fullwidth" data-src="img/quote.jpeg" alt="Three rubber duckies">
                 <!-- Start of the responsive section -->
                 <div class="modal__content--section">
                   <h2 class="modal__content--title">Responsive Design</h2>
-                  <img class="modal__content--section--img img-right" src="img/iit-responsive.png" alt="iiT website being displayed on a mobile device">
+                  <img class="lazy modal__content--section--img img-right" data-src="img/iit-responsive.jpg" alt="iiT website being displayed on a mobile device">
                   <p class="large-text">Mobile accounts for approximately half of web traffic worldwide. In the first quarter of 2019, mobile devices (excluding tablets) generated 48.71 percent of global website traffic, consistently hovering around the 50 percent mark since the beginning of 2017.</p>
                   <p>iiT was built to be responsive, although it was not built mobile first. If iiT was simply a testing instrument to test the feasibility of controlling a website using speech, the desire for a responsive design would have been significantly less. Irrespective, iiT can be viewed across several devices and is considered to be mobile friendly.</p>
                 </div>
@@ -479,7 +469,7 @@
 
           <!-- Portfolio item Doggie Walks -->
           <figure class="portfolio__items--item" data-id="html">
-            <img src="img/dw.png" alt="Doggie Walks website on a laptop" class="portfolio__items--item--img">
+            <img data-src="img/dw.jpg" alt="Doggie Walks website on a laptop" class="lazy portfolio__items--item--img">
             <figcaption class="portfolio__items--item--fig">
               <h2 class="portfolio__items--item--title">Doggie Walks</h2>
               <a href="#" class="portfolio-link">Learn More</a>
@@ -513,11 +503,11 @@
                 <h2 class="modal__content--title">Project Background</h2>
                 <p class="large-text">As part of my cis3159 module, I was allowed to select one small and one large project to complete. The list of large tasks was relatively small, but immediately, one task appealed more than the others. Doggie Walks is a fictional company created to provide us with the experience of what a developer experiences on a day to day basis. For me, this was an exciting proposition due to my aspirations of becoming a front end web developer. </p>
                 <p>The project allowed me to experience the process of requirements gathering to building a final website in a short period. The critical aspect of the task was to take the list of requirements and interpret them to provide a bespoke website for the customer.</p>
-                <img class="modal__content--fullwidth" src="img/quote.jpeg" alt="An image representing an artistic impression of Doggie Walks">
+                <img class="lazy modal__content--fullwidth" data-src="img/quote.jpeg" alt="Three rubber duckies">
                 <!-- Start of the responsive section -->
                 <div class="modal__content--section">
                   <h2 class="modal__content--title">Responsive Design</h2>
-                  <img class="modal__content--section--img img-right" src="img/doggie-responsive.png" alt="Image displaying Doggie Walks on a mobile device and tablet">
+                  <img class="lazy modal__content--section--img img-right" data-src="img/doggie-responsive.jpg" alt="Image displaying Doggie Walks on a mobile device and tablet">
                   <p class="large-text">Mobile accounts for approximately half of web traffic worldwide. In the first quarter of 2019, mobile devices (excluding tablets) generated 48.71 percent of global website traffic, consistently hovering around the 50 percent mark since the beginning of 2017.</p>
                   <p>Doggie Walks was designed and built to be responsive, although it was not built mobile first. Doggie Walks is a website that is commonly accessed across several devices with the analytic data provided, suggesting that users commonly access the website on a mobile device for a specific period. The data provided suggest that users access the website with a specific goal. Therefore it was of paramount importance to design Doggie Walks to be mobile friendly with easily accessible information across all devices. </p>
                 </div>
@@ -533,7 +523,7 @@
 
           <!-- Portfolio item Blog -->
           <figure class="portfolio__items--item" data-id="laravel">
-            <img src="img/blog.png" alt="Blog website on a tabelet" class="portfolio__items--item--img">
+            <img data-src="img/blog.jpg" alt="Blog website on a tablet" class="lazy portfolio__items--item--img">
             <figcaption class="portfolio__items--item--fig">
               <h2 class="portfolio__items--item--title">Laravel Blog</h2>
               <a href="#" class="portfolio-link">Learn More</a>
@@ -564,7 +554,7 @@
                 <p>Over the last three years, my course focussed predominantly on Javascript with very little time dedicated to PHP. We did dabble with Laravel and were tasked with the challenge of building a secure questionnaire application. Despite being relatively satisfied with the outcome, I acknowledged that it could have been a lot better. </p>
                 <p>Laravel is a popular framework with prospective employers, and I understood that I needed to start again with both PHP and Laravel. The problem of learning a new language and framework simultaneously was an uphill challenge.</p>
                 <p>The ideal project was to build a blog system incorporating all the features you would expect from a typical blog. </p>
-                <img class="modal__content--fullwidth" src="img/quote.jpeg" alt="An grapical representation of the layout for the laravel blog being sketched.">
+                <img class="lazy modal__content--fullwidth" data-src="img/quote.jpeg" alt="Three rubber duckies">
                 <!-- Start of the design process section -->
                 <div class="modal__content--section">
                   <h2 class="modal__content--title">Features</h2>
@@ -585,7 +575,7 @@
 
           <!-- Portfolio item NML -->
           <figure class="portfolio__items--item" data-id="js">
-            <img src="img/nml.png" alt="NMLwebsite on a laptop" class="portfolio__items--item--img">
+            <img data-src="img/nml.jpg" alt="NMLwebsite on a laptop" class="lazy portfolio__items--item--img">
             <figcaption class="portfolio__items--item--fig">
               <h2 class="portfolio__items--item--title">World Museum Liverpool</h2>
               <a href="#" class="portfolio-link">Learn More</a>
@@ -615,7 +605,7 @@
                 <p class="large-text">As part of my cis2162 module, we were placed in groups and asked to select a project from a list of project briefs. While the practical side was to create the build; there were no marks for this. The build was a tool to demonstrate and reflect on our team working abilities with a bonus of possibly presenting or getting our work in a live environment.</p>
                 <p>Inevitably, with no marks on offer, the majority of the group displayed no interest or desire to contribute. Despite this, another team member and I decided to utilise the skills that we had learnt and created a build worthy of presenting the National Museums Liverpool staff. The design and build of the website is my work, including all JavaScript, while the animation is the work of the other team member.  </p>
                 <p class="highlight">Proudly, we were selected to present and demonstrate our work before the National Museum Liverpool staff as well as being one of two pieces of work selected to be hosted inside the NML.</p>
-                <img class="modal__content--fullwidth" src="img/quote.jpeg" alt="An artistic impression of the design created for National Museum Liverpool">
+                <img class="lazy modal__content--fullwidth" data-src="img/quote.jpeg" alt="Three rubber duckies">
                 <!-- Start of process section -->
                 <h2 class="modal__content--title">Build Process</h2>
                 <h3 class="modal__content--h3">Brief</h3>
@@ -634,7 +624,7 @@
                 <p class="large-text">The puzzle incorporates the 32 piece design as standard, but it was explained that further expansion could be discussed to include easier jigsaw puzzles on a level basis.</p>
                 <p>The majority of the code for the puzzle is predominantly Javascript with a small amount of JQuery. It is written in JavaScript, but it uses the DOM to access the document and its elements.</p>
                 <p>The combination is used to create a range of functions to ensure the jigsaw puzzle works. Firstly, a function identifies any objects (images) that may or may not be draggable. Another function defines whether the object can or cannot be dropped; this function will only accept an image dropped into the correct drop zone. Another function to define the game as complete, which contains a list of code which is executed once all the pieces are in the correct place. Lastly, a function was created, which contains an array of facts which appear beneath the puzzle; this function executes when a piece has been placed in the correct drop zone.</p>
-                <img class="modal__content--fullwidth" src="img/quote.jpeg" alt="An artistic impression of the design created for National Museum Liverpool">
+                <img class="lazy modal__content--fullwidth" data-src="img/quote.jpeg" alt="Three rubber duckies">
                 <!-- Start of the demonstration section -->
                 <div class="modal__content--section">
                   <h2 class="modal__content--title">Demonstration</h2>
@@ -662,7 +652,7 @@
       <h1 class="contact--title">Get in Touch</h1>
       <h2 class="contact--sub">Drop Me a Line...</h2>
       <div class="contact__container">
-        <img class="contact__container--img" src="img/contact.png" alt="">
+        <img class="lazy contact__container--img" data-src="img/contact.jpg" alt="A contact design with a personal logo on a set of business cards.">
           <div class="contact__container--box">
             <ul class="contact__container--box--icons">
               <li class="contact__container--box--icons--list">
@@ -696,8 +686,18 @@
       </footer>
 
     <!-- Import JS scripts -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110345083-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-110345083-2');
+    </script>
     <script src="js/nav.js"></script>
     <script src="js/portfolio.js"></script>
     <script src="js/filter.js"></script>
+    <script src="js/lazyload.js"></script>
   </body>
 </html>

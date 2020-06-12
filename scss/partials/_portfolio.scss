@@ -35,7 +35,7 @@
 
       &--list {
         display: inline-block;
-        @include sans-serif($fs: 1.1rem, $ff: $ff-title, $color: $base);
+        @include sans-serif($fs: .8rem, $ff: $ff-title, $color: $base);
         margin: 0 5px;
         text-transform: uppercase;
         cursor: pointer;
@@ -141,8 +141,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-gap: .5em;
-
-
   }
 
   .span-2 {
