@@ -72,7 +72,7 @@
     }
 
     &--title {
-      @include sans-serif($fs: 3rem, $color: $base, $ff: $ff-title, $ls: 0);
+      @include sans-serif($fs: 2.8rem, $color: $base, $ff: $ff-title, $ls: 0);
       margin-top: .5em;
       margin-bottom: 0;
       position: relative;
@@ -86,24 +86,16 @@
         font-size: 5rem;
         margin-top: 0;
       }
-
-      // @include mq-xl {
-      //   font-size: 6rem;
-      // }
     }
 
     &--sub {
-      @include sans-serif($fs: 1.5rem, $color: $main, $ff: $ff-sub, $ls: 0);
+      @include sans-serif($fs: 1.4rem, $color: $main, $ff: $ff-sub, $ls: 0);
       margin-top: .5em;
       font-style: italic;
 
       @include mq {
         font-size: 2rem;
       }
-
-      // @include mq-l {
-      //   font-size: 2.2rem;
-      // }
     }
 
     &--text {

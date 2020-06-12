@@ -690,7 +690,7 @@ h2 {
         padding: 3em 0 0 3em;
         margin-left: 5em; } }
     .hero__content--title {
-      font-size: 3rem;
+      font-size: 2.8rem;
       letter-spacing: 0;
       color: #606060;
       text-transform: upppercase;
@@ -709,7 +709,7 @@ h2 {
           font-size: 5rem;
           margin-top: 0; } }
     .hero__content--sub {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       letter-spacing: 0;
       color: #A78CE7;
       text-transform: upppercase;
