@@ -942,15 +942,15 @@ h2 {
     background-position: center; }
     @media (min-width: 75em) {
       .modal__section--header {
-        height: 60guvh; } }
+        height: 100vh; } }
     .modal__section--header--box {
-      background: rgba(96, 96, 96, 0.9);
+      background: rgba(96, 96, 96, 0.6);
       padding: 2em 0 1em 2em;
       color: #ffffff;
       width: 100%; }
       @media (min-width: 75em) {
         .modal__section--header--box {
-          padding: 5em 0 1em 5em; } }
+          padding: 5em 0 5em 5em; } }
       .modal__section--header--box--title {
         color: #ffffff;
         font-size: 1.9rem;
@@ -990,34 +990,34 @@ h2 {
     display: block; }
 
 .header-blackswan {
-  background-image: url("../img/blackswan-modal.jpg"); }
+  background-image: url("../img/blackswan-large.jpg"); }
 
 .header-adventure {
-  background-image: url("../img/adventure-modal.jpg"); }
+  background-image: url("../img/adventure-large.jpg"); }
 
 .header-mendip {
-  background-image: url("../img/mendip-modal.jpg"); }
+  background-image: url("../img/mendip-large-min.jpg"); }
 
 .header-roman {
-  background-image: url("../img/roman-modal.jpg"); }
+  background-image: url("../img/roman-large-min.jpg"); }
 
 .header-connect4 {
-  background-image: url("../img/connect4-modal.jpg"); }
+  background-image: url("../img/c4-large-min.jpg"); }
 
 .header-nexter {
-  background-image: url("../img/nexter-modal.jpg"); }
+  background-image: url("../img/nexter-large-min.jpg"); }
 
 .header-iit {
-  background-image: url("../img/iit-modal.jpg"); }
+  background-image: url("../img/iit-large-min.jpg"); }
 
 .header-dw {
-  background-image: url("../img/dw-modal.jpg"); }
+  background-image: url("../img/dw-large.jpg"); }
 
 .header-blog {
-  background-image: url("../img/blog-modal.jpg"); }
+  background-image: url("../img/blog-large-min.jpg"); }
 
 .header-nml {
-  background-image: url("../img/nml-modal.jpg"); }
+  background-image: url("../img/nml-large-min.jpg"); }
 
 .modal__content {
   text-align: left;
@@ -1299,7 +1299,7 @@ h2 {
         padding: 1rem; }
         @media (min-width: 75em) {
           .portfolio__section--filter--buttons--list {
-            font-size: 1.8rem; } }
+            font-size: 1.2rem; } }
         .portfolio__section--filter--buttons--list:hover {
           color: #FF7BB4; }
     .portfolio__section--filter .active {
