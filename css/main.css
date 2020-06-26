@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Cardo:ital@0;1&family=Oswald&display=swap");
-@import url("https://use.typekit.net/pws3tdw.css");
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes bounce {
   0% {
@@ -376,7 +374,7 @@ template {
     .about__section--sub {
       font-size: 2rem;
       letter-spacing: 0.05em;
-      color: #FF7BB4;
+      color: #ffffff;
       text-transform: upppercase;
       line-height: 1;
       font-family: "marydale", sans-serif;
@@ -386,7 +384,8 @@ template {
       @media (min-width: 50em) {
         .about__section--sub {
           font-size: 2.5rem;
-          margin-top: -1.5em; } }
+          margin-top: -1.5em;
+          color: #FF7BB4; } }
     .about__section--sub, .about__section--text {
       grid-column: about-start / about-end; }
       @media (min-width: 50em) {
@@ -416,7 +415,7 @@ html, body {
 
 body {
   color: #606060;
-  font-family: "Cardo", serif;
+  font-family: "forma-djr-text", sans-serif;
   line-height: 1.6;
   background: #ffffff;
   font-size: 1.1rem;
@@ -430,7 +429,7 @@ body {
   color: #606060;
   text-transform: upppercase;
   line-height: 1;
-  font-family: "Cardo", serif;
+  font-family: "forma-djr-text", sans-serif;
   font-weight: 400; }
   @media (min-width: 50em) {
     .large-text {
@@ -442,7 +441,7 @@ body {
   color: #A78CE7;
   text-transform: upppercase;
   line-height: 1;
-  font-family: "Cardo", serif;
+  font-family: "forma-djr-text", sans-serif;
   font-weight: 400;
   font-weight: bold;
   font-style: italic; }
@@ -471,7 +470,7 @@ h2 {
   color: #606060;
   text-transform: upppercase;
   line-height: 1;
-  font-family: "Cardo", serif;
+  font-family: "forma-djr-text", sans-serif;
   font-weight: 400;
   background-image: linear-gradient(to right, #C69963, #38405B);
   -webkit-background-clip: text;
@@ -580,7 +579,7 @@ h2 {
         color: #FF7BB4;
         text-transform: upppercase;
         line-height: 1;
-        font-family: "Cardo", serif;
+        font-family: "forma-djr-text", sans-serif;
         font-weight: 400;
         text-transform: uppercase;
         max-width: 33.3%;
@@ -626,7 +625,7 @@ h2 {
     color: #606060;
     text-transform: upppercase;
     line-height: 1;
-    font-family: "Cardo", serif;
+    font-family: "forma-djr-text", sans-serif;
     font-weight: 400;
     padding-top: 2em;
     font-weight: bold; }
@@ -727,7 +726,7 @@ h2 {
       color: #606060;
       text-transform: upppercase;
       line-height: 1;
-      font-family: "Cardo", serif;
+      font-family: "forma-djr-text", sans-serif;
       font-weight: 400;
       width: 80%; }
       @media (min-width: 50em) {
@@ -776,7 +775,7 @@ h2 {
       color: #ffffff;
       text-transform: upppercase;
       line-height: 1;
-      font-family: "Cardo", serif;
+      font-family: "forma-djr-text", sans-serif;
       font-weight: 400;
       position: relative;
       top: 30%;
@@ -1367,7 +1366,7 @@ h2 {
   color: #ffffff;
   text-transform: upppercase;
   line-height: 1;
-  font-family: "Cardo", serif;
+  font-family: "forma-djr-text", sans-serif;
   font-weight: 400;
   text-decoration: none;
   border-bottom: 2px solid #A78CE7;
@@ -1412,7 +1411,7 @@ h2 {
       color: #A78CE7;
       text-transform: upppercase;
       line-height: 1;
-      font-family: "Cardo", serif;
+      font-family: "forma-djr-text", sans-serif;
       font-weight: 400;
       line-height: 1.3; }
       @media (min-width: 100em) {
@@ -1461,7 +1460,7 @@ h2 {
     color: #606060;
     text-transform: upppercase;
     line-height: 1;
-    font-family: "Cardo", serif;
+    font-family: "forma-djr-text", sans-serif;
     font-weight: 400;
     list-style: none;
     display: flex;

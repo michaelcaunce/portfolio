@@ -55,13 +55,14 @@
     }
 
     &--sub {
-      @include sans-serif($fs: 2rem, $ff: $ff-sub, $color: $accent);
+      @include sans-serif($fs: 2rem, $ff: $ff-sub, $color: $white);
       font-style: italic;
       margin-top: -2.8em;
 
       @include mq {
         font-size: 2.5rem;
         margin-top: -1.5em;
+        color: $accent;
       }
     }
 
