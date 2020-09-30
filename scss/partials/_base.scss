@@ -8,7 +8,13 @@
   box-sizing: inherit;
 }
 
-html, body {
+@font-face {
+  font-family: titleDex;
+  src: url("../../fonts/Dexotick\ By\ Dhan\ Studio.ttf");
+}
+
+html,
+body {
   height: 100%;
 }
 
@@ -41,27 +47,17 @@ img {
   max-width: 100%;
 }
 
-h1, h2, p {
-  // margin-top: 0;
+h1,
+h2,
+p {
   margin-bottom: 1em;
 }
 
 h1 {
-  @include sans-serif($fs: 3.125rem, $ff: $ff-title, $ls: 0);
+  @include sans-serif($fs: 3.125rem, $ff: titleDex, $ls: 0);
 
   @include mq {
-    font-size: 4rem;
-  }
-}
-
-h2 {
-  @include sans-serif($fs: 2rem);
-  background-image: linear-gradient(to right, $secondary, $primary);
-  -webkit-background-clip: text;
-  color: transparent;
-
-  @include mq {
-    font-size: 3rem;
+    font-size: 5rem;
   }
 }
 
@@ -70,4 +66,4 @@ h2 {
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
-  }
+}

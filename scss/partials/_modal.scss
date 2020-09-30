@@ -8,7 +8,7 @@
   bottom: 1em;
   left: 2em;
   right: 2em;
-  box-shadow: 0 0 0 3em rgba($primary, .8);
+  box-shadow: 0 0 0 3em rgba($main, 0.8);
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;
@@ -17,23 +17,22 @@
     background: transparent;
     position: fixed;
     background: $main;
-    top: .7em;
+    top: 0.7em;
     left: 1.5em;
     border: 0;
     width: 1.5em;
     height: 1.5em;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 0 5px rgba($secondary, .9);
-  
+    box-shadow: 0 0 5px rgba($base, 0.9);
+
     &--img {
       max-height: 1em;
-      margin-top: .2em;
+      margin-top: 0.2em;
     }
   }
 
   // Start of the modal header styling
-
   &--header {
     text-align: left;
     padding: 5em 0;
@@ -43,34 +42,34 @@
 
     @include mq-l {
       height: 100vh;
-    } 
+    }
 
     // Styling for the overlapping title box at the top of each modal
     &--box {
-      background: rgba($base, .6);
+      background: rgba($base, 0.6);
       padding: 2em 0 1em 2em;
       color: $white;
       width: 100%;
 
       @include mq-l {
-          padding: 5em 0 5em 5em;
-        }
+        padding: 5em 0 5em 5em;
+      }
 
       &--title {
         color: $white;
         font-size: 1.9rem;
         display: inline-block;
-    
+
         &::after {
-          content: '';
+          content: "";
           height: 3px;
-          margin: .5em 0;
+          margin: 0.5em 0;
           background: $main;
           display: block;
         }
 
         @include mq-l {
-            font-size: 3rem;
+          font-size: 3rem;
         }
       }
 
@@ -81,16 +80,16 @@
       &--social {
         display: flex;
         align-items: flex-start;
-    
+
         &--icons {
           @include clearfix;
           width: 2.5em;
           height: 2.5em;
           margin-right: 1em;
           fill: $white;
-    
+
           &:hover {
-            fill: $accent;
+            fill: $main;
           }
         }
       }
@@ -104,44 +103,56 @@
 }
 
 // Styling specific to individual modals. The 'hero' image at the top of each modal
+.header-portfolio {
+  background-image: url("../img/portfolio-large.jpg");
+}
+
+.header-10years {
+  background-image: url("../img/wedding-large.jpg");
+}
+
+.header-rediscover {
+  background-image: url("../img/rediscover-large.jpg");
+}
+
 .header-blackswan {
-  background-image: url('../img/blackswan-large.jpg');
+  background-image: url("../img/blackswan-large.jpg");
 }
 
 .header-adventure {
-  background-image: url('../img/adventure-large.jpg');
+  background-image: url("../img/adventure-large.jpg");
 }
 
 .header-mendip {
-  background-image: url('../img/mendip-large-min.jpg');
+  background-image: url("../img/mendip-large-min.jpg");
 }
 
 .header-roman {
-  background-image: url('../img/roman-large-min.jpg');
+  background-image: url("../img/roman-large-min.jpg");
 }
 
 .header-connect4 {
-  background-image: url('../img/c4-large-min.jpg');
+  background-image: url("../img/c4-large.jpg");
 }
 
 .header-nexter {
-  background-image: url('../img/nexter-large-min.jpg');
+  background-image: url("../img/nexter-large-min.jpg");
 }
 
 .header-iit {
-  background-image: url('../img/iit-large-min.jpg');
+  background-image: url("../img/iit-large-min.jpg");
 }
 
 .header-dw {
-  background-image: url('../img/dw-large.jpg');
+  background-image: url("../img/dw-large.jpg");
 }
 
 .header-blog {
-  background-image: url('../img/blog-large-min.jpg');
+  background-image: url("../img/blog-large-min.jpg");
 }
 
 .header-nml {
-  background-image: url('../img/nml-large-min.jpg');
+  background-image: url("../img/nml-large-min.jpg");
 }
 
 // End of modal header styling
@@ -154,22 +165,13 @@
   padding-bottom: 2em;
 
   // Title styling
-   &--title {
-      @include sans-serif($fs: 2.8rem, $color: $base, $ff: $ff-title, $ls: 0);
-      margin-top: 1em;
+  &--title {
+    @include sans-serif($fs: 2.8rem, $color: $base, $ff: $ff-title, $ls: 0);
+    margin-top: 1em;
 
-      @include mq-l {
-        font-size: 3em;
-      }
-  }
-
-  // Styling for the full width banners
-  &--fullwidth {
-    width: 100vw !important;
-    max-width: initial;
-    margin: 2em calc(50% - 50vw);
-    height: 20vh !important;
-    object-fit: cover;
+    @include mq-l {
+      font-size: 3em;
+    }
   }
 
   &--section {
@@ -187,9 +189,9 @@
       max-height: 350px;
       float: right;
       margin-bottom: 2em;
-  
-    @include mq-l {
-      margin-top: -5em;
+
+      @include mq-l {
+        margin-top: -5em;
       }
     }
 
@@ -202,7 +204,7 @@
         position: relative;
         overflow: hidden;
         flex: 1 1 25rem;
-      
+
         &--img {
           display: block;
           width: 100%;
@@ -224,14 +226,13 @@
         width: 100%;
       }
     }
-    
+
     @supports (display: grid) {
-      // max-height: 50vh;
       &--gallery {
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: .5em;
-    
+        grid-gap: 0.5em;
+
         @include mq {
           grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
         }
@@ -244,15 +245,21 @@
   }
 }
 
-
 // Modal Animations
 @keyframes modalIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes modalOut {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-

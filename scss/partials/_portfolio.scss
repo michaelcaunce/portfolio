@@ -1,10 +1,9 @@
-
 // Styling for the portfolio section
 .portfolio__section {
   @include container($max-width: 80em);
   text-align: left;
   padding: 2em 0;
-  
+
   figure {
     margin: 0;
   }
@@ -13,13 +12,21 @@
     height: 100%;
   }
 
-  &--subtitle {
-    @include sans-serif($fs: 1.8rem, $ff: $ff-sub, $color: $accent);
-    margin-top: -1.5em;
-    font-style: italic;
-
+  &--title {
     @include mq {
-      font-size: 2.5rem;
+      margin-bottom: 0;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 55%;
+        left: 0;
+        height: 0.1em;
+        width: 17%;
+        background: $main;
+        z-index: -1;
+      }
     }
   }
 
@@ -31,10 +38,9 @@
       text-align: center;
       padding: 0;
 
-
       &--list {
         display: inline-block;
-        @include sans-serif($fs: .8rem, $ff: $ff-title, $color: $base);
+        @include sans-serif($fs: 0.8rem, $ff: $ff-main, $color: $base);
         margin: 0 5px;
         text-transform: uppercase;
         cursor: pointer;
@@ -45,7 +51,7 @@
         }
 
         &:hover {
-          color: $accent;
+          color: $main;
         }
       }
     }
@@ -79,7 +85,8 @@
       transition: all 1s ease-in-out;
     }
 
-    &:hover &--img, &:focus &--img {
+    &:hover &--img,
+    &:focus &--img {
       transform: scale(1.5);
     }
 
@@ -94,21 +101,19 @@
       padding-top: 1em;
       padding-left: 1em;
       padding-bottom: 1em;
-      background-image: linear-gradient(to right bottom,
-        rgba($base, .9),
-        rgba($base, 1));
-
+      background-image: linear-gradient(to right bottom, rgba($base, 0.9), rgba($base, 1));
       text-align: left;
       transition: top ease-in-out 350ms;
     }
 
-    &:hover &--fig, &:focus &--fig {
+    &:hover &--fig,
+    &:focus &--fig {
       top: 0;
     }
 
     &--title {
       margin-bottom: auto;
-      @include sans-serif($fs: 1.8rem, $color: $accent, $ff: $ff-title, $ls: 0);
+      @include sans-serif($fs: 1.8rem, $color: $cream, $ff: $ff-title, $ls: 0);
     }
 
     &--social {
@@ -139,10 +144,10 @@
   .portfolio__items {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    grid-gap: .5em;
+    grid-gap: 0.5em;
   }
 
-  .span-2 {
-    grid-row: span 2;
-  }
+  // .span-2 {
+  //   grid-row: span 2;
+  // }
 }

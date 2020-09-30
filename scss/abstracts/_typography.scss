@@ -1,17 +1,15 @@
-
 // Defining the the variable for the different fonts.
-$ff-main: 'forma-djr-text', sans-serif;
-$ff-sub: 'marydale', sans-serif;
-$ff-title: 'reross-rectangular', sans-serif;
+$ff-main: "Lato", sans-serif;
+$ff-sub: "Sacramento", cursive;
+$ff-title: "Prata", serif;
 
 // Defining the font-weight variables.
 $fw-n: 400;
 $fw-m: 500;
 $fw-b: 900;
 
-
 // Defined Mixins to define styles that can be re-used throughout the stylesheet
-@mixin sans-serif($fs, $ls: .05em, $color: $base, $tt: upppercase, $lh: 1, $ff: $ff-main ) {
+@mixin sans-serif($fs, $ls: 0.05em, $color: $base, $tt: upppercase, $lh: 1, $ff: $ff-main) {
   font-size: $fs;
   letter-spacing: $ls;
   color: $color;

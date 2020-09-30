@@ -1,10 +1,11 @@
-
-.quote__container{
+.quote__container {
   @include container($max-width: 100vw);
   padding: 3rem 0;
-  background-image: url(../../img/quote.jpeg);
+  background-image: url(../../img/quote.jpg);
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,27 +17,26 @@
   .quote__section {
     @include container($max-width: 90em);
     text-align: center;
-    background-color: $white;
-    padding: 5em;
+    background-color: rgba(96, 96, 96, 0.75);
+    padding: 2em;
 
     @include mq-xl {
       width: 50%;
     }
 
-
     &--quote {
-      @include sans-serif($fs: 2.2rem, $color: $main, $ff: $ff-main);
+      @include sans-serif($fs: 2rem, $color: $white, $ff: $ff-title);
       line-height: 1.3;
 
       @include mq-xl {
-        font-size: 4rem;
+        font-size: 2.4rem;
       }
 
       &::after {
-        content: '';
+        content: "";
         width: 90%;
-        height: 10px;
-        background: $accent;
+        height: 5px;
+        background: $main;
         display: block;
         margin: 1em auto;
 
@@ -47,10 +47,8 @@
     }
 
     &--cite {
-      @include sans-serif($fs: 2rem, $color: $base, $ff: $ff-sub);
+      @include sans-serif($fs: 1.2rem, $color: $white, $ff: $ff-main);
       margin-top: 1.5em;
-      font-style: italic;
-      font-weight: bold;
     }
   }
 }

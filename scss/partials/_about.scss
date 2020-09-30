@@ -1,4 +1,3 @@
-
 // Styling for the about me section. Nested sections are specific to the about-me class.
 .about__section {
   @include container;
@@ -16,20 +15,6 @@
       margin-right: 1em;
     }
   }
-
-  a {
-    &:link,
-    &:visited {
-      color: $secondary;
-      text-decoration: none;
-      transition: all .2s;
-      font-weight: bold;
-    }
-
-    &:hover {
-      color: $primary;
-    }
-  }
 }
 
 // Styling specific for browsers supporting css grids
@@ -39,35 +24,38 @@
     display: grid;
     // Names are assigned to the lines of the grid, see square brackets. The use of name lines allows line-based placement for redefining the grid.
     grid-template-columns: [about-start] minmax(15em, 1fr) [title-start] minmax(6em, 1fr) [img-end] 2fr [about-end];
-    grid-column-gap: .75em;
+    grid-column-gap: 0.75em;
 
     // Defining the placement of the about title ensuring the placement overlaps the imgage.
     &--title {
       grid-column: about-start / about-end;
       grid-row: 2 / 2;
-      margin-top: -3em;
+      margin-top: 0;
+      color: $base;
+      margin-bottom: 1rem;
 
       @include mq {
-        margin-top: .5em;
+        margin-top: 0.5em;
         grid-row: 1 / 2;
+        position: relative;
+        margin-bottom: 0;
 
-      }
-    }
-
-    &--sub {
-      @include sans-serif($fs: 2rem, $ff: $ff-sub, $color: $white);
-      font-style: italic;
-      margin-top: -2.8em;
-
-      @include mq {
-        font-size: 2.5rem;
-        margin-top: -1.5em;
-        color: $accent;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 55%;
+          left: 0;
+          height: 0.1em;
+          width: 30%;
+          background: $main;
+          z-index: -1;
+        }
       }
     }
 
     // Ensure that the subtitle flows beneath the image and the content of the section occupies the full width. Small screens only.
-    &--sub, &--text {
+    &--sub,
+    &--text {
       grid-column: about-start / about-end;
 
       // The subtitle and content will positon next to the image on larger screens.
@@ -75,6 +63,20 @@
         grid-row: 2 / 4;
         grid-column: about-start / img-end;
       }
+
+      // &::after {
+      //   content: "Creativity Connected";
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   opacity: 0.04;
+      //   font-size: 20rem;
+      //   // transform: rotate(-90deg);
+      //   line-height: 1;
+      //   font-family: $ff-title;
+      //   max-width: 100%;
+      //   text-align: center;
+      // }
     }
 
     &--text {
@@ -82,13 +84,11 @@
         margin-top: 2rem;
       }
     }
-    
 
     // Defining the placement of the image within the grid.
     &--img {
       grid-column: about-start / img-end;
       grid-row: 1 / 2;
-
 
       @include mq {
         grid-column: img-end / about-end;
