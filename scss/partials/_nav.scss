@@ -25,21 +25,25 @@
       text-align: center;
       display: flex;
       justify-content: center;
+      transition: all 0.3s;
 
-      &:hover:nth-child(odd) {
+      &:hover {
         background: $main;
-      }
-
-      &:hover:nth-child(even) {
-        background: $main;
+        transition: all 0.3s;
       }
 
       a {
-        @include sans-serif($fs: 1.4rem, $ff: $ff-title) text-decoration: none;
+        @include sans-serif($fs: 1.4rem, $ff: $ff-main) text-decoration: none;
         // If more links are added to the navigation, adjust the divided by number accordingly.
         padding: calc(93vh / 12) 0;
         line-height: 0;
         scroll-behavior: smooth;
+        transition: all 0.3s;
+
+        &:hover {
+          color: $white;
+          transition: all 0.3s;
+        }
       }
     }
   }
