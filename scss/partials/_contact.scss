@@ -1,5 +1,5 @@
 .contact {
-  @include container($max-width: 80em);
+  @include container($max-width: 83em);
   @include clearfix;
   // min-height: 100vh;
   position: relative;
@@ -9,39 +9,38 @@
   &--title {
     text-align: left;
     margin-top: 1em;
-    @include mq {
-      position: relative;
+    position: relative;
 
-      &::after {
-        content: "";
-        position: absolute;
-        top: 55%;
-        left: 0;
-        height: 0.1em;
-        width: 23%;
-        background: $main;
-        z-index: -1;
-      }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 0.1em;
+      width: 10%;
+      background: $accent;
+      z-index: -1;
     }
-  }
 
-  &--sub {
-    @include sans-serif($fs: 1.8rem, $ff: $ff-sub, $color: $main);
-    margin-top: -1.5em;
-    font-style: italic;
-
-    @include mq {
-      font-size: 2.5rem;
-      margin-top: -1.5em;
+    @include mq-xl {
+      &::before {
+        content: "03";
+        position: absolute;
+        bottom: -12rem;
+        right: 90rem;
+        font-size: 10rem;
+        z-index: -1;
+        opacity: 0.05;
+      }
     }
   }
 
   &__container {
     min-height: 800px;
     background: $white;
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 
     &--img {
       display: none;
@@ -75,6 +74,10 @@
         width: 100%;
         display: flex;
         justify-content: space-evenly;
+
+        @include mq-l {
+          display: none;
+        }
 
         &--list {
           list-style: none;
@@ -127,7 +130,7 @@
           background: $main;
 
           &:hover {
-            background: $base;
+            background: $accent;
           }
         }
 

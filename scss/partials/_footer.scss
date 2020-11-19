@@ -5,11 +5,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  border-top: 5px solid $main;
-  height: 30vh;
+  height: 20vh;
+  background-color: $main;
 
   p {
-    @include sans-serif($fs: 1.2rem, $color: $base, $ff: $ff-main) padding-top: 2em;
-    font-weight: bold;
+    @include sans-serif($fs: 1rem, $color: $base, $ff: $ff-main) padding-top: 2em;
   }
 }

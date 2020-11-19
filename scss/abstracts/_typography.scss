@@ -1,7 +1,19 @@
 // Defining the the variable for the different fonts.
 $ff-main: "Lato", sans-serif;
-$ff-sub: "Sacramento", cursive;
-$ff-title: "Prata", serif;
+
+// Font Face Fonts
+
+@font-face {
+  src: url("../../fonts/Winter.otf");
+  font-family: Winter;
+}
+
+@font-face {
+  font-family: Neon;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/Blackpast.otf");
+}
 
 // Defining the font-weight variables.
 $fw-n: 400;

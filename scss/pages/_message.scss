@@ -12,7 +12,6 @@
   .message__section {
     @include container($max-width: 90em);
     text-align: center;
-    background-color: $white;
     padding: 5em 2em;
 
     @include mq-xl {
@@ -20,26 +19,18 @@
     }
 
     &--title {
-      @include sans-serif($fs: 5rem, $color: $base, $ff: titleDex);
-
-      @include mq-l {
-        font-size: 8rem;
-      }
+      @include sans-serif($fs: 4rem, $color: $white, $ff: Neon);
     }
 
     &--text {
-      @include sans-serif($fs: 1.5rem, $color: $main, $ff: $ff-main);
+      @include sans-serif($fs: 1.5rem, $color: $white, $ff: $ff-main);
       line-height: 1.3;
-
-      @include mq-xl {
-        font-size: 2.8rem;
-      }
 
       &::after {
         content: "";
         width: 90%;
-        height: 10px;
-        background: $main;
+        height: 5px;
+        background: $accent;
         display: block;
         margin: 1em auto 2em auto;
 
@@ -50,7 +41,7 @@
     }
 
     &--btn {
-      @include sans-serif($fs: 1rem, $color: $base, $ff: $ff-main, $ls: 0);
+      @include sans-serif($fs: 1.2rem, $color: $white, $ff: $ff-main, $ls: 0);
       position: relative;
       margin-top: 2em;
       text-decoration: none;
@@ -72,27 +63,27 @@
         top: -1rem;
         left: -1rem;
         border-width: 3px 0 0 3px;
-        border-color: $main;
+        border-color: $accent;
       }
 
       &::after {
         bottom: -1rem;
         right: -1rem;
         border-width: 0 3px 3px 0;
-        border-color: $main;
+        border-color: $accent;
       }
 
       &:hover {
-        color: $main;
-        background-color: $white;
-        border-color: $white;
+        color: $white;
+        background-color: $main;
+        border-color: $main;
       }
 
       &:hover::before,
       &:hover::after {
         width: calc(100% + 2rem);
         height: calc(100% + 2rem);
-        border-color: $white;
+        border-color: $main;
       }
     }
   }

@@ -16,7 +16,7 @@
   &--button {
     background: transparent;
     position: fixed;
-    background: $main;
+    background: $white;
     top: 0.7em;
     left: 1.5em;
     border: 0;
@@ -24,7 +24,7 @@
     height: 1.5em;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 0 5px rgba($base, 0.9);
+    box-shadow: 0 0 5px rgba($accent, 0.9);
 
     &--img {
       max-height: 1em;
@@ -64,7 +64,7 @@
           content: "";
           height: 3px;
           margin: 0.5em 0;
-          background: $main;
+          background: $accent;
           display: block;
         }
 
@@ -74,7 +74,7 @@
       }
 
       &--sub {
-        @include sans-serif($fs: 1.5rem, $color: $white, $ff: $ff-title, $ls: 0);
+        @include sans-serif($fs: 1.5rem, $color: $white, $ff: $ff-main, $ls: 0);
       }
 
       &--social {
@@ -89,7 +89,7 @@
           fill: $white;
 
           &:hover {
-            fill: $main;
+            fill: $accent;
           }
         }
       }
@@ -166,7 +166,7 @@
 
   // Title styling
   &--title {
-    @include sans-serif($fs: 2.8rem, $color: $base, $ff: $ff-title, $ls: 0);
+    @include sans-serif($fs: 2.8rem, $color: $base, $ff: Neon, $ls: 0);
     margin-top: 1em;
 
     @include mq-l {
@@ -241,7 +241,7 @@
   }
 
   h3 {
-    color: $main;
+    color: $accent;
   }
 }
 

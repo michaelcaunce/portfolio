@@ -1,20 +1,9 @@
 // Styling for the about me section. Nested sections are specific to the about-me class.
 .about__section {
-  @include container;
+  @include container($max-width: 80em);
   @include clearfix;
   margin-top: 5em;
   margin-bottom: 5em;
-
-  &--img {
-    @include clearfix;
-    margin-top: 2em;
-    margin-bottom: 2em;
-
-    @include mq {
-      float: left;
-      margin-right: 1em;
-    }
-  }
 }
 
 // Styling specific for browsers supporting css grids
@@ -29,26 +18,39 @@
     // Defining the placement of the about title ensuring the placement overlaps the imgage.
     &--title {
       grid-column: about-start / about-end;
-      grid-row: 2 / 2;
+      grid-row: 1 / 2;
       margin-top: 0;
       color: $base;
       margin-bottom: 1rem;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 0.1em;
+        width: 10%;
+        background: $accent;
+        z-index: -1;
+      }
 
       @include mq {
         margin-top: 0.5em;
         grid-row: 1 / 2;
-        position: relative;
-        margin-bottom: 0;
 
-        &::after {
-          content: "";
+        margin-bottom: 0;
+      }
+
+      @include mq-xl {
+        &::before {
+          content: "01";
           position: absolute;
-          top: 55%;
-          left: 0;
-          height: 0.1em;
-          width: 30%;
-          background: $main;
+          bottom: -11rem;
+          right: 90rem;
+          font-size: 10rem;
           z-index: -1;
+          opacity: 0.05;
         }
       }
     }
@@ -61,38 +63,18 @@
       // The subtitle and content will positon next to the image on larger screens.
       @include mq {
         grid-row: 2 / 4;
-        grid-column: about-start / img-end;
+        grid-column: about-start / about-end;
       }
 
-      // &::after {
-      //   content: "Creativity Connected";
-      //   position: absolute;
-      //   top: 0;
-      //   left: 0;
-      //   opacity: 0.04;
-      //   font-size: 20rem;
-      //   // transform: rotate(-90deg);
-      //   line-height: 1;
-      //   font-family: $ff-title;
-      //   max-width: 100%;
-      //   text-align: center;
-      // }
+      @include mq-l {
+        grid-row: 2 / 4;
+        grid-column: about-start / img-end;
+      }
     }
 
     &--text {
       @include mq {
         margin-top: 2rem;
-      }
-    }
-
-    // Defining the placement of the image within the grid.
-    &--img {
-      grid-column: about-start / img-end;
-      grid-row: 1 / 2;
-
-      @include mq {
-        grid-column: img-end / about-end;
-        grid-row: 2 / 4;
       }
     }
   }
