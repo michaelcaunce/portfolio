@@ -15,6 +15,7 @@ sr.reveal(".hero--img", { origin: "top", delay: 600, distance: "500px" })
 sr.reveal(".hero__content--title", { origin: "left", delay: 600 })
 sr.reveal(".hero__footer", { origin: "left", delay: 1000 })
 sr.reveal(".hero__content--text", { origin: "right", delay: 1200 })
+sr.reveal(".hero__content--btn", { origin: "right", delay: 1800 })
 sr.reveal(".hero--text", { origin: "right", delay: 1200 })
 sr.reveal(".social__btn", { origin: "right", delay: 1400 })
 

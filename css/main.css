@@ -684,6 +684,17 @@ h1 {
       @media (min-width: 75em) {
         .hero__content--text {
           margin-top: 2rem; } }
+    .hero__content--btn:link, .hero__content--btn:visited {
+      font-size: 1.2rem;
+      letter-spacing: 0;
+      color: #ea9a28;
+      text-transform: upppercase;
+      line-height: 1;
+      font-family: "Lato", sans-serif;
+      font-weight: 400;
+      text-decoration: none; }
+    .hero__content--btn:hover {
+      color: #ffffff; }
 
 /* If browser supports CSS Grid */
 @supports (display: grid) {
