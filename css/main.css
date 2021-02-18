@@ -8,6 +8,12 @@
   font-weight: normal;
   src: url("../../fonts/Blackpast.otf"); }
 
+@font-face {
+  font-family: Panton;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/Panton.ttf"); }
+
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes bounce {
   0% {
@@ -585,6 +591,36 @@ h1 {
           background: #ea9a28; }
       .contact__container--box--form textarea {
         height: 200px; }
+
+.change-theme {
+  color: #ffffff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  transition: transform 0.3s; }
+  .change-theme:hover {
+    color: #ea9a28; }
+
+body.dark-theme .body-container,
+body.dark-theme .modal__section,
+body.dark-theme .contact__container--box,
+body.dark-theme .hero,
+body.dark-theme .footer {
+  background-color: black; }
+
+body.dark-theme h1 {
+  color: #ea9a28; }
+  body.dark-theme h1:after {
+    background: #1c4f6a; }
+
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme p,
+body.dark-theme .skills__list,
+body.dark-theme .portfolio__section--filter--buttons--list {
+  color: #ffffff; }
 
 .footer {
   display: flex;

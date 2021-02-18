@@ -1,0 +1,39 @@
+.change-theme {
+  color: $white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  transition: transform 0.3s;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+body.dark-theme {
+  .body-container,
+  .modal__section,
+  .contact__container--box,
+  .hero,
+  .footer {
+    background-color: black;
+  }
+
+  h1 {
+    color: $accent;
+
+    &:after {
+      background: $main;
+    }
+  }
+
+  h2,
+  h3,
+  h4,
+  p,
+  .skills__list,
+  .portfolio__section--filter--buttons--list {
+    color: $white;
+  }
+}
