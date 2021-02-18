@@ -20,11 +20,20 @@ body.dark-theme {
     background-color: black;
   }
 
-  h1 {
+  h1,
+  .modal__content--title {
     color: $accent;
 
     &:after {
       background: $main;
+    }
+  }
+
+  .modal__section--header--box--title {
+    color: $white;
+
+    &:after {
+      background: $accent;
     }
   }
 
@@ -35,5 +44,11 @@ body.dark-theme {
   .skills__list,
   .portfolio__section--filter--buttons--list {
     color: $white;
+  }
+
+  .skills__list--item {
+    &::before {
+      background: $main;
+    }
   }
 }

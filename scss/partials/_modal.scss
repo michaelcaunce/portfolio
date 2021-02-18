@@ -168,6 +168,18 @@
   &--title {
     @include sans-serif($fs: 2.8rem, $color: $base, $ff: Neon, $ls: 0);
     margin-top: 1em;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 0.1em;
+      width: 10%;
+      background: $accent;
+      z-index: -1;
+    }
 
     @include mq-l {
       font-size: 3em;

@@ -609,10 +609,17 @@ body.dark-theme .hero,
 body.dark-theme .footer {
   background-color: black; }
 
-body.dark-theme h1 {
+body.dark-theme h1,
+body.dark-theme .modal__content--title {
   color: #ea9a28; }
-  body.dark-theme h1:after {
+  body.dark-theme h1:after,
+  body.dark-theme .modal__content--title:after {
     background: #1c4f6a; }
+
+body.dark-theme .modal__section--header--box--title {
+  color: #ffffff; }
+  body.dark-theme .modal__section--header--box--title:after {
+    background: #ea9a28; }
 
 body.dark-theme h2,
 body.dark-theme h3,
@@ -621,6 +628,9 @@ body.dark-theme p,
 body.dark-theme .skills__list,
 body.dark-theme .portfolio__section--filter--buttons--list {
   color: #ffffff; }
+
+body.dark-theme .skills__list--item::before {
+  background: #1c4f6a; }
 
 .footer {
   display: flex;
@@ -913,7 +923,17 @@ body.dark-theme .portfolio__section--filter--buttons--list {
     line-height: 1;
     font-family: Neon;
     font-weight: 400;
-    margin-top: 1em; }
+    margin-top: 1em;
+    position: relative; }
+    .modal__content--title::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 0.1em;
+      width: 10%;
+      background: #ea9a28;
+      z-index: -1; }
     @media (min-width: 75em) {
       .modal__content--title {
         font-size: 3em; } }
