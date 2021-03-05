@@ -62,7 +62,7 @@
     <div class="body-container">
       <!-- Start of the hero banner section, along with being the placeholder for the navigation hamburger. -->
       <section class="hero">
-        <button class="menu-button">
+        <button class="menu-button" aria-label="Menu">
           <!-- SVG for hamburger -->
           <svg class="hamburger" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 124 124" style="enable-background:new 0 0 124 124;" xml:space="preserve" class="hovered-paths"><g><g>
             <path d="M112,6H12C5.4,6,0,11.4,0,18s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,6,112,6z"  class="active-path" />
@@ -101,11 +101,6 @@
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/MichaelJCaunce" target="_blank">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li>
               <a href="https://www.facebook.com/profile.php?id=795882835" target="_blank">
                 <i class="fab fa-facebook"></i>
               </a>
@@ -113,7 +108,7 @@
           </ul>
         </div>
       </section>
-      <button class="social__btn" data-text-swap="Close">Get in Touch</button>
+      <button class="social__btn" data-text-swap="Close" aria-label="Social Icons">Get in Touch</button>
 
       <!-- Start of the about me section -->
       <section class="about__section" id="about">
@@ -139,27 +134,32 @@
             <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
             </filter>
             </defs>
-            </svg>
+          </svg>
         </div>
         <!-- Start of skills section -->
         <div class="skills">
           <!-- <h1 class="skills--title">Skill Set</h1> -->
-          <ul class="skills__list">
-            <div class="flex-column">
-              <li class="skills__list--item" aria-label="elite">HTML</li>
-              <li class="skills__list--item" aria-label="elite">CSS</li>
-              <li class="skills__list--item" aria-label="average">JS</li>
-              <li class="skills__list--item" aria-label="average">React</li>
-              <li class="skills__list--item" aria-label="advanced">Version Control</li>
-          </div>
+          <div class="skills__list"> 
+        <ul class="flex-column">
+            <li class="skills__list--item" aria-label="elite">HTML</li>
+            <li class="skills__list--item" aria-label="elite">CSS</li>
+            <li class="skills__list--item" aria-label="average">JS</li>
+            <li class="skills__list--item" aria-label="average">React</li>
+            <li class="skills__list--item" aria-label="advanced">Version Control</li>
+          </ul>
 
-          <div class="flex-column">
+
+          <ul class="flex-column">
             <li class="skills__list--item" aria-label="average">PHP</li>
             <li class="skills__list--item" aria-label="average">Laravel</li>
             <li class="skills__list--item" aria-label="adept">Wordpress</li>
             <li class="skills__list--item" aria-label="advanced">UX</li>
             <li class="skills__list--item" aria-label="average">MySQL</li>
-            </div>
+          </ul>
+          </div>
+          
+            
+
           </ul>
         </div>
       </section>
@@ -202,7 +202,7 @@
                     Portfolio modal below
                                           ** -->
             <div class="modal__section">
-              <button class="modal__section--button">
+              <button class="modal__section--button" aria-label="Close">
                 <img class="modal__section--button--img" src="img/svgs/close.svg" alt="Close modal">
               </button>
               <div class="modal__section--header header-portfolio">
@@ -254,7 +254,7 @@
                     Portfolio modal below
                                           ** -->
             <div class="modal__section">
-              <button class="modal__section--button">
+              <button class="modal__section--button" aria-label="Close">
                 <img class="modal__section--button--img" src="img/svgs/close.svg" alt="Close modal">
               </button>
               <div class="modal__section--header header-10years">
@@ -294,7 +294,7 @@
                     Portfolio modal below
                                           ** -->
             <div class="modal__section">
-              <button class="modal__section--button">
+              <button class="modal__section--button" aria-label="Close">
                 <img class="modal__section--button--img" src="img/svgs/close.svg" alt="Close modal">
               </button>
               <div class="modal__section--header header-rediscover">
@@ -342,7 +342,7 @@
                     Portfolio modal below
                                           ** -->
             <div class="modal__section">
-              <button class="modal__section--button">
+              <button class="modal__section--button" aria-label="Close">
                 <img class="modal__section--button--img" src="img/svgs/close.svg" alt="Close modal">
               </button>
               <div class="modal__section--header header-blackswan">
@@ -382,7 +382,7 @@
                     Portfolio modal below
                                           ** -->
             <div class="modal__section">
-              <button class="modal__section--button">
+              <button class="modal__section--button" aria-label="Close">
                 <img class="modal__section--button--img" src="img/svgs/close.svg" alt="Close modal">
               </button>
               <div class="modal__section--header header-adventure">
@@ -421,7 +421,7 @@
                     Portfolio modal below
                                           ** -->
             <div class="modal__section">
-              <button class="modal__section--button">
+              <button class="modal__section--button" aria-label="Close">
                 <img class="modal__section--button--img" src="img/svgs/close.svg" alt="Close modal">
               </button>
               <div class="modal__section--header header-mendip">
@@ -460,7 +460,7 @@
                     Portfolio modal below
                                           ** -->
             <div class="modal__section">
-              <button class="modal__section--button">
+              <button class="modal__section--button" aria-label="Close">
                 <img class="modal__section--button--img" src="img/svgs/close.svg" alt="Close modal">
               </button>
               <div class="modal__section--header header-roman">
@@ -499,7 +499,7 @@
                     Portfolio modal below
                                           ** -->
             <div class="modal__section">
-              <button class="modal__section--button">
+              <button class="modal__section--button" aria-label="Close">
                 <img class="modal__section--button--img" src="img/svgs/close.svg" alt="Close modal">
               </button>
               <div class="modal__section--header header-connect4">
@@ -544,7 +544,7 @@
                     Portfolio modal below
                                           ** -->
             <div class="modal__section">
-              <button class="modal__section--button">
+              <button class="modal__section--button" aria-label="Close">
                 <img class="modal__section--button--img" src="img/svgs/close.svg" alt="Close modal">
               </button>
               <div class="modal__section--header header-nexter">
@@ -583,7 +583,7 @@
                     Portfolio modal below
                                           ** -->
             <div class="modal__section">
-              <button class="modal__section--button">
+              <button class="modal__section--button" aria-label="Close">
                 <img class="modal__section--button--img" src="img/svgs/close.svg" alt="Close modal">
               </button>
               <div class="modal__section--header header-iit">
@@ -654,7 +654,7 @@
                     Portfolio modal below
                                           ** -->
             <div class="modal__section">
-              <button class="modal__section--button">
+              <button class="modal__section--button" aria-label="Close">
                 <img class="modal__section--button--img" src="img/svgs/close.svg" alt="Close modal">
               </button>
               <div class="modal__section--header header-dw">
@@ -708,7 +708,7 @@
                     Portfolio modal below
                                           ** -->
             <div class="modal__section">
-              <button class="modal__section--button">
+              <button class="modal__section--button" aria-label="Close">
                 <img class="modal__section--button--img" src="img/svgs/close.svg" alt="Close modal">
               </button>
               <div class="modal__section--header header-blog">
@@ -760,7 +760,7 @@
                     Portfolio modal below
                                           ** -->
             <div class="modal__section">
-              <button class="modal__section--button">
+              <button class="modal__section--button" aria-label="Close">
                 <img class="modal__section--button--img" src="img/svgs/close.svg" alt="Close modal">
               </button>
               <div class="modal__section--header header-nml">
@@ -823,23 +823,23 @@
           <div class="contact__container--box">
             <ul class="contact__container--box--icons">
               <li class="contact__container--box--icons--list">
-                <a href="https://github.com/michaelcaunce" class="contact__container--box--icons--list--link" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/michaelcaunce" class="contact__container--box--icons--list--link" target="_blank" aria-label="github link"><i class="fab fa-github"></i></a>
               </li>
               <li class="contact__container--box--icons--list">
-                <a href="https://www.facebook.com/profile.php?id=795882835" class="contact__container--box--icons--list--link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=795882835" class="contact__container--box--icons--list--link" target="_blank" aria-label="facebook link"><i class="fab fa-facebook-f"></i></a>
               </li>
-              <li class="contact__container--box--icons--list">
+              <!-- <li class="contact__container--box--icons--list">
                 <a href="https://twitter.com/MichaelJCaunce" class="contact__container--box--icons--list--link" target="_blank"><i class="fab fa-twitter"></i></a>
-              </li>
+              </li> -->
               <li class="contact__container--box--icons--list">
-                <a href="https://www.linkedin.com/in/michael-caunce-241010/" class="contact__container--box--icons--list--link" target="_blank" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/michael-caunce-241010/" class="contact__container--box--icons--list--link" target="_blank" aria-label="linkedin link"><i class="fab fa-linkedin"></i></a>
               </li>
             </ul>
             <form class="contact__container--box--form" name="contact" method="POST" data-netlify="true" action="/message.html">
-              <input type="text" placeholder="First Name" required>
-              <input type="text" placeholder="Last Name" required>
-              <input type="email" placeholder="Email Address" required>
-              <textarea name="message" placeholder="Enter Message Here" class="textarea" ></textarea>
+              <input for="first name" type="text" placeholder="First Name" required>
+              <input for="surname" type="text" placeholder="Last Name" required>
+              <input for="email address" type="email" placeholder="Email Address" required>
+              <textarea for="message content" name="message" placeholder="Enter Message Here" class="textarea" ></textarea>
               <input type="submit" name="" value="Send">
             </form>
           </div>

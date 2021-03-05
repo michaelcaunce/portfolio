@@ -11,7 +11,7 @@ const sr = ScrollReveal({
 /*SCROLL HOME*/
 sr.reveal(".header--logo", {})
 sr.reveal(".navigation ul", { delay: 200 })
-sr.reveal(".hero--img", { origin: "top", delay: 600, distance: "500px" })
+sr.reveal(".hero--img", { origin: "right", delay: 600, distance: "500px" })
 sr.reveal(".hero__content--title", { origin: "left", delay: 600 })
 sr.reveal(".hero__footer", { origin: "left", delay: 1000 })
 sr.reveal(".hero__content--text", { origin: "right", delay: 1200 })

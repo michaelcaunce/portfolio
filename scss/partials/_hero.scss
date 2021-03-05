@@ -83,7 +83,12 @@
     &--btn {
       &:link,
       &:visited {
-        @include sans-serif($fs: 1.2rem, $color: $accent, $ff: $ff-main, $ls: 0);
+        @include sans-serif(
+          $fs: 1.2rem,
+          $color: $accent,
+          $ff: $ff-main,
+          $ls: 0
+        );
         text-decoration: none;
       }
 
