@@ -828,18 +828,49 @@
               <li class="contact__container--box--icons--list">
                 <a href="https://www.facebook.com/profile.php?id=795882835" class="contact__container--box--icons--list--link" target="_blank" aria-label="facebook link"><i class="fab fa-facebook-f"></i></a>
               </li>
-              <!-- <li class="contact__container--box--icons--list">
-                <a href="https://twitter.com/MichaelJCaunce" class="contact__container--box--icons--list--link" target="_blank"><i class="fab fa-twitter"></i></a>
-              </li> -->
               <li class="contact__container--box--icons--list">
                 <a href="https://www.linkedin.com/in/michael-caunce-241010/" class="contact__container--box--icons--list--link" target="_blank" aria-label="linkedin link"><i class="fab fa-linkedin"></i></a>
               </li>
             </ul>
             <form class="contact__container--box--form" name="contact" method="POST" data-netlify="true" action="/message.html">
-              <input for="first name" type="text" placeholder="First Name" required>
-              <input for="surname" type="text" placeholder="Last Name" required>
-              <input for="email address" type="email" placeholder="Email Address" required>
-              <textarea for="message content" name="message" placeholder="Enter Message Here" class="textarea" ></textarea>
+              <ul>
+                <li>
+                  <label for="first name">
+                    First Name
+                    <span>
+                      (required)
+                    </span>
+                  </label>
+                  <input id="first name" type="text" placeholder="First Name" required>
+                </li>
+                <li>
+                  <label for="surname">
+                    Last Name
+                    <span>
+                      (required)
+                    </span>
+                  </label>
+                  <input id="surname" type="text" placeholder="Last Name" required>
+                </li>
+                <li>
+                  <label for="email address">
+                    Email Address
+                    <span>
+                      (required)
+                    </span>
+                  </label>
+                  <input id="email address" type="email" placeholder="Email Address" required>
+                </li>
+                <li>
+                   <label for="message content">
+                    Your Message
+                    <span>
+                      (required)
+                    </span>
+                  </label>
+                  <textarea id="message content" name="message" placeholder="Enter Message Here" class="textarea" ></textarea>
+                </li>
+              </ul>
               <input type="submit" name="" value="Send">
             </form>
           </div>
@@ -865,7 +896,7 @@
     <script src="js/portfolio.js"></script>
     <script src="js/filter.js"></script>
     <script src="js/lazyload.js"></script>
-    <script src="js/scroll.js"></script>
+    <!-- <script src="js/scroll.js"></script> -->
     <script src="js/social.js"></script>
     <script src="js/dark-theme.js"></script>
 
