@@ -158,7 +158,7 @@
       padding: 0;
 
       a {
-        @include sans-serif($fs: 1.2rem, $color: $white, $ff: $ff-main) text-decoration: none;
+        @include sans-serif($fs: 1.4rem, $color: $white, $ff: $ff-main) text-decoration: none;
         padding: 0 0.5em;
         display: inline-block;
         transition: transform 0.3s;

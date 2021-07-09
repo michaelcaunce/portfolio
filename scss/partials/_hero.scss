@@ -48,13 +48,14 @@
       }
 
       &--sub {
-        @include sans-serif($fs: 4rem, $color: #ea9a28, $ff: Neon, $ls: 0);
-        margin-left: -0.2rem;
+        @include sans-serif($fs: 4rem, $color: $accent, $ff: Neon, $ls: 0);
         padding: 0;
+        margin-left: -0.2rem;
 
         @include mq {
           font-size: 7rem;
           margin-top: 1.5rem;
+          margin-left: -0.7rem;
         }
 
         @include mq-xl {
@@ -83,17 +84,13 @@
     &--btn {
       &:link,
       &:visited {
-        @include sans-serif(
-          $fs: 1.2rem,
-          $color: $accent,
-          $ff: $ff-main,
-          $ls: 0
-        );
+        @include sans-serif($fs: 1.4rem, $color: $white, $ff: $ff-main, $ls: 0);
         text-decoration: none;
+        font-weight: 400;
       }
 
       &:hover {
-        color: $white;
+        color: $accent;
       }
     }
   }
