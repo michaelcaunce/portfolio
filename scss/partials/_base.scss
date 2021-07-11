@@ -50,10 +50,10 @@ p {
 }
 
 h1 {
-  @include sans-serif($fs: 2.2rem, $ff: Neon, $ls: 0);
+  @include sans-serif($fs: 2.2rem, $ff: font-title, $ls: 0);
 
   @include mq {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 }
 

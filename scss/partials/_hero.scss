@@ -29,7 +29,7 @@
     }
 
     &--title {
-      @include sans-serif($fs: 1.5rem, $color: $white, $ff: Neon, $ls: 0);
+      @include sans-serif($fs: 1.5rem, $color: $white, $ff: font-title, $ls: 0);
       position: relative;
 
       &::after {
@@ -37,30 +37,28 @@
         position: absolute;
         top: 105%;
         left: 0;
-        height: 0.05em;
+        height: 0.1em;
         width: 20%;
         background: $white;
         z-index: -1;
       }
 
       @include mq {
-        font-size: 2rem;
+        font-size: 3rem;
       }
 
       &--sub {
-        @include sans-serif($fs: 4rem, $color: $accent, $ff: Neon, $ls: 0);
-        padding: 0;
+        @include sans-serif($fs: 4.5rem, $color: $accent, $ff: font-title, $ls: 0);
         margin-left: -0.2rem;
+        padding: 0;
 
         @include mq {
           font-size: 7rem;
-          margin-top: 1.5rem;
-          margin-left: -0.7rem;
         }
 
         @include mq-xl {
-          font-size: 10rem;
-          margin-top: 1.5rem;
+          font-size: 13rem;
+          margin-left: -0.5rem;
         }
       }
     }
@@ -86,12 +84,17 @@
       &:visited {
         @include sans-serif($fs: 1.4rem, $color: $white, $ff: $ff-main, $ls: 0);
         text-decoration: none;
-        font-weight: 400;
+        margin-top: 2rem;
       }
 
       &:hover {
         color: $accent;
       }
+    }
+
+    &__footer {
+      @include sans-serif($fs: 2.8rem, $color: $white, $ff: font-script, $ls: 0);
+      margin-left: 0.5em;
     }
   }
 }
@@ -128,7 +131,6 @@
       @include mq-l {
         grid-row: 6 / 6;
         grid-column: 2 / 7;
-        background-color: transparent;
       }
 
       &--text {
@@ -145,7 +147,7 @@
     }
 
     &__footer {
-      @include sans-serif($fs: 2.8rem, $color: $white, $ff: Winter, $ls: 0);
+      @include sans-serif($fs: 2.8rem, $color: $white, $ff: font-script, $ls: 0);
       grid-column: 1 / -1;
       grid-row: 10 / -1;
       margin-left: 0.5em;
