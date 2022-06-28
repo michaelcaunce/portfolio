@@ -48,7 +48,7 @@
       }
 
       &--sub {
-        @include sans-serif($fs: 4.5rem, $color: $accent, $ff: font-title, $ls: 0);
+        @include sans-serif($fs: 4.5rem, $color: $base, $ff: font-title, $ls: 0);
         margin-left: -0.2rem;
         padding: 0;
 
@@ -111,10 +111,10 @@
       grid-column: 1 / -1;
       grid-row: 1 / -1;
 
-      @include mq-xl {
-        grid-column: 6 / -1;
-        grid-row: 1 / -1;
-      }
+      // @include mq-xl {
+      //   grid-column:  / -1;
+      //   grid-row: 1 / -1;
+      // }
     }
 
     &__content {

@@ -370,7 +370,7 @@ template {
         left: 0;
         height: 0.1em;
         width: 10%;
-        background: #00c6b0;
+        background: #2e7cac;
         z-index: -1; }
       @media (min-width: 50em) {
         .about__section--title {
@@ -410,6 +410,7 @@ template {
 html,
 body {
   height: 100%;
+  background-color: #fff5f2;
   scroll-behavior: smooth; }
 
 body {
@@ -496,7 +497,7 @@ ul {
       left: 0;
       height: 0.1em;
       width: 10%;
-      background: #00c6b0;
+      background: #2e7cac;
       z-index: -1; }
     @media (min-width: 100em) {
       .contact--title::before {
@@ -581,7 +582,7 @@ ul {
         transition: 0.5s;
         background: #1c4f6a; }
         .contact__container--box--form input[type="submit"]:hover {
-          background: #00c6b0; }
+          background: #2e7cac; }
       .contact__container--box--form textarea {
         height: 200px; }
 
@@ -594,7 +595,7 @@ body.dark-theme .footer {
 
 body.dark-theme h1,
 body.dark-theme .modal__content--title {
-  color: #00c6b0; }
+  color: #2e7cac; }
   body.dark-theme h1:after,
   body.dark-theme .modal__content--title:after {
     background: #1c4f6a; }
@@ -602,7 +603,7 @@ body.dark-theme .modal__content--title {
 body.dark-theme .modal__section--header--box--title {
   color: #ffffff; }
   body.dark-theme .modal__section--header--box--title:after {
-    background: #00c6b0; }
+    background: #2e7cac; }
 
 body.dark-theme h2,
 body.dark-theme h3,
@@ -680,7 +681,7 @@ body.dark-theme .skills__list--item::before {
       .hero__content--title--sub {
         font-size: 4.5rem;
         letter-spacing: 0;
-        color: #00c6b0;
+        color: #606060;
         text-transform: upppercase;
         line-height: 1;
         font-family: font-title;
@@ -723,7 +724,7 @@ body.dark-theme .skills__list--item::before {
       text-decoration: none;
       margin-top: 2rem; }
     .hero__content--btn:hover {
-      color: #00c6b0; }
+      color: #2e7cac; }
     .hero__content__footer {
       font-size: 2.8rem;
       letter-spacing: 0;
@@ -743,10 +744,6 @@ body.dark-theme .skills__list--item::before {
     .hero--img {
       grid-column: 1 / -1;
       grid-row: 1 / -1; }
-      @media (min-width: 100em) {
-        .hero--img {
-          grid-column: 6 / -1;
-          grid-row: 1 / -1; } }
     .hero__content {
       grid-column: 1 / -1;
       grid-row: 3 / 7;
@@ -803,7 +800,7 @@ body.dark-theme .skills__list--item::before {
     height: 1.5em;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 0 5px rgba(0, 198, 176, 0.9); }
+    box-shadow: 0 0 5px rgba(46, 124, 172, 0.9); }
     .modal__section--button--img {
       max-height: 1em;
       margin-top: 0.2em; }
@@ -832,7 +829,7 @@ body.dark-theme .skills__list--item::before {
           content: "";
           height: 3px;
           margin: 0.5em 0;
-          background: #00c6b0;
+          background: #2e7cac;
           display: block; }
         @media (min-width: 75em) {
           .modal__section--header--box--title {
@@ -858,7 +855,7 @@ body.dark-theme .skills__list--item::before {
             display: block;
             clear: both; }
           .modal__section--header--box--social--icons:hover {
-            fill: #00c6b0; }
+            fill: #2e7cac; }
   .modal__section.open {
     display: block; }
 
@@ -923,7 +920,7 @@ body.dark-theme .skills__list--item::before {
       left: 0;
       height: 0.1em;
       width: 10%;
-      background: #00c6b0;
+      background: #2e7cac;
       z-index: -1; }
     @media (min-width: 75em) {
       .modal__content--title {
@@ -972,7 +969,7 @@ body.dark-theme .skills__list--item::before {
         .modal__content--section--gallery {
           grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)); } } }
   .modal__content h3 {
-    color: #00c6b0; }
+    color: #2e7cac; }
 
 @keyframes modalIn {
   0% {
@@ -1014,7 +1011,7 @@ body.dark-theme .skills__list--item::before {
         background: #1c4f6a;
         transition: all 0.3s; }
         .mobile-nav ul li:hover a {
-          color: #00c6b0; }
+          color: #2e7cac; }
       .mobile-nav ul li a {
         font-size: 1.4rem;
         letter-spacing: 0.05em;
@@ -1128,7 +1125,7 @@ body.dark-theme .skills__list--item::before {
           display: block;
           width: 0;
           height: 0.1em;
-          background-color: #00c6b0;
+          background-color: #2e7cac;
           margin-top: 0.3em; }
         .navigation ul a:hover {
           transform: translateY(0.5rem) scale(1); }
@@ -1149,7 +1146,7 @@ body.dark-theme .skills__list--item::before {
 
 @media (min-width: 50em) {
       .navigation .change-theme:hover {
-        color: #00c6b0;
+        color: #2e7cac;
         transform: translateY(0.5rem) scale(1); } }
 
 .portfolio__section {
@@ -1171,7 +1168,7 @@ body.dark-theme .skills__list--item::before {
       left: 0;
       height: 0.1em;
       width: 10%;
-      background: #00c6b0;
+      background: #2e7cac;
       z-index: -1; }
     @media (min-width: 50em) {
       .portfolio__section--title {
@@ -1209,7 +1206,7 @@ body.dark-theme .skills__list--item::before {
           .portfolio__section--filter--buttons--list {
             font-size: 1.2rem; } }
         .portfolio__section--filter--buttons--list:hover {
-          color: #00c6b0; }
+          color: #2e7cac; }
     .portfolio__section--filter .active {
       font-weight: bolder;
       border-bottom: 4px solid #1c4f6a; }
@@ -1280,7 +1277,7 @@ body.dark-theme .skills__list--item::before {
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
   text-decoration: none;
-  border-bottom: 2px solid #00c6b0;
+  border-bottom: 2px solid #2e7cac;
   align-self: flex-start; }
 
 @supports (display: grid) {
@@ -1337,7 +1334,7 @@ body.dark-theme .skills__list--item::before {
         content: "";
         width: 90%;
         height: 5px;
-        background: #00c6b0;
+        background: #2e7cac;
         display: block;
         margin: 1em auto; }
         @media (min-width: 50em) {
@@ -1398,7 +1395,7 @@ body.dark-theme .skills__list--item::before {
           text-decoration: none;
           transition: transform 0.3s; }
           .social__container--panel ul li a:hover {
-            color: #00c6b0;
+            color: #2e7cac;
             transition: 0.3s; }
 
 .social__btn {
@@ -1424,7 +1421,7 @@ body.dark-theme .skills__list--item::before {
       padding: 1rem;
       transition: transform 0.3s; } }
   .social__btn:hover {
-    background-color: #00c6b0;
+    background-color: #2e7cac;
     color: #001f61;
     transition: 0.3s; }
   .social__btn:focus {
@@ -1475,8 +1472,8 @@ body.dark-theme .skills__list--item::before {
         height: 20px;
         background: #606060; }
       .skills__list--item:after {
-        background-color: #00c6b0;
-        background: repeating-linear-gradient(-45deg, #00c6b0, #00c6b0 10px, #00d5be 10px, #00d5be 20px);
+        background-color: #2e7cac;
+        background: repeating-linear-gradient(-45deg, #2e7cac, #2e7cac 10px, #3185b8 10px, #3185b8 20px);
         height: 16px;
         top: 2px;
         left: 2px;
@@ -1514,7 +1511,7 @@ body.dark-theme .skills__list--item::before {
           left: 0;
           height: 0.1em;
           width: 10%;
-          background: #00c6b0;
+          background: #2e7cac;
           z-index: -1; }
         @media (min-width: 50em) {
           .skills .skills--title {
@@ -1592,7 +1589,7 @@ body.dark-theme .skills__list--item::before {
         content: "";
         width: 90%;
         height: 5px;
-        background: #00c6b0;
+        background: #2e7cac;
         display: block;
         margin: 1em auto 2em auto; }
         @media (min-width: 50em) {
@@ -1623,12 +1620,12 @@ body.dark-theme .skills__list--item::before {
         top: -1rem;
         left: -1rem;
         border-width: 3px 0 0 3px;
-        border-color: #00c6b0; }
+        border-color: #2e7cac; }
       .message__container .message__section--btn::after {
         bottom: -1rem;
         right: -1rem;
         border-width: 0 3px 3px 0;
-        border-color: #00c6b0; }
+        border-color: #2e7cac; }
       .message__container .message__section--btn:hover {
         color: #ffffff;
         background-color: #1c4f6a;
