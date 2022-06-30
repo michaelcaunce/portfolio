@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @font-face {
   src: url("../../fonts/Winter.otf");
   font-family: Winter; }
@@ -420,7 +419,7 @@ body {
 
 body {
   color: #606060;
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.6;
   background: #ffffff;
   font-size: 1.1rem;
@@ -434,8 +433,8 @@ body {
   color: #606060;
   text-transform: upppercase;
   line-height: 1;
-  font-family: "Lato", sans-serif;
-  font-weight: 400; }
+  font-family: "Roboto", sans-serif;
+  font-weight: 300; }
   @media (min-width: 50em) {
     .large-text {
       font-size: 1.9rem; } }
@@ -446,8 +445,8 @@ body {
   color: #1c4f6a;
   text-transform: upppercase;
   line-height: 1;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   font-weight: bold;
   font-style: italic; }
 
@@ -466,7 +465,7 @@ h1 {
   text-transform: upppercase;
   line-height: 1;
   font-family: Neon;
-  font-weight: 400; }
+  font-weight: 300; }
   @media (min-width: 50em) {
     h1 {
       font-size: 3.5rem; } }
@@ -578,8 +577,8 @@ ul {
         color: #ffffff;
         text-transform: upppercase;
         line-height: 1;
-        font-family: "Lato", sans-serif;
-        font-weight: 400;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
         text-transform: uppercase;
         max-width: 33.3%;
         color: #ffffff;
@@ -644,8 +643,8 @@ body.dark-theme .skills__list--item::before {
     color: #606060;
     text-transform: upppercase;
     line-height: 1;
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
     padding-top: 2em; }
 
 .hero {
@@ -679,7 +678,7 @@ body.dark-theme .skills__list--item::before {
       text-transform: upppercase;
       line-height: 1;
       font-family: Neon;
-      font-weight: 400;
+      font-weight: 300;
       position: relative; }
       .hero__content--title::after {
         content: "";
@@ -700,7 +699,7 @@ body.dark-theme .skills__list--item::before {
         text-transform: upppercase;
         line-height: 1;
         font-family: Neon;
-        font-weight: 400;
+        font-weight: 300;
         margin-left: -0.2rem;
         padding: 0; }
         @media (min-width: 50em) {
@@ -717,8 +716,8 @@ body.dark-theme .skills__list--item::before {
       color: #ffffff;
       text-transform: upppercase;
       line-height: 1;
-      font-family: "Lato", sans-serif;
-      font-weight: 400;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
       line-height: 1.4;
       width: 90%;
       margin-top: 2rem; }
@@ -735,8 +734,8 @@ body.dark-theme .skills__list--item::before {
       color: #ea9a28;
       text-transform: upppercase;
       line-height: 1;
-      font-family: "Lato", sans-serif;
-      font-weight: 400;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
       text-decoration: none; }
     .hero__content--btn:hover {
       color: #ffffff; }
@@ -783,7 +782,7 @@ body.dark-theme .skills__list--item::before {
       text-transform: upppercase;
       line-height: 1;
       font-family: Winter;
-      font-weight: 400;
+      font-weight: 300;
       grid-column: 1 / -1;
       grid-row: 10 / -1;
       margin-left: 0.5em; } }
@@ -851,8 +850,8 @@ body.dark-theme .skills__list--item::before {
         color: #ffffff;
         text-transform: upppercase;
         line-height: 1;
-        font-family: "Lato", sans-serif;
-        font-weight: 400; }
+        font-family: "Roboto", sans-serif;
+        font-weight: 300; }
       .modal__section--header--box--social {
         display: flex;
         align-items: flex-start; }
@@ -921,7 +920,7 @@ body.dark-theme .skills__list--item::before {
     text-transform: upppercase;
     line-height: 1;
     font-family: Neon;
-    font-weight: 400;
+    font-weight: 300;
     margin-top: 1em;
     position: relative; }
     .modal__content--title::after {
@@ -1028,7 +1027,7 @@ body.dark-theme .skills__list--item::before {
         text-transform: upppercase;
         line-height: 1;
         font-family: Neon;
-        font-weight: 400;
+        font-weight: 300;
         text-decoration: none;
         padding: calc(93vh / 12) 0;
         line-height: 0;
@@ -1118,8 +1117,8 @@ body.dark-theme .skills__list--item::before {
         color: #ffffff;
         text-transform: upppercase;
         line-height: 1;
-        font-family: "Lato", sans-serif;
-        font-weight: 400;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
         text-decoration: none;
         padding: 0 0.5em;
         display: inline-block;
@@ -1183,8 +1182,8 @@ body.dark-theme .skills__list--item::before {
         color: #606060;
         text-transform: upppercase;
         line-height: 1;
-        font-family: "Lato", sans-serif;
-        font-weight: 400;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
         font-weight: bold;
         margin: 0 5px;
         text-transform: uppercase;
@@ -1240,8 +1239,8 @@ body.dark-theme .skills__list--item::before {
       color: #ffffff;
       text-transform: upppercase;
       line-height: 1;
-      font-family: "Lato", sans-serif;
-      font-weight: 400; }
+      font-family: "Roboto", sans-serif;
+      font-weight: 300; }
     .portfolio__items--item--social {
       display: flex;
       flex-direction: row;
@@ -1262,8 +1261,8 @@ body.dark-theme .skills__list--item::before {
   color: #ffffff;
   text-transform: upppercase;
   line-height: 1;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   text-decoration: none;
   border-bottom: 2px solid #ea9a28;
   align-self: flex-start; }
@@ -1309,8 +1308,8 @@ body.dark-theme .skills__list--item::before {
       color: #ffffff;
       text-transform: upppercase;
       line-height: 1;
-      font-family: "Lato", sans-serif;
-      font-weight: 400;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
       line-height: 1.3; }
       @media (min-width: 50em) {
         .quote__container .quote__section--quote {
@@ -1334,8 +1333,8 @@ body.dark-theme .skills__list--item::before {
       color: #ffffff;
       text-transform: upppercase;
       line-height: 1;
-      font-family: "Lato", sans-serif;
-      font-weight: 400;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
       margin-top: 1.5em; }
 
 /* SOCIAL PANEL CSS */
@@ -1396,8 +1395,8 @@ body.dark-theme .skills__list--item::before {
       color: #ffffff;
       text-transform: upppercase;
       line-height: 1;
-      font-family: "Lato", sans-serif;
-      font-weight: 400;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
       position: fixed;
       bottom: 20px;
       right: 20px;
@@ -1433,8 +1432,8 @@ body.dark-theme .skills__list--item::before {
     color: #606060;
     text-transform: upppercase;
     line-height: 1;
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
     font-weight: bold;
     list-style: none;
     display: flex;
@@ -1563,15 +1562,15 @@ body.dark-theme .skills__list--item::before {
       text-transform: upppercase;
       line-height: 1;
       font-family: Neon;
-      font-weight: 400; }
+      font-weight: 300; }
     .message__container .message__section--text {
       font-size: 1.5rem;
       letter-spacing: 0.05em;
       color: #ffffff;
       text-transform: upppercase;
       line-height: 1;
-      font-family: "Lato", sans-serif;
-      font-weight: 400;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
       line-height: 1.3; }
       .message__container .message__section--text::after {
         content: "";
@@ -1589,8 +1588,8 @@ body.dark-theme .skills__list--item::before {
       color: #ffffff;
       text-transform: upppercase;
       line-height: 1;
-      font-family: "Lato", sans-serif;
-      font-weight: 400;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
       position: relative;
       margin-top: 2em;
       text-decoration: none;

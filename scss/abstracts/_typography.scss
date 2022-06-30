@@ -1,7 +1,6 @@
 // Defining the the variable for the different fonts.
-$ff-main: "Lato", sans-serif;
-
-@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+$ff-main: "Roboto", sans-serif;
+$ff-title: "Zilla Slab", serif;
 
 // Font Face Fonts
 
@@ -25,24 +24,17 @@ $ff-main: "Lato", sans-serif;
 }
 
 // Defining the font-weight variables.
-$fw-n: 400;
+$fw-n: 300;
 $fw-m: 500;
 $fw-b: 900;
 
 // Defined Mixins to define styles that can be re-used throughout the stylesheet
-@mixin sans-serif(
-  $fs,
-  $ls: 0.05em,
-  $color: $base,
-  $tt: upppercase,
-  $lh: 1,
-  $ff: $ff-main
-) {
+@mixin sans-serif($fs, $ls: 0.05em, $color: $base, $tt: upppercase, $lh: 1, $ff: $ff-main, $fw: $fw-n) {
   font-size: $fs;
   letter-spacing: $ls;
   color: $color;
   text-transform: $tt;
   line-height: $lh;
   font-family: $ff;
-  font-weight: $fw-n;
+  font-weight: $fw;
 }
