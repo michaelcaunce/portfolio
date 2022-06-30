@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #1c4f6a;
+  background-color: $base;
   z-index: 1;
 
   &--img {
@@ -29,7 +29,7 @@
     }
 
     &--title {
-      @include sans-serif($fs: 1.5rem, $color: $white, $ff: Neon, $ls: 0);
+      @include sans-serif($fs: 1.5rem, $color: $white, $ff: $ff-title, $ls: 0);
       position: relative;
 
       &::after {
@@ -48,7 +48,7 @@
       }
 
       &--sub {
-        @include sans-serif($fs: 4rem, $color: #ea9a28, $ff: Neon, $ls: 0);
+        @include sans-serif($fs: 4rem, $color: $accent, $ff: $ff-title, $ls: 0);
         margin-left: -0.2rem;
         padding: 0;
 
@@ -83,12 +83,7 @@
     &--btn {
       &:link,
       &:visited {
-        @include sans-serif(
-          $fs: 1.2rem,
-          $color: $accent,
-          $ff: $ff-main,
-          $ls: 0
-        );
+        @include sans-serif($fs: 1.2rem, $color: $accent, $ff: $ff-main, $ls: 0);
         text-decoration: none;
       }
 
@@ -130,7 +125,7 @@
 
       @include mq-l {
         grid-row: 6 / 6;
-        grid-column: 2 / 7;
+        grid-column: 1 / 7;
         background-color: transparent;
       }
 
