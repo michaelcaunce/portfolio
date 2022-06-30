@@ -1,9 +1,13 @@
 // Styling for the about me section. Nested sections are specific to the about-me class.
+
+.about__section--container {
+  background-color: #fcb7d4;
+}
 .about__section {
   @include container($max-width: 80em);
   @include clearfix;
-  margin-top: 5em;
-  margin-bottom: 5em;
+  padding-top: 10em;
+  padding-bottom: 10em;
 }
 
 // Styling specific for browsers supporting css grids
@@ -12,7 +16,7 @@
   .about__section {
     display: grid;
     // Names are assigned to the lines of the grid, see square brackets. The use of name lines allows line-based placement for redefining the grid.
-    grid-template-columns: [about-start] minmax(15em, 1fr) [title-start] minmax(6em, 1fr) [img-end] 2fr [about-end];
+    // grid-template-columns: [about-start] minmax(15em, 1fr) [title-start] minmax(6em, 1fr) [img-end] 2fr [about-end];
     grid-column-gap: 0.75em;
 
     // Defining the placement of the about title ensuring the placement overlaps the imgage.
@@ -20,7 +24,7 @@
       grid-column: about-start / about-end;
       grid-row: 1 / 2;
       margin-top: 0;
-      color: $base;
+      color: $white;
       margin-bottom: 1rem;
       position: relative;
 
@@ -32,13 +36,12 @@
         height: 0.1em;
         width: 10%;
         background: $accent;
-        z-index: -1;
+        z-index: 1;
       }
 
       @include mq {
         margin-top: 0.5em;
         grid-row: 1 / 2;
-
         margin-bottom: 0;
       }
 
@@ -49,8 +52,10 @@
           bottom: -11rem;
           right: 90rem;
           font-size: 10rem;
-          z-index: -1;
-          opacity: 0.05;
+          z-index: 1;
+          opacity: 0.03;
+          color: $white;
+          // background-color: $white;
         }
       }
     }
@@ -58,6 +63,7 @@
     // Ensure that the subtitle flows beneath the image and the content of the section occupies the full width. Small screens only.
     &--sub,
     &--text {
+      @include sans-serif($fs: 18px, $color: $white, $ff: $ff-main, $ls: 0.5px, $lh: 31px);
       grid-column: about-start / about-end;
 
       // The subtitle and content will positon next to the image on larger screens.
@@ -76,6 +82,10 @@
       @include mq {
         margin-top: 2rem;
       }
+    }
+
+    .large-text {
+      color: $white;
     }
   }
 }

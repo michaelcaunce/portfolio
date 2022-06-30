@@ -1,5 +1,6 @@
 // Defining the the variable for the different fonts.
-$ff-main: "PT Sans", sans-serif;
+$ff-main: "Roboto", sans-serif;
+$ff-title: "Zilla Slab", serif;
 
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
 
@@ -18,17 +19,17 @@ $ff-main: "PT Sans", sans-serif;
 }
 
 // Defining the font-weight variables.
-$fw-n: 400;
+$fw-n: 300;
 $fw-m: 500;
 $fw-b: 900;
 
 // Defined Mixins to define styles that can be re-used throughout the stylesheet
-@mixin sans-serif($fs, $ls: 0.05em, $color: $base, $tt: upppercase, $lh: 1, $ff: $ff-main) {
+@mixin sans-serif($fs, $ls: 0.05em, $color: $base, $tt: upppercase, $lh: 1, $ff: $ff-main, $fw: $fw-n) {
   font-size: $fs;
   letter-spacing: $ls;
   color: $color;
   text-transform: $tt;
   line-height: $lh;
   font-family: $ff;
-  font-weight: $fw-n;
+  font-weight: $fw;
 }
