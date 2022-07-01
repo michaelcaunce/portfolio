@@ -17,8 +17,9 @@
   }
 
   &__content {
-    padding: 1em 0 0 1em;
+    padding: 1em 0 1em 1em;
     z-index: 1;
+    background-color: $base;
 
     @include mq {
       padding: 1em 0 0 1em;
@@ -26,10 +27,11 @@
 
     @include mq-l {
       padding: 1rem;
+      ackground-color: transparent;
     }
 
     &--title {
-      @include sans-serif($fs: 1.5rem, $color: $accent, $ff: $ff-title, $ls: 0);
+      @include sans-serif($fs: 1.8rem, $color: $accent, $ff: $ff-title, $ls: 0);
       position: relative;
 
       &::after {
@@ -37,25 +39,29 @@
         position: absolute;
         top: 105%;
         left: 0;
-        height: 0.3em;
+        height: 0.2em;
         width: 20%;
         background: $white;
         z-index: -1;
       }
 
-      @include mq {
+      @include mq-l {
         font-size: 2rem;
+        &::after {
+          top: 110%;
+        }
+      }
+
+      @include mq-xl {
+        &::after {
+          top: 100%;
+        }
       }
 
       &--sub {
-        @include sans-serif($fs: 4rem, $color: $white, $ff: $ff-title, $ls: 0);
+        @include sans-serif($fs: 4.5rem, $color: $white, $ff: $ff-title, $ls: 0);
         margin-left: -0.2rem;
         padding: 0;
-
-        @include mq {
-          font-size: 7rem;
-          margin-top: 1.5rem;
-        }
 
         @include mq-xl {
           font-size: 10rem;
@@ -69,11 +75,6 @@
       line-height: 1.4;
       width: 90%;
       margin-top: 2rem;
-
-      @include mq {
-        font-size: 1.4rem;
-        margin-top: 1.5rem;
-      }
 
       @include mq-l {
         margin-top: 2rem;
@@ -107,25 +108,23 @@
       grid-row: 1 / -1;
 
       @include mq-l {
-        grid-column: 2 / 6;
+        grid-column: 5 / -1;
         grid-row: 1 / -1;
       }
     }
 
     &__content {
       grid-column: 1 / -1;
-      grid-row: 3 / 7;
+      grid-row: 2 / 7;
       margin-top: 3rem;
 
-      @include mq {
-        grid-column: 2 / 10;
-        grid-row: 5 / 7;
-        padding: 1em 0 0 1em;
+      @include mq-l {
+        grid-row: 4;
+        grid-column: 1 / 6;
       }
 
-      @include mq-l {
+      @include mq-xl {
         grid-row: 5;
-        grid-column: 6 / 10;
       }
 
       &--text {
