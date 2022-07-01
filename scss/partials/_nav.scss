@@ -10,11 +10,11 @@
   transition: transform ease-in 250ms; // Transition the transform.
 
   @include mq {
-    right: 50%;
+    right: 40%;
   }
 
   @include mq-l {
-    right: 70%;
+    right: 80%;
   }
 
   ul {
@@ -74,11 +74,11 @@
     transform: translateX(85%);
 
     @include mq {
-      transform: translateX(50%);
+      transform: translateX(60%);
     }
 
     @include mq-l {
-      transform: translateX(30%);
+      transform: translateX(20%);
     }
   }
 
@@ -106,18 +106,6 @@
   cursor: pointer;
   transition: all 0.3s;
 
-  @include mq {
-    &:after {
-      content: "Menu";
-      display: block;
-      position: absolute;
-      color: #000;
-      top: 20px;
-      font-size: 12px;
-      left: 35px;
-    }
-  }
-
   svg {
     height: 1.5em;
 
@@ -127,7 +115,6 @@
   }
 
   &:hover {
-    transform: translateY(0.1rem);
     fill: $white;
   }
 }
