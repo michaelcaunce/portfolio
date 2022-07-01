@@ -29,7 +29,7 @@
     }
 
     &--title {
-      @include sans-serif($fs: 1.5rem, $color: $white, $ff: $ff-title, $ls: 0);
+      @include sans-serif($fs: 1.5rem, $color: $accent, $ff: $ff-title, $ls: 0);
       position: relative;
 
       &::after {
@@ -37,7 +37,7 @@
         position: absolute;
         top: 105%;
         left: 0;
-        height: 0.05em;
+        height: 0.3em;
         width: 20%;
         background: $white;
         z-index: -1;
@@ -48,7 +48,7 @@
       }
 
       &--sub {
-        @include sans-serif($fs: 4rem, $color: $accent, $ff: $ff-title, $ls: 0);
+        @include sans-serif($fs: 4rem, $color: $white, $ff: $ff-title, $ls: 0);
         margin-left: -0.2rem;
         padding: 0;
 
@@ -106,8 +106,8 @@
       grid-column: 1 / -1;
       grid-row: 1 / -1;
 
-      @include mq-xl {
-        grid-column: 6 / -1;
+      @include mq-l {
+        grid-column: 2 / 6;
         grid-row: 1 / -1;
       }
     }
@@ -124,9 +124,8 @@
       }
 
       @include mq-l {
-        grid-row: 6 / 6;
-        grid-column: 1 / 7;
-        background-color: transparent;
+        grid-row: 5;
+        grid-column: 6 / 10;
       }
 
       &--text {

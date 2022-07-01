@@ -1,5 +1,5 @@
 // Styling specific to the navigation on smaller devices.
-.mobile-nav {
+.navigation {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -9,6 +9,14 @@
   transform: translateX(-100%); // Hides the mobile nav out of the display. Use JS to make the nav come out.
   transition: transform ease-in 250ms; // Transition the transform.
 
+  @include mq {
+    right: 50%;
+  }
+
+  @include mq-l {
+    right: 70%;
+  }
+
   ul {
     margin: 0;
     padding: 0;
@@ -17,8 +25,9 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
-    height: 93vh;
-    background: $white;
+    height: 100vh;
+    background: $base;
+    border-right: solid $main 1em;
 
     li {
       text-align: center;
@@ -29,18 +38,21 @@
       &:hover {
         background: $main;
         transition: all 0.3s;
+
+        a {
+          color: $base;
+        }
       }
 
       a {
-        @include sans-serif($fs: 1.4rem, $ff: Neon) text-decoration: none;
+        @include sans-serif($fs: 1.8rem, $ff: $ff-title, $color: $white) text-decoration: none;
         // If more links are added to the navigation, adjust the divided by number accordingly.
-        padding: calc(93vh / 12) 0;
+        padding: calc(100vh / 12) 0;
         line-height: 0;
         scroll-behavior: smooth;
         transition: all 0.3s;
 
         &:hover {
-          color: $white;
           transition: all 0.3s;
         }
       }
@@ -54,22 +66,24 @@
   height: 93vh;
   overflow-y: hidden;
 
-  .mobile-nav {
+  .navigation {
     transform: translateX(0); //Move mobile-nav back to its starting point.
   }
 
   .body-container {
     transform: translateX(85%);
+
+    @include mq {
+      transform: translateX(50%);
+    }
+
+    @include mq-l {
+      transform: translateX(30%);
+    }
   }
 
   .menu-button {
     transform: translateX(0);
-  }
-
-  @include mq-l {
-    .menu-button {
-      transform: translateX(100%);
-    }
   }
 
   .close {
@@ -81,106 +95,43 @@
   }
 }
 
+// Styling for the menu button
 .menu-button {
   position: absolute;
-  top: 2em;
+  top: 1em;
   left: 1em;
   background: transparent;
   border: 0;
-  fill: $white;
+  fill: $accent;
   cursor: pointer;
   transition: all 0.3s;
 
   @include mq {
-    fill: $main;
+    &:after {
+      content: "Menu";
+      display: block;
+      position: absolute;
+      color: #000;
+      top: 20px;
+      font-size: 12px;
+      left: 35px;
+    }
   }
 
   svg {
     height: 1.5em;
+
+    @include mq {
+      height: 2em;
+    }
   }
 
   &:hover {
-    transform: translateY(0.3rem);
-  }
-
-  // Remove on larger screens
-  @include mq {
-    display: none;
+    transform: translateY(0.1rem);
+    fill: $white;
   }
 }
 
 .close {
   display: none;
-}
-
-// Hide the navigation on smaller screens
-.navigation {
-  display: none;
-}
-
-// Hide the logo on smaller screens
-.header--logo {
-  display: none;
-}
-
-// Styling specific to the navigation on larger screens.
-@include mq {
-  .header {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    &--logo {
-      display: block;
-      height: 4em;
-      width: auto;
-      margin-left: 3em;
-    }
-  }
-  .navigation {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    margin: 0 auto;
-    width: 100%;
-
-    ul {
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      list-style: none;
-      margin-right: 1em;
-      padding: 0;
-
-      a {
-        @include sans-serif($fs: 1.2rem, $color: $white, $ff: $ff-main) text-decoration: none;
-        padding: 0 0.5em;
-        display: inline-block;
-        transition: transform 0.3s;
-
-        &::after {
-          content: "";
-          display: block;
-          width: 0;
-          height: 0.1em;
-          background-color: $accent;
-          margin-top: 0.3em;
-        }
-
-        &:hover {
-          transform: translateY(0.5rem) scale(1);
-        }
-
-        &:hover::after {
-          width: 99%;
-          transition: 0.3s;
-        }
-      }
-    }
-  }
 }

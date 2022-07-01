@@ -4,7 +4,7 @@
 //  querySelector to find the menu button, class menu-button.
 const navToggle = document.querySelector(".menu-button")
 //  querySelector to find the mobile nav, class mobile-nav.
-const nav = document.querySelector(".mobile-nav")
+const nav = document.querySelector(".navigation")
 //  querySelector to find the container wrapped around the website, class body-container.
 const containerBody = document.querySelector(".body-container")
 
