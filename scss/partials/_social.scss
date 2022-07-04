@@ -19,15 +19,15 @@
 
   // Social panel popout
   &--panel {
-    background-color: $accent-dark;
+    background-color: $base;
     border-radius: 50px;
-    border: 5px solid $main;
+    border: 1px solid $main;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 80px;
+    height: 60px;
     width: 350px;
     max-width: calc(100% - 10px);
 
@@ -53,7 +53,7 @@
           transition: transform 0.3s;
 
           &:hover {
-            color: $accent;
+            color: $main;
             transition: 0.3s;
           }
         }
@@ -67,22 +67,22 @@
 
   @include mq-l {
     display: block;
-    @include sans-serif($fs: 1.1rem, $color: $white, $ff: $ff-main, $ls: 0);
+    @include sans-serif($fs: 1.4rem, $color: $white, $ff: $ff-title, $ls: 0);
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 999;
     border-radius: 50px;
-    background-color: $accent-dark;
+    background-color: $base;
     border: 1px solid $main;
     cursor: pointer;
-    padding: 1rem;
+    padding: 0.8rem;
     transition: transform 0.3s;
   }
 
   &:hover {
-    background-color: $accent;
-    color: #001f61;
+    background-color: $main;
+    color: $base;
     transition: 0.3s;
   }
 
