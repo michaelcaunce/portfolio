@@ -71,7 +71,7 @@
 
     .active {
       font-weight: bolder;
-      border-bottom: 4px solid $main;
+      border-bottom: 4px solid $accent;
 
       &:hover {
         color: $base;
@@ -114,7 +114,7 @@
       padding-top: 1em;
       padding-left: 1em;
       padding-bottom: 1em;
-      background-image: linear-gradient(to right bottom, rgba($main, 0.9), rgba($main, 1));
+      background-image: linear-gradient(to right bottom, rgba($accent, 0.9), rgba($accent, 1));
       text-align: left;
       transition: top ease-in-out 350ms;
     }
