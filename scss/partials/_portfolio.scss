@@ -52,8 +52,7 @@
 
       &--list {
         display: inline-block;
-        @include sans-serif($fs: 0.8rem, $ff: $ff-main, $color: $base);
-        font-weight: bold;
+        @include sans-serif($fs: 0.8rem, $ff: $ff-title, $color: $base);
         margin: 0 5px;
         text-transform: uppercase;
         cursor: pointer;
@@ -159,8 +158,4 @@
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-gap: 0.5em;
   }
-
-  // .span-2 {
-  //   grid-row: span 2;
-  // }
 }

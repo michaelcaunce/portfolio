@@ -3,7 +3,6 @@
   @include clearfix;
   position: relative;
   padding: 20px;
-  margin-bottom: 5em;
 
   &--title {
     text-align: left;
@@ -121,7 +120,7 @@
           color: $white;
           cursor: pointer;
           transition: 0.5s;
-          background: $accent;
+          background: $base;
 
           &:hover {
             background: $base;

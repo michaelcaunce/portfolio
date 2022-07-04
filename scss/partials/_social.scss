@@ -21,7 +21,7 @@
   &--panel {
     background-color: $base;
     border-radius: 50px;
-    border: 1px solid $main;
+    border: 1px solid $accent;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,7 +53,7 @@
           transition: transform 0.3s;
 
           &:hover {
-            color: $main;
+            color: $accent;
             transition: 0.3s;
           }
         }
@@ -74,14 +74,14 @@
     z-index: 999;
     border-radius: 50px;
     background-color: $base;
-    border: 1px solid $main;
+    border: 1px solid $accent;
     cursor: pointer;
     padding: 0.8rem;
     transition: transform 0.3s;
   }
 
   &:hover {
-    background-color: $main;
+    background-color: $accent;
     color: $base;
     transition: 0.3s;
   }
