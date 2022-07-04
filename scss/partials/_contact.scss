@@ -1,7 +1,6 @@
 .contact {
   @include container($max-width: 83em);
   @include clearfix;
-  // min-height: 100vh;
   position: relative;
   padding: 20px;
   margin-bottom: 5em;
@@ -81,7 +80,7 @@
             display: flex;
             font-size: 1.5rem;
             text-decoration: none;
-            color: #b6bbc5;
+            color: $accent;
             width: 3rem;
             height: 3rem;
             margin-bottom: 2rem;
@@ -122,10 +121,10 @@
           color: $white;
           cursor: pointer;
           transition: 0.5s;
-          background: $main;
+          background: $accent;
 
           &:hover {
-            background: $accent;
+            background: $base;
           }
         }
 
