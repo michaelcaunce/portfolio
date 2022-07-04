@@ -59,17 +59,6 @@
     &--sub,
     &--text {
       grid-column: about-start / about-end;
-
-      // The subtitle and content will positon next to the image on larger screens.
-      @include mq {
-        grid-row: 2 / 4;
-        grid-column: about-start / about-end;
-      }
-
-      @include mq-l {
-        grid-row: 2 / 4;
-        grid-column: about-start / img-end;
-      }
     }
 
     &--text {
