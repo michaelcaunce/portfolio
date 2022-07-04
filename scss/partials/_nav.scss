@@ -26,8 +26,8 @@
     justify-content: space-between;
     align-items: stretch;
     height: 100vh;
-    background: $base;
-    border-right: solid $main 1em;
+    background: $white;
+    border-right: solid $accent 0.5em;
 
     li {
       text-align: center;
@@ -36,7 +36,7 @@
       transition: all 0.3s;
 
       &:hover {
-        background: $main;
+        background: $accent;
         transition: all 0.3s;
 
         a {
@@ -45,7 +45,7 @@
       }
 
       a {
-        @include sans-serif($fs: 1.8rem, $ff: $ff-title, $color: $white) text-decoration: none;
+        @include sans-serif($fs: 1.8rem, $ff: $ff-title, $color: $base) text-decoration: none;
         // If more links are added to the navigation, adjust the divided by number accordingly.
         padding: calc(100vh / 12) 0;
         line-height: 0;
@@ -102,7 +102,7 @@
   left: 1em;
   background: transparent;
   border: 0;
-  fill: $accent;
+  fill: $base;
   cursor: pointer;
   transition: all 0.3s;
 
@@ -115,7 +115,7 @@
   }
 
   &:hover {
-    fill: $white;
+    fill: $accent;
   }
 }
 
